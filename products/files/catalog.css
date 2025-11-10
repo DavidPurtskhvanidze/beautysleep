@@ -12,6 +12,9 @@
 
 /*shop-cart-toaster*/
 
+:root {
+    --header-height: 60px;
+}
 .shop-cart-toaster {
     display: flex;
     align-items: center;
@@ -1702,6 +1705,12 @@ input[type=radio]:checked + .product-modal-size,
     .pp_product-modal .pp__content {
         top: 0;
         margin-bottom: 0;
+        transform: translateX(100%);
+        /*transition-delay: .2s;*/
+        /*transition: .2s;*/
+    }
+    .pp_product-modal.show .pp__content {
+        transform: translateX(0%);
     }
     .product-modal-wrapper {
         flex-direction: column;
