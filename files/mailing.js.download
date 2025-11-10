@@ -1,0 +1,19 @@
+class MailingPopup{constructor(){if(window.MailingPopup)return window.MailingPopup;this.initialize();}
+initialize(){this.startTime=performance.now();this.firstPopupDelay=15000;this.secondPopupDelay=85000;this.timers={};this.selectors={firstPopup:'.pp[data-pp="mailing-sale"]',secondPopup:'.pp[data-pp="mailing-pop"]',closeBtn:'.pp__close',cart:'#msCart',order:'#msOrder',popups:'.pp'}
+this.elements={firstPopup:document.querySelector(this.selectors.firstPopup),secondPopup:document.querySelector(this.selectors.secondPopup),closeBtns:document.querySelectorAll(this.selectors.closeBtn),cart:document.querySelector(this.selectors.cart),order:document.querySelector(this.selectors.order),popups:document.querySelectorAll(this.selectors.popups)}
+if(this.elements.cart||this.elements.order){return;}
+if(!this.getCookie('mailing_first_popup')){this.setTimer('firstPopup',this.firstPopupDelay);}
+if(this.getCookie('mailing_first_popup')&&!this.getCookie('mailing_second_popup')){this.setTimer('secondPopup',(this.secondPopupDelay+this.firstPopupDelay));}
+if(this.elements.firstPopup){const observer=new MutationObserver((mutations)=>{mutations.forEach((mutation)=>{if(mutation.type==='attributes'&&mutation.attributeName==='class'){if(this.elements.firstPopup.classList.contains('show')&&!this.getCookie('mailing_first_popup')){this.setCookie('mailing_first_popup',true);}
+if(this.elements.secondPopup.classList.contains('show')&&!this.getCookie('mailing_second_popup')){this.setCookie('mailing_second_popup',true);}
+if(!this.elements.firstPopup.classList.contains('show')&&this.getCookie('mailing_first_popup')&&!this.getCookie('mailing_second_popup')){this.startTime=performance.now()-this.firstPopupDelay;this.setTimer('secondPopup',this.secondPopupDelay);}}});});observer.observe(this.elements.firstPopup,{attributes:true});observer.observe(this.elements.secondPopup,{attributes:true});}
+if(typeof jQuery!=='undefined'){$(document).on('af_complete',(e,response)=>{if(response.success){if(response.form.closest(this.selectors.firstPopup)||response.form.closest('.js-form-mailing')){clearTimeout(this.timers['secondPopup']);clearTimeout(this.timers['firstPopup']);}}})}
+window.MailingPopup=this;}
+setTimer(key,time=1000){clearTimeout(this.timers[key]);this.timers[key]=setTimeout(()=>{this.showPopup(key);},time)}
+showPopup(key){this.elements.popups.length&&this.elements.popups.forEach(el=>this.hidePopup(el));const popup=this.elements[key];popup.classList.add('show');document.body.classList.add('noscroll');const endTime=performance.now();const executionTime=Math.round((endTime-this.startTime)/1000);console.log(`Модальное окно ${popup.dataset.pp} открыто через ${executionTime} секунд`);}
+hidePopup(popup){popup.classList.remove('show');document.body.classList.remove('noscroll');}
+setCookie(name,value,options={}){options={path:'/',...options};if(options.expires instanceof Date){options.expires=options.expires.toUTCString();}
+let updatedCookie=encodeURIComponent(name)+"="+encodeURIComponent(value);for(let optionKey in options){updatedCookie+="; "+optionKey;let optionValue=options[optionKey];if(optionValue!==true){updatedCookie+="="+optionValue;}}
+document.cookie=updatedCookie;}
+getCookie(name){let matches=document.cookie.match(new RegExp("(?:^|; )"+name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g,'\\$1')+"=([^;]*)"));return matches?decodeURIComponent(matches[1]):undefined;}}
+document.addEventListener('DOMContentLoaded',()=>{new MailingPopup();})

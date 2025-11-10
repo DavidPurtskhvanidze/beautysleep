@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="182"
+   height="292"
+   viewbox="0 0 182 292"
+   fill="none"
+   version="1.1"
+   id="svg18"
+   sodipodi:docname="neverback-step-2.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <metadata
+     id="metadata22">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1738"
+     inkscape:window-height="886"
+     id="namedview20"
+     showgrid="false"
+     inkscape:zoom="1.019493"
+     inkscape:cx="-49.932939"
+     inkscape:cy="99.043231"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg18" />
+  <g
+     opacity="0.6"
+     id="g9"
+     style="fill:#e0b370;fill-opacity:1">
+    <mask
+       id="mask0"
+       mask-type="alpha"
+       maskUnits="userSpaceOnUse"
+       x="0"
+       y="0"
+       width="182"
+       height="292">
+      <rect
+         width="182"
+         height="292"
+         fill="#F9FAFB"
+         id="rect2" />
+    </mask>
+    <g
+       mask="url(#mask0)"
+       id="g7"
+       style="fill:#e0b370;fill-opacity:1">
+      <path
+         opacity="0.6"
+         d="M-1.03719 295.746V268.691C38.3663 229.842 66.1152 200.428 82.2095 180.449C113.566 141.323 129.244 108.302 129.244 81.3854C129.244 67.7885 125.082 56.5502 116.757 47.6705C108.71 38.7909 97.0552 34.351 81.7933 34.351C69.3063 34.351 58.2067 38.3746 48.4946 46.4218C38.7825 54.469 32.539 65.9848 29.7641 80.9692L1.46022 69.3147C4.79008 48.2255 14.2247 31.5762 29.7641 19.3666C45.3035 7.15713 63.6178 1.05237 84.7069 1.05237C110.236 1.05237 129.938 8.40583 143.812 23.1127C157.687 37.5422 164.624 54.7465 164.624 74.7257C164.624 93.595 159.629 113.574 149.639 134.663C139.927 155.475 127.024 175.315 110.93 194.185C94.8353 212.777 81.932 226.928 72.2199 236.641C62.7853 246.075 52.7957 255.371 42.2511 264.528H176.695V295.746H-1.03719Z"
+         fill="url(#paint0_linear)"
+         id="path5"
+         style="fill:#e0b370;fill-opacity:1" />
+    </g>
+  </g>
+  <defs
+     id="defs16">
+    <linearGradient
+       id="paint0_linear"
+       x1="-9.18373"
+       y1="-346.761"
+       x2="-207.381"
+       y2="-265.423"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.0365419"
+         stop-color="#FFE9ED"
+         id="stop11" />
+      <stop
+         offset="0.75864"
+         stop-color="#B5D0FE"
+         id="stop13" />
+    </linearGradient>
+  </defs>
+</svg>

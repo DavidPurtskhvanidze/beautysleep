@@ -1,0 +1,9 @@
+class Sendsay{constructor(){if(window.Sendsay)return window.Sendsay;this.initialize();}
+initialize(){window.sndsyApiOnReady=window.sndsyApiOnReady||[];window.Sendsay=this;this.eventSource=new EventSource('/assets/components/sendsay/ssehandler.php');this.eventSource.onmessage=(e)=>{const data=JSON.parse(e.data);if(data.error){console.log(data.error);this.eventSource.close();}else{this.sendEvent(data);}}}
+sendEvent(data){window.sndsyApiOnReady.push(()=>{if(data.eventData){sndsyApi.ssecEvent(data.eventName,data.eventData,data.userEmail)}else{sndsyApi.ssecEvent(data.eventName,data.userEmail)}})
+sndsyApi.runQueue();if(data.viewed){const views=this.getCookie('sendsay_views')?this.getCookie('sendsay_views').split(','):[];views.push(data.viewed);this.setCookie('sendsay_views',views.join(','));}}
+setCookie(name,value,options={}){options={path:'/',...options};if(options.expires instanceof Date){options.expires=options.expires.toUTCString();}
+let updatedCookie=encodeURIComponent(name)+"="+encodeURIComponent(value);for(let optionKey in options){updatedCookie+="; "+optionKey;let optionValue=options[optionKey];if(optionValue!==true){updatedCookie+="="+optionValue;}}
+document.cookie=updatedCookie;}
+getCookie(name){let matches=document.cookie.match(new RegExp("(?:^|; )"+name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g,'\\$1')+"=([^;]*)"));return matches?decodeURIComponent(matches[1]):undefined;}}
+const ssInterval=setInterval(()=>{if(typeof window.sndsyApi!=='undefined'){new Sendsay();clearInterval(ssInterval);}},1000)
