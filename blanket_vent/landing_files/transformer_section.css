@@ -1,0 +1,148 @@
+.transformer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #EAEDFF;
+    padding: clamp(16px, calc(64 / 1920* 100vw), 64px) clamp(10px, calc(20 / 1920* 100vw), 20px) clamp(16px, calc(64 / 1920* 100vw), 64px) 0;
+}
+.transformer-section h3 {
+    font-weight: 300;
+    font-size: clamp(24px, calc(32 / 1920* 100vw), 32px);
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #221D1E;
+    margin-bottom: clamp(24px, calc(64 / 1920* 100vw), 64px);
+}
+.transformer-section h3 b {
+    font-weight: 500;
+}
+.transformer-sub-title-mob {
+    display: none;
+}
+.transformer-sub-desc-mob {
+    display: none;
+}
+.transformer-item h4 {
+    font-weight: 500;
+    font-size: clamp(18px, calc(48 / 1920* 100vw), 48px);
+    line-height: 1.4;
+    padding-left: clamp(10px, calc(20 / 1920* 100vw), 20px);
+    text-transform: uppercase;
+    color: #221D1E;
+}
+.transformer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(16px, calc(20 / 1920* 100vw), 20px);
+    margin-bottom: clamp(24px, calc(64 / 1920* 100vw), 64px);
+}
+.transformer-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: clamp(16px, calc(32 / 1920* 100vw), 32px);
+}
+.transformer-picture {
+    border-radius: clamp(15px, calc(32 / 1920* 100vw), 32px);
+    overflow: hidden;
+    display: flex;
+}
+.transformer-video {
+    border-radius: clamp(15px, calc(32 / 1920* 100vw), 32px);
+    overflow: hidden;
+    display: flex;
+}
+.transformer-item .transformer-label {
+    position: absolute;
+    left: clamp(14px, calc(32 / 1920* 100vw), 32px);
+    bottom: clamp(15px, calc(15 / 1920* 100vw), 15px);
+    font-weight: 500;
+    font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #221D1E;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(3px, calc(8 / 1920* 100vw), 8px);
+}
+.transformer-item .transformer-label > span {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 16px;
+    background-color: #F5F5F5;
+    border-radius: clamp(3px, calc(6 / 1920* 100vw), 6px);
+    font-weight: 300;
+    font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
+    line-height: 1;
+    color: #221D1E;
+}
+.transformer-section .button {
+    font-weight: 500;
+    font-size: clamp(14px, calc(18 / 1920 * 100vw), 18px);
+    height: clamp(28px, calc(44 / 1920 * 100vw), 44px);
+    padding: 0 clamp(16px, calc(32 / 1920 * 100vw), 32px);
+    line-height: 1;
+    text-transform: uppercase;
+    color: #221D1E;
+    display: inline-flex;
+}
+.transformer-section  .button>svg {
+    margin-left: 0.4em;
+    margin-right: 0;
+}
+@media (max-width: 768px) {
+    .transformer-section {
+        padding: 16px 10px;
+    }
+    .transformer-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .transformer-section h3 {
+        display: none;
+    }
+    .transformer-sub-title-mob {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: center;
+        text-transform: uppercase;
+        color: #221D1E;
+        margin-bottom: 16px;
+    }
+    .transformer-sub-title-mob b {
+        font-weight: 500;
+    }
+    .transformer-sub-desc-mob {
+        display: inline-block;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 1.4;
+        text-align: center;
+        color: #221D1E;
+    }
+    .transformer-item {
+        gap: 0;
+    }
+    .transformer-item h4 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 24px;
+        padding-left: 0;
+    }
+    .transformer-pillow {
+        display: none;
+    }
+    .transformer-section .button {
+        min-width: 165px;
+    }
+    .transformer-item .transformer-label > span {
+        padding: 3px 10px;
+    }
+}
