@@ -39,6 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// --------updateCounters
 function updateCounters() {
     const containers = document.querySelectorAll('.slide-product-color-size');
     const isMobile = window.innerWidth < 767;
@@ -70,7 +72,7 @@ function updateElementGroup(container, className, maxVisible, counterClass) {
     // Если элементов больше максимального количества
     if (elements.length > maxVisible) {
         // Скрываем лишние элементы
-        for (let i = maxVisible - 1; i < elements.length; i++) {
+        for (let i = maxVisible - (className !== 'size' ? 1:0); i < elements.length; i++) {
             elements[i].style.display = 'none';
         }
 
@@ -81,7 +83,7 @@ function updateElementGroup(container, className, maxVisible, counterClass) {
         counter.textContent = `+${hiddenCount}`;
 
         // Вставляем счетчик вместо последнего видимого элемента
-        if (elements[maxVisible - 1]) {
+        if (elements[maxVisible - 1] && className !== 'size') {
             elements[maxVisible - 1].after(counter);
         }
     }
@@ -92,6 +94,7 @@ document.addEventListener('DOMContentLoaded', updateCounters);
 
 // Запускаем при изменении размера окна
 window.addEventListener('resize', updateCounters);
+// --------updateCounters
 
 function updateHeaderHeight() {
     // Проверяем ширину окна
