@@ -1,0 +1,3208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style class="vjs-styles-defaults">
+        .video-js {
+            width: 300px;
+            height: 150px;
+        }
+
+        .vjs-fluid {
+            padding-top: 56.25%
+        }
+    </style>
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <base href=".">
+    <title>Университет Beauty Sleep</title>
+    <meta name="description" content="Описание">
+    <meta property="og:title" content="">
+
+    <style>
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('../../files/fonts/CeraPro-Regular.woff2') format('woff2'),
+            url('../../files/fonts/CeraPro-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('../../files/fonts/CeraPro-Bold.woff2') format('woff2'),
+            url('../../files/fonts/CeraPro-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('../../files/fonts/CeraPro-Medium.woff2') format('woff2'),
+            url('../../files/fonts/CeraPro-Medium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('../../files/fonts/CeraPro-Light.woff2') format('woff2'),
+            url('../../files/fonts/CeraPro-Light.woff') format('woff');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+
+    <link rel="stylesheet" href="../../files/normalize.css">
+    <link rel="stylesheet" href="../../files/swiper.min.css">
+    <link href="../../files/video-js.min.css" rel="stylesheet">
+    <link href="../../files/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../files/css_styles.css">
+    <link rel="stylesheet" href="../../files/aos.css">
+    <link rel="stylesheet" href="../../files/pnotify.custom.css">
+    <link rel="stylesheet" href="../../files/css_common.css">
+    <link rel="stylesheet" href="../files/style.css">
+
+    <script src="../../files/jquery-3.4.1.min.js"></script>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+            if ("IntersectionObserver" in window) {
+                let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.srcset = lazyImage.dataset.srcset;
+                            lazyImage.classList.remove("lazy");
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+                lazyImages.forEach(function (lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            } else {
+                // Possibly fall back to event handlers here
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+            if ("IntersectionObserver" in window) {
+                var lazyVideoObserver = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach(function (video) {
+                        if (video.isIntersecting) {
+                            for (var source in video.target.children) {
+                                var videoSource = video.target.children[source];
+                                if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                                    videoSource.src = videoSource.dataset.src;
+                                }
+                            }
+                            video.target.load();
+                            video.target.classList.remove("lazy");
+                            lazyVideoObserver.unobserve(video.target);
+                        }
+                    });
+                });
+                lazyVideos.forEach(function (lazyVideo) {
+                    lazyVideoObserver.observe(lazyVideo);
+                });
+            }
+        });
+    </script>
+
+
+
+    <link rel="stylesheet" href="../../files/index(1).css" type="text/css">
+    <link rel="stylesheet" href="../../files/default(1).css" type="text/css">
+    <link rel="stylesheet" href="../../files/university.css" type="text/css">
+    <link rel="stylesheet" href="../../files/header.css">
+
+    <style>
+        .SmartCaptcha-Overlay {
+            position: fixed;
+            z-index: 9999999;
+            top: -10000px;
+            left: -10000px;
+
+            width: 100%;
+            width: var(--smart-captcha-doc-width, 100%);
+            height: 100%;
+            height: var(--smart-captcha-doc-height, 100%);
+            margin: 0;
+            padding: 0;
+
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .SmartCaptcha-Overlay.SmartCaptcha-Overlay_visible {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .SmartCaptcha-Overlay.SmartCaptcha-Overlay_no_background {
+            background: none;
+        }
+
+        .SmartCaptcha-Overlay .SmartCaptcha-Spin {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+
+            margin: auto;
+
+            transform: translateY(-50%);
+        }
+    </style>
+    <style>
+        .SmartCaptcha-Spin {
+            display: none;
+            visibility: hidden;
+
+            box-sizing: border-box;
+
+            border: 2px solid transparent;
+            border-radius: 50%;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+        }
+
+        .SmartCaptcha-Spin::after {
+            visibility: hidden;
+
+            content: '\00A0';
+        }
+
+        .SmartCaptcha-Overlay_visible.SmartCaptcha-Overlay_show_spinner .SmartCaptcha-Spin {
+            display: inline-block;
+            visibility: visible;
+
+            width: 50px;
+            height: 50px;
+
+            border-top-color: #5282FF;
+            border-left-color: #5282FF;
+
+            animation: islands-spin 1s .21s infinite linear;
+
+            backface-visibility: hidden;
+        }
+
+        .SmartCaptcha-Overlay_visible.SmartCaptcha-Overlay_show_spinner .SmartCaptcha-Spin {
+            border-top-color: var(--spin-view-default-border-color, #5282FF);
+            border-left-color: var(--spin-view-default-border-color, #5282FF);
+        }
+
+        @keyframes islands-spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <style>
+        .smart-captcha {
+            min-width: 300px;
+            height: 102px;
+        }
+
+        .smart-captcha_invisible {
+            height: 0;
+        }
+    </style>
+
+    <!--    <style>-->
+    <!--        html, body {-->
+    <!--            overflow: unset !important;-->
+    <!--        }-->
+    <!--    </style>-->
+
+</head>
+
+<body>
+
+<header class="header" style="top: 0px;">
+    <div class="header__content">
+        <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-autoheight" data-site-carousel="header">
+            <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-6544px, 0px, 0px); height: 15px;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="2" style="width: 1636px;">
+                <span class="header__slide">Для обеспечения быстрой работы сайта, пожалуйста, отключите VPN</span>
+            </div>
+                <div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 1636px;">
+                    <a href="products/" class="header__slide">-10% НА ВСЕ ИЗДЕЛИЯ. ПРОМОКОД: HAPPY10</a>
+                </div>
+                <div class="swiper-slide" data-swiper-slide-index="1" style="width: 1636px;">
+                    <span class="header__slide">Покупайте сейчас и оплачивайте частями в течение нескольких месяцев</span>
+                </div>
+                <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="2" style="width: 1636px;">
+                    <span class="header__slide">Для обеспечения быстрой работы сайта, пожалуйста, отключите VPN</span>
+                </div>
+                <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" style="width: 1636px;">
+                    <a href="products/" class="header__slide">-10% НА ВСЕ ИЗДЕЛИЯ. ПРОМОКОД: HAPPY10</a>
+                </div></div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        <div class="header__middle">
+            <div class="header__middle-col">
+                <a href="tel:88002224624" class="header__phone">
+                    <img loading="lazy" width="18" height="18" src="../../files/phone.svg" alt="Телефон горячей линии">
+                    <span class="header__phone-text">8 (800) 222 46 24</span>
+                </a>
+                <button class="header__nav-switch" data-site-switch="#main-nav" data-site-noscroll="1" data-site-backdrop="1">
+                    <span class="header__line"></span>
+                    <span class="header__line"></span>
+                    <span class="header__line"></span>
+                </button>
+            </div>
+            <div class="header__middle-col">
+                <a class="header__logo-link">
+                    <img loading="lazy" width="356" height="45" class="header__logo" src="../../files/logo.svg" alt="Beauty Sleep">
+                </a>
+            </div>
+            <div class="header__middle-col">
+                <div class="header__link-group">
+                    <a href="products/" class="header__shop-link">
+                        <img loading="lazy" src="../../files/dot-grid.svg" alt="Онлайн магазин">
+                        <span class="header__link-text">Купить</span>
+                    </a>
+                    <a href="basket" class="header__cart-link ">
+    <span class="header__cart-icon-wrap">
+        <img loading="lazy" class="header__cart-icon" src="../../files/cart_new_icon.svg" width="18" height="18" alt="Shopping cart">
+        <span class="header__cart-counter">0</span>
+    </span>
+                        <span class="header__link-text">Корзина</span>
+                    </a>                </div>
+            </div>
+        </div>
+        <nav class="header__nav-wrap" id="main-nav">
+            <div class="header__mobile" style="padding: 1.5rem 0.5rem;">
+                <div class="header__mobile-col" style="align-items: flex-start; justify-content: flex-start;">
+                    <a href="products/" class="header__shop-link">
+                        <img loading="lazy" data-site-lazy="../../files/dot-grid.svg" data-site-svg="" alt="Онлайн магазин">
+                        <span class="header__link-text">Купить</span>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav">
+                <ul class="header__nav">
+                    <li class="header__nav-item" data-site-switch="#submenu-0" data-site-hover="(min-width: 1280px)">
+                        <button class="header__nav-link ">
+                            <span class="header__nav-link-text">Подушки</span>
+                            <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g opacity="0.500000">
+                                    <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+                                </g>
+                            </svg>
+                        </button>
+                        <div id="submenu-0" class="header__submenu-wrap">
+                            <ul class="header__submenu header__submenu_special">
+                                <li class="header__submenu-item">
+                                    <a href="omnia" class="header__submenu-link">
+                                        <div class="header__submenu-img-wrap">
+                                            <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/pillow_omnia02.svg" alt="Omnia">
+                                        </div>
+                                        <span class="header__submenu-link-text">Omnia</span>
+                                    </a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="copper" class="header__submenu-link">
+                                        <div class="header__submenu-img-wrap">
+                                            <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/pillow_copper02.svg" alt="Omnia Copper Blend">
+                                        </div>
+                                        <span class="header__submenu-link-text">Omnia Copper Blend</span>
+                                    </a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="hyaluron" class="header__submenu-link">
+                                        <div class="header__submenu-img-wrap">
+                                            <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/pillow_Hyaluronic.svg" alt="Omnia Hyaluron">
+                                        </div>
+                                        <span class="header__submenu-link-text">Omnia Hyaluron</span>
+                                    </a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="cooling" class="header__submenu-link">
+                                        <div class="header__submenu-img-wrap">
+                                            <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/pillow_cooling02.svg" alt="Omnia Cooling">
+                                        </div>
+                                        <span class="header__submenu-link-text">Omnia Cooling</span>
+                                    </a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="aula" class="header__submenu-link">
+                                        <div class="header__submenu-img-wrap">
+                                            <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/pillow_aula02.svg" alt="Aula">
+                                        </div>
+                                        <span class="header__submenu-link-text">Aula</span>
+                                    </a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="products/?category=437" class="header__submenu-link">
+                                        <div class="header__submenu-img-wrap">
+                                            <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/somia_ico02.svg" alt="Подушки для мужчин&nbsp;и&nbsp;детей">
+                                        </div>
+                                        <span class="header__submenu-link-text">Подушки для мужчин&nbsp;и&nbsp;детей</span>
+                                    </a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="pillow-for-decollete" class="header__submenu-link">
+                                        <div class="header__submenu-img-wrap">
+                                            <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/pillow_decollete02.svg" alt="Подушка для декольте">
+                                        </div>
+                                        <span class="header__submenu-link-text">Подушка для декольте</span>
+                                    </a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="products/?category=25" class="header__submenu-link">
+                                        <div class="header__submenu-img-wrap">
+                                            <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/pillow_case02.svg" alt="Наволочки">
+                                        </div>
+                                        <span class="header__submenu-link-text">Наволочки</span>
+                                    </a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="sleep-wrinkles" class="header__submenu-link">
+                                        <div class="header__submenu-img-wrap">
+                                            <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/sleep02.svg" alt="Beauty - сон">
+                                        </div>
+                                        <span class="header__submenu-link-text">Beauty - сон</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li><li class="header__nav-item" data-site-switch="#submenu-1" data-site-hover="(min-width: 1280px)">
+                    <button class="header__nav-link ">
+                        <span class="header__nav-link-text">Одеяла</span>
+                        <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g opacity="0.500000">
+                                <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <div id="submenu-1" class="header__submenu-wrap">
+                        <ul class="header__submenu ">
+                            <li class="header__submenu-item">
+                                <a href="weighted-blanket" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/blanket02.svg" alt="Утяжеленное одеяло ">
+                                    </div>
+                                    <span class="header__submenu-link-text">Утяжеленное одеяло </span>
+                                </a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="airmesh-blanket" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/blanket002.svg" alt="Одеяло с вентиляционными вставками">
+                                    </div>
+                                    <span class="header__submenu-link-text">Одеяло с вентиляционными вставками</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li><li class="header__nav-item" data-site-switch="#submenu-2" data-site-hover="(min-width: 1280px)">
+                    <button class="header__nav-link ">
+                        <span class="header__nav-link-text">Постельное белье</span>
+                        <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g opacity="0.500000">
+                                <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <div id="submenu-2" class="header__submenu-wrap">
+                        <ul class="header__submenu ">
+                            <li class="header__submenu-item">
+                                <a href="products/?category=481" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/linen02.svg" alt="Постельное белье">
+                                        <img loading="lazy" width="55" height="55" src="../../files/menu/new.svg" alt="" class="header__submenu-img-new">
+                                    </div>
+                                    <span class="header__submenu-link-text">Постельное белье</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li><li class="header__nav-item" data-site-switch="#submenu-3" data-site-hover="(min-width: 1280px)">
+                    <button class="header__nav-link ">
+                        <span class="header__nav-link-text">Одежда и аксессуары из шелка</span>
+                        <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g opacity="0.500000">
+                                <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <div id="submenu-3" class="header__submenu-wrap">
+                        <ul class="header__submenu ">
+                            <li class="header__submenu-item">
+                                <a href="silk-clothes/?category=all" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/all_products02.svg" alt="Все товары из шелка">
+                                    </div>
+                                    <span class="header__submenu-link-text">Все товары из шелка</span>
+                                </a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="silk-clothes/?category=263-452-261-512-259-508-536-505-504" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/clothes02.svg" alt="Одежда">
+                                    </div>
+                                    <span class="header__submenu-link-text">Одежда</span>
+                                </a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="silk-clothes/?category=267-266-268-269-270-280" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/accessories02.svg" alt="Аксессуары">
+                                    </div>
+                                    <span class="header__submenu-link-text">Аксессуары</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li><li class="header__nav-item" data-site-switch="#submenu-4" data-site-hover="(min-width: 1280px)">
+                    <button class="header__nav-link ">
+                        <span class="header__nav-link-text">Ароматы для сна</span>
+                        <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g opacity="0.500000">
+                                <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <div id="submenu-4" class="header__submenu-wrap">
+                        <ul class="header__submenu ">
+                            <li class="header__submenu-item">
+                                <a href="scents-for-sleep" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/aroma02.svg" alt="Ароматы для сна">
+                                    </div>
+                                    <span class="header__submenu-link-text">Ароматы для сна</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li><li class="header__nav-item" data-site-switch="#submenu-5" data-site-hover="(min-width: 1280px)">
+                    <button class="header__nav-link ">
+                        <span class="header__nav-link-text">Идеи подарков</span>
+                        <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g opacity="0.500000">
+                                <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <div id="submenu-5" class="header__submenu-wrap">
+                        <ul class="header__submenu ">
+                            <li class="header__submenu-item">
+                                <a href="products/?category=287" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/gift_card02.svg" alt="Подарочные сертификаты">
+                                    </div>
+                                    <span class="header__submenu-link-text">Подарочные сертификаты</span>
+                                </a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="products/?category=325" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/gift02.svg" alt="Подарочные наборы">
+                                    </div>
+                                    <span class="header__submenu-link-text">Подарочные наборы</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li><li class="header__nav-item" data-site-switch="#submenu-6" data-site-hover="(min-width: 1280px)">
+                    <button class="header__nav-link ">
+                        <span class="header__nav-link-text">Наша наука</span>
+                        <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g opacity="0.500000">
+                                <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <div id="submenu-6" class="header__submenu-wrap">
+                        <ul class="header__submenu ">
+                            <li class="header__submenu-item">
+                                <a href="our-science" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/expert02.svg" alt="Клинические исследования">
+                                    </div>
+                                    <span class="header__submenu-link-text">Клинические исследования</span>
+                                </a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="beauty-sleep-university/" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/univer.svg" alt="Beauty - университет">
+                                    </div>
+                                    <span class="header__submenu-link-text">Beauty - университет</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li><li class="header__nav-item" data-site-switch="#submenu-7" data-site-hover="(min-width: 1280px)">
+                    <button class="header__nav-link ">
+                        <span class="header__nav-link-text">Покупателям</span>
+                        <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g opacity="0.500000">
+                                <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <div id="submenu-7" class="header__submenu-wrap">
+                        <ul class="header__submenu ">
+                            <li class="header__submenu-item">
+                                <a href="dostavka-i-oplata" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/delivery02.svg" alt="Доставка и оплата">
+                                    </div>
+                                    <span class="header__submenu-link-text">Доставка и оплата</span>
+                                </a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="garantia-i-vozvrat" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/return02.svg" alt="Гарантия и возврат">
+                                    </div>
+                                    <span class="header__submenu-link-text">Гарантия и возврат</span>
+                                </a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="for-customers/contacts" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/contacts02.svg" alt="Контакты">
+                                    </div>
+                                    <span class="header__submenu-link-text">Контакты</span>
+                                </a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="o-kompanii" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/about02.svg" alt="О компании">
+                                    </div>
+                                    <span class="header__submenu-link-text">О компании</span>
+                                </a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="reviews" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/review02.svg" alt="Отзывы">
+                                    </div>
+                                    <span class="header__submenu-link-text">Отзывы</span>
+                                </a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="question" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/faq02.svg" alt="Вопросы">
+                                    </div>
+                                    <span class="header__submenu-link-text">Вопросы</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>                </ul>
+                <div class="header__mobile" style="align-items: flex-start;justify-content: flex-start; row-gap: 1rem;">
+
+                    <div class="header__mobile-col" style="align-items: flex-start;justify-content: flex-start;">
+                        <a href="tel:88002224624" class="header__mobile-link">
+                            <img loading="lazy" width="20" height="20" src="../../files/phone.svg" alt="Hotline phone">
+                            <span class="header__mobile-link-text">8 (800) 222 46 24</span>
+                        </a>
+                    </div>
+                    <div class="header__mobile-col" style="align-items: flex-start;justify-content: flex-start;">
+                        <a href="https://api.whatsapp.com/send?phone=+79303844624" class="header__mobile-link">
+                            <img loading="lazy" width="20" height="20" src="../../files/socials/wa.svg" alt="Whatsapp phone">
+                            <span class="header__mobile-link-text">+7 (930) 384-46-24</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main role="main">
+    <div class="post-page-wrapper">
+        <article class="post-container">
+
+            <!--  post-top-block-->
+            <div class="post-top-block">
+                <div class="post-top-back-button">
+                    <button>
+            <span>
+              Все статьи
+            </span>
+                    </button>
+                </div>
+                <div class="post-top-date-views">
+                    <div class="post-date">
+                        01.01.2025
+                    </div>
+                    <div class="post-views">
+                        <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8.98389" y="8.13086" width="5.73913" height="5.73913" rx="2.86957" stroke="#4F6FC1"/>
+                            <path d="M3.39413 8.76465C8.23814 4.32431 15.673 4.3243 20.517 8.76465L22.9556 11L20.517 13.2354C15.673 17.6757 8.23814 17.6757 3.39413 13.2354L0.955566 11L3.39413 8.76465Z" stroke="#4F6FC1" stroke-linejoin="round"/>
+                        </svg>
+                        <span>
+              521
+            </span>
+                    </div>
+                </div>
+            </div>
+            <!--  post-top-block-->
+
+            <!--post-hero-text-->
+            <div class="post-hero-text">
+                <h1>
+                    BEAUTY-СОН — это
+                </h1>
+            </div>
+            <!--post-hero-text-->
+
+            <!--post-num-list-->
+            <div class="post-num-list post-block-96-64-margin-bottom">
+                <div class="post-num-list-item">
+                    <div class="num">
+                        <svg width="55" height="100" viewBox="0 0 55 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g style="mix-blend-mode:multiply" opacity="0.7">
+                                <path d="M45.2412 89.5509H16.212C16.1697 89.1846 16.1486 88.8794 16.1486 88.6353C16.1486 87.9436 16.2964 87.4757 16.5922 87.2315C16.888 86.9467 17.8177 86.6618 19.3811 86.377C21.8319 85.8887 23.8178 85.2987 25.3391 84.607C25.7616 83.7118 25.9729 82.8777 25.9729 82.1045V78.3204C25.9729 77.8728 26.0362 75.818 26.163 72.1558C26.2053 70.7724 26.2475 64.7909 26.2898 54.2115L26.4166 39.8682L26.2898 31.5064C26.2898 30.2857 26.332 26.4405 26.4166 19.9708C16.8247 26.5626 11.5639 29.8585 10.6342 29.8585C10.2962 29.8585 9.93706 29.6957 9.55672 29.3702C9.1765 29.004 8.98633 28.6581 8.98633 28.3326C8.98633 27.9257 9.1342 27.6002 9.42994 27.356C10.0215 26.827 11.4371 25.9522 13.6766 24.7315C14.0146 24.5687 15.4725 23.4701 18.05 21.4356C22.1488 18.1397 25.1489 15.5559 27.0504 13.6841C28.9518 11.8123 30.1138 10.7544 30.5365 10.5103C31.3815 10.4696 32.0365 10.4492 32.5013 10.4492C33.5999 10.4492 34.276 10.6323 34.5296 10.9986C34.8253 11.3241 34.9732 12.5652 34.9732 14.7217L34.5296 69.104V74.4752C34.5296 75.7772 34.5084 77.0996 34.4662 78.4425C34.4239 79.7445 34.4028 80.7008 34.4028 81.3111C34.4028 82.7759 34.593 83.7321 34.9732 84.1797C35.2267 84.4645 36.0085 84.8308 37.3184 85.2784L41.6284 86.1329C43.4876 86.5805 44.5017 86.8857 44.6708 87.0484C45.0933 87.4146 45.3046 87.9842 45.3046 88.7573L45.2412 89.5509Z" fill="url(#paint0_linear_994_29405)"/>
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_994_29405" x1="-193.374" y1="-111.368" x2="-283.863" y2="85.9645" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.0365419" stop-color="#FFE9ED"/>
+                                    <stop offset="0.75864" stop-color="#B5D0FE"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="info">
+                        «CОН БЕЗ МОРЩИН»<br class="br-desk-tablet">
+                        С ЗАБОТОЙ О КОЖЕ
+                    </div>
+                </div>
+                <div class="post-num-list-item">
+                    <div class="num">
+                        <svg width="57" height="100" viewBox="0 0 57 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g style="mix-blend-mode:multiply" opacity="0.7">
+                                <path d="M51.6367 89.5509C45.5332 89.3067 37.3545 89.1846 27.1005 89.1846L13.856 89.5509L7.93555 89.3678L3.23586 89.5509C2.74753 89.5102 2.03544 89.4084 1.09961 89.2457C1.83201 87.5367 2.76784 85.9701 3.90721 84.546C7.28451 80.3956 12.2284 75.0448 18.7388 68.4937C27.8534 59.3384 33.8551 52.1566 36.7441 46.9483C39.6332 41.6992 41.0776 36.7758 41.0776 32.1778C41.0776 27.8646 39.6127 24.2432 36.683 21.3135C33.7534 18.3838 30.1523 16.919 25.8798 16.919C23.3164 16.919 20.8343 17.5293 18.4336 18.7501C16.0328 19.9301 14.1001 21.4356 12.6352 23.2666C11.6994 24.4467 10.4584 26.8067 8.91211 30.3467C8.05763 32.2998 7.54899 33.3578 7.38617 33.5206C7.14211 33.8054 6.85721 33.9478 6.53169 33.9478C6.20617 33.9478 5.88065 33.7851 5.55513 33.4595C5.27034 33.0933 5.12794 32.6457 5.12794 32.1167C5.12794 30.2857 6.04346 27.356 7.87451 23.3277C9.74628 19.2993 12.4725 16.1459 16.0533 13.8672C19.6746 11.5886 23.8658 10.4492 28.6265 10.4492C34.852 10.4492 40.04 12.4838 44.1904 16.5528C48.3815 20.5811 50.477 25.4029 50.477 31.0181C50.477 35.4534 49.0528 39.9699 46.2046 44.568C43.3563 49.1253 36.8051 56.1239 26.5513 65.564C23.174 68.6565 20.7733 70.9352 19.3491 72.4C17.9249 73.8648 15.0563 77.0386 10.7432 81.9214C16.9688 82.1656 22.6246 82.2877 27.711 82.2877C28.8095 82.2877 30.0099 82.2469 31.312 82.1656C33.7127 82.0842 35.1165 82.0435 35.5235 82.0435L44.0073 82.2266C44.9432 82.2266 45.8994 81.779 46.876 80.8838C47.8525 79.9887 49.1749 77.4659 50.8433 73.3155L52.3081 73.2544C52.5116 73.2544 52.8167 73.2748 53.2236 73.3155C53.4271 73.7223 53.5288 74.0276 53.5288 74.231L53.4067 74.7193C53.0812 75.8993 52.7964 78.0559 52.5522 81.189C52.3895 83.0201 52.0843 85.8074 51.6367 89.5509Z" fill="url(#paint0_linear_994_29411)"/>
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_994_29411" x1="-185.796" y1="-106.547" x2="-271.132" y2="81.2131" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.0365419" stop-color="#FFE9ED"/>
+                                    <stop offset="0.75864" stop-color="#B5D0FE"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="info">
+                        КРЕПКИЙ СОН И ПОЛНОЕ<br class="br-desk-tablet">
+                        РАССЛАБЛЕНИЕ
+                    </div>
+                </div>
+                <div class="post-num-list-item">
+                    <div class="num">
+                        <svg width="51" height="100" viewBox="0 0 51 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g style="mix-blend-mode:multiply" opacity="0.7">
+                                <path d="M8.00583 27.417L5.99167 26.3183C8.5551 20.0928 11.6069 15.7185 15.147 13.1958C18.687 10.6323 22.817 9.35059 27.5371 9.35059C31.9316 9.35059 35.4514 10.3271 38.0961 12.2803C42.0431 15.21 44.0166 18.5058 44.0166 22.1679C44.0166 25.1383 42.9993 28.1291 40.9648 31.1401C38.971 34.1513 35.4514 37.5284 30.4057 41.272L31.8705 41.2109C35.0444 41.2109 38.0961 42.0248 41.0258 43.6523C43.9963 45.2393 46.3359 47.7417 48.0449 51.1597C49.7539 54.537 50.6083 58.1788 50.6083 62.085C50.6083 69.9381 47.7194 76.6724 41.9414 82.2876C36.2041 87.8622 28.8799 90.6494 19.9688 90.6494C13.2142 90.6494 8.22958 89.6728 5.0151 87.7197C3.26542 86.7025 2.39062 85.4207 2.39062 83.8745C2.39062 83.02 2.73646 82.2469 3.42823 81.5552C4.16063 80.8634 5.05584 80.5176 6.11375 80.5176C7.45656 80.5176 9.08406 81.25 10.9966 82.7148C15.5131 86.1735 19.4398 87.9028 22.7764 87.9028C27.8219 87.9028 32.2978 85.787 36.2041 81.5552C40.1103 77.2827 42.0634 71.9117 42.0634 65.4419C42.0634 60.0708 40.741 55.6763 38.0961 52.2583C35.492 48.7997 32.1757 47.0703 28.1474 47.0703C25.1364 47.0703 22.0032 48.4945 18.748 51.3428L17.2831 48.9014C19.3177 47.1517 21.1488 45.6665 22.7764 44.4458C27.7405 40.8244 31.4433 37.264 33.8847 33.7647C35.6344 31.2419 36.5093 29.0243 36.5093 27.1118C36.5093 23.8973 35.3699 21.1915 33.0912 18.9942C30.8126 16.7561 27.8219 15.6372 24.1191 15.6372C18.0156 15.6372 12.6445 19.5638 8.00583 27.417Z" fill="url(#paint0_linear_994_29417)"/>
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_994_29417" x1="-183.945" y1="-112.1" x2="-277.733" y2="81.2274" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.0365419" stop-color="#FFE9ED"/>
+                                    <stop offset="0.75864" stop-color="#B5D0FE"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="info">
+                        ЭСТЕТИЧЕСКОЕ<br class="br-desk-tablet">
+                        НАСЛАЖДЕНИЕ
+                    </div>
+                </div>
+                <div class="post-num-list-item">
+                    <div class="num">
+                        <svg width="55" height="100" viewBox="0 0 55 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_994_29423)">
+                                <g style="mix-blend-mode:multiply" opacity="0.7">
+                                    <path d="M38.5546 9.47266H41.3622C41.3216 10.7341 41.3012 11.4868 41.3012 11.7309L41.4843 20.7031L41.1181 28.7598L41.3622 37.732V44.812L41.4843 54.4555C41.4843 55.9612 41.4436 58.2398 41.3622 61.2915L42.644 61.3525H46.9774L51.1279 61.4135L54.5459 61.2915C54.6272 62.5529 54.6679 63.4888 54.6679 64.0992C54.6679 64.7095 54.6272 65.6453 54.5459 66.9068C52.0231 67.0289 50.6599 67.0898 50.4565 67.0898L47.4047 67.0289H44.9633C44.3122 67.0289 43.1119 66.9881 41.3622 66.9068C41.2809 72.6847 41.2809 80.3548 41.3622 89.917C41.1181 90.1611 40.8536 90.3239 40.5688 90.4053L36.7846 90.5273C35.9708 90.5273 34.7297 90.4867 33.0615 90.4053C33.1835 85.6039 33.2445 82.1655 33.2445 80.0903C33.2445 78.2593 33.2039 76.5909 33.1226 75.0854C33.0005 72.3185 32.9394 70.7316 32.9394 70.3247C32.9394 69.5923 32.9801 68.4529 33.0615 66.9068C31.3524 67.1102 30.0301 67.2119 29.0942 67.2119C28.6059 67.2119 28.0566 67.1916 27.4462 67.1508C23.3365 66.9474 21.0172 66.8457 20.4883 66.8457C19.9592 66.8457 18.6571 66.9881 16.582 67.2729L10.2954 66.9068L6.87734 67.0898L4.55807 66.7237L1.62839 67.334L1.07901 66.9068C0.997656 66.0116 0.957031 65.3402 0.957031 64.8926C0.957031 64.445 0.997656 63.7737 1.07901 62.8784C2.21839 61.3729 4.31391 58.3211 7.36568 53.7231L19.2676 36.4502C22.1972 32.0964 24.659 28.6377 26.6528 26.0742C28.6466 23.5107 30.6201 20.7642 32.5732 17.8345C34.5263 14.8641 36.5202 12.0769 38.5546 9.47266ZM33.0615 61.2915L33.1226 51.2818L33.0615 43.3472V22.9004C29.7248 27.2949 25.0862 33.9477 19.1455 42.8589C12.3502 53.0315 8.32193 59.1756 7.06047 61.2915C8.85089 61.2101 10.1936 61.1695 11.0888 61.1695L27.8124 61.4135C29.0332 61.4135 30.7829 61.3729 33.0615 61.2915Z" fill="url(#paint0_linear_994_29423)"/>
+                                </g>
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_994_29423" x1="-187.867" y1="-111.978" x2="-280.572" y2="82.7021" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.0365419" stop-color="#FFE9ED"/>
+                                    <stop offset="0.75864" stop-color="#B5D0FE"/>
+                                </linearGradient>
+                                <clipPath id="clip0_994_29423">
+                                    <rect width="54" height="100" fill="white" transform="translate(0.832031)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="info">
+                        ПРЕМИАЛЬНЫЕ<br class="br-desk-tablet">
+                        АКСЕССУАРЫ
+                    </div>
+                </div>
+            </div>
+            <!--post-num-list-->
+
+            <div class="post-block-two-tiles post-block-96-64-margin-bottom">
+                <div class="">
+                    <h3>
+                        ЧТО ТАКОЕ
+                        МОРЩИНЫ СНА?
+                    </h3>
+                    <p>
+                        Это специфические заломы, вызванные деформацией кожи
+                        при контакте с подушкой во время сна на боку или животе
+                    </p>
+                    <p>
+                        С возрастом такие заломы не исчезают по утрам и превращаются
+                        в постоянные морщины
+                    </p>
+                    <p style="margin-bottom: 16px">
+                        Часто кожа деформируется по линиям мимических морщин, усиливая
+                        их проявление
+                    </p>
+                    <div class="post-arrow-info">
+                        <div class="text">
+                            Посмотрите, <b class="post-text-uppercase">насколько сильно<br class="br-mobile"> деформируется наша
+                            кожа</b><br class="br-mobile"> при контакте с подушкой!
+                        </div>
+                        <img src="files/images/arrow.jpg" alt="">
+                    </div>
+                </div>
+                <picture class="post-block-img-fill post-tablet-10-margin-bottom">
+                    <source srcset="files/images/what-are-sleep-wrinkles-mob.webp" media="(max-width: 768px)" type="image/webp">
+                    <source srcset="files/images/what-are-sleep-wrinkles.webp" type="image/webp">
+
+                    <img src="files/images/what-are-sleep-wrinkles.webp" alt="">
+                </picture>
+            </div>
+
+            <!--post-big-title-->
+            <div class="post-big-title post-big-title-simple post-block-32-16-margin-bottom">
+                <h3 class="post-big-title-text">
+                    ЧТО ВАЖНО ЗНАТЬ О ТИПАХ МОРЩИН?
+                </h3>
+            </div>
+            <p class="post-text-center post-block-32-16-margin-bottom">
+                Мы считаем мимические морщины главным врагом молодости кожи. Но далеко не все морщины на нашем лице обусловлены мимикой.
+            </p>
+            <!--post-big-title-->
+
+            <div class="post-block-two-tiles post-block-194-64-margin-bottom">
+                <div class="post-img-top-text">
+                    <div class="info">
+                        <h4>
+                            МИМИЧЕСКИЕ МОРЩИНЫ
+                        </h4>
+                        <p>
+                            Возникают при повторяющихся сокращениях мышц лица
+                        </p>
+                    </div>
+                    <picture>
+                        <source srcset="files/images/facial-wrinkles-mob.webp" media="(max-width: 768px)" type="image/webp">
+                        <source srcset="files/images/facial-wrinkles.webp" type="image/webp">
+
+                        <img src="files/images/facial-wrinkles.webp" alt="">
+                    </picture>
+                </div>
+                <div class="post-img-top-text">
+                    <div class="info">
+                        <h4>
+                            МОРЩИНЫ СНА
+                        </h4>
+                        <p>
+                            Вызваны повторяющимся сдавливанием кожи<br class="br-desk-tablet">
+                            лица при сне на боку или животе
+                        </p>
+                    </div>
+                    <picture>
+                        <source srcset="files/images/sleep-wrinkles-mob.webp" media="(max-width: 768px)" type="image/webp">
+                        <source srcset="files/images/sleep-wrinkles.webp" type="image/webp">
+
+                        <img src="files/images/sleep-wrinkles.webp" alt="">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="post-block-desktop-divider">
+                <div class="post-big-title post-big-title-simple post-block-32-16-margin-bottom">
+                    <h3 class="post-big-title-text">
+                        ВАЖНО
+                    </h3>
+                </div>
+                <div class="post-block-two-tiles post-block-194-64-margin-bottom">
+                    <div class="post-important">
+                        <img src="files/images/atention.svg" alt="">
+                        <div class="info">
+                            <h3>
+                                МОРЩИНЫ СНА МОГУТ УСИЛИВАТЬ<br class="br-desk-tablet">
+                                ВИДИМОСТЬ МИМИЧЕСКИХ МОРЩИН
+                            </h3>
+                            <p>
+                                так как часто кожа сминается по уже существующим сгибам
+                                мимических морщин. Особенно уязвима нежная кожа вокруг глаз
+                                и губ.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="post-important">
+                        <img src="files/images/atention.svg" alt="">
+                        <div class="info">
+                            <h3>
+                                МОРЩИНЫ СНА, КАК ПРАВИЛО,<br class="br-desk-tablet">
+                                РАСПОЛОЖЕНЫ ВЕРТИКАЛЬНО,
+                            </h3>
+                            <p>
+                                но поскольку лица у нас неодинаковые и спим мы по-разному,
+                                то заломы могут быть также и горизонтальными (особенно в области
+                                глаз).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-block-two-tiles post-block-96-64-margin-bottom">
+                <h3 class="post-tablet-txt-center">
+                    КОСМЕТОЛОГИЧЕСКИЕ<br>
+                    ПРОЦЕДУРЫ ПРОТИВ<br>
+                    МОРЩИН
+                </h3>
+                <div class="post-icon-items">
+                    <div class="item">
+                        <img src="files/images/procedure-ico-1.svg" alt="">
+                        <div class="info">
+                            В настоящее время мимические морщины с успехом
+                            корректируются препаратами на основе
+                            ботулотоксина (Botox, Disport, Xeomin), а также —
+                            филлерами на основе гиалуроновой кислоты.
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="files/images/procedure-ico-2.svg" alt="">
+                        <div class="info">
+                            Когда мы улыбаемся или хмуримся это происходит
+                            под действием кратковременного сокращения
+                            мышц, а деформация кожи во время сна длится
+                            часами. Именно поэтому морщины сна тяжелее
+                            поддаются коррекции, а использование филлеров
+                            имеет кратковременный эффект.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--post-big-title-->
+            <div class="post-big-title post-block-96-64-margin-bottom">
+                <svg viewBox="0 0 193 50" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M70.6855 0C84.4866 0.000228949 95.6748 11.193 95.6748 25C95.6748 38.8068 84.4866 49.9998 70.6855 50C56.8843 50 45.6953 38.8069 45.6953 25C45.6953 11.1929 56.8843 0 70.6855 0ZM186.219 0C188.42 0 190.555 0.284523 192.589 0.819336C181.875 3.63841 173.974 13.3958 173.974 24.999C173.974 36.6036 181.877 46.362 192.593 49.1797C190.557 49.7151 188.422 50 186.219 50C172.418 50 161.23 38.807 161.229 25C161.229 11.1929 172.417 2.73297e-05 186.219 0ZM0 0C13.5002 0.345362 25.8357 11.4022 25.8359 24.9912C25.8359 38.5804 13.5003 49.6379 0 49.9834V0ZM141.369 49.9834C127.869 49.6376 115.533 38.5803 115.533 24.9912C115.533 11.4023 127.869 0.345602 141.369 0V49.9834Z" fill="url(#paint0_linear_1168_18326)"/>
+                    <defs>
+                        <linearGradient id="paint0_linear_1168_18326" x1="3.44875e-06" y1="50" x2="25.2615" y2="-44.6565" gradientUnits="userSpaceOnUse">
+                            <stop offset="0.0618" stop-color="#FEE8ED"/>
+                            <stop offset="0.9893" stop-color="#D5DDF3"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+                <div>
+                    <h3 class="post-big-title-text">
+                        BEAUTY СОН<br class="br-mobile"> C BEAUTY SLEEP
+                    </h3>
+                    <p class="post-big-title-sub-text">
+                        Мы продумали все, чтобы вы могли проснуться на утро<br class="br-desk-tablet">
+                        по-настоящему свежей и отдохнувшей
+                    </p>
+                </div>
+
+                <svg viewBox="0 0 193 50" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.13574 0C20.937 4.38305e-05 32.125 11.1929 32.125 25C32.125 38.8071 20.937 50 7.13574 50C4.93265 50 2.79774 49.7151 0.761719 49.1797C11.4777 46.362 19.3808 36.6036 19.3809 24.999C19.3809 13.3958 11.4793 3.63841 0.765625 0.819336C2.79969 0.284526 4.9346 0 7.13574 0ZM122.316 0C136.117 0.000228949 147.306 11.193 147.306 25C147.306 38.8068 136.117 49.9998 122.316 50C108.515 50 97.3262 38.8069 97.3262 25C97.3262 11.1929 108.515 0 122.316 0ZM51.6309 0C65.1311 0.34538 77.4666 11.4022 77.4668 24.9912C77.4668 38.5804 65.1312 49.6378 51.6309 49.9834V0ZM193 49.9834C179.5 49.6376 167.164 38.5803 167.164 24.9912C167.164 11.4023 179.5 0.345602 193 0V49.9834Z" fill="url(#paint0_linear_1168_18332)"/>
+                    <defs>
+                        <linearGradient id="paint0_linear_1168_18332" x1="0.761722" y1="50" x2="26.0635" y2="-44.6333" gradientUnits="userSpaceOnUse">
+                            <stop offset="0.0618" stop-color="#FEE8ED"/>
+                            <stop offset="0.9893" stop-color="#D5DDF3"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <!--post-big-title-->
+
+
+            <!--post-author-info-->
+            <footer class="post-author-info post-block-96-64-margin-bottom">
+                <div class="post-author-info-box">
+                    <div class="post-author-info-title">
+                        Информация проверена экспертом
+                    </div>
+                    <div class="post-author-info-author">
+                        Редактор Beauty Sleep
+                    </div>
+                </div>
+                <div class="post-author-info-logo">
+                    <picture>
+                        <source srcset="../files/images/bs_logo_h.svg" media="(max-width: 768px)" type="image/svg+xml">
+                        <source srcset="../files/images/bs_logo_v.svg" type="image/svg+xml">
+
+                        <img src="../files/images/bs_logo_h.svg" alt="Beauty Sleep Logo">
+                    </picture>
+                </div>
+            </footer>
+            <!--post-author-info-->
+        </article>
+    </div>
+
+
+    <!--post-interesting-->
+    <section class="post-interesting post-block-96-64-margin-bottom">
+        <h3 class="post-interesting-title">
+            <b>Вам</b> может быть <b>интересно</b>
+        </h3>
+        <div class="post-interesting-grid">
+
+            <!--post-card-->
+            <div class="post-card">
+                <div class="post-card-img">
+                    <img src="../files/images/HOW_OVERHEATING_AFFECTS_SLEEP_550x415_873.jpg.webp" alt="">
+                </div>
+                <div class="post-card-info">
+                    <div class="post-card-date-views">
+                        <div class="post-card-date">
+                            <span>21.08.2023</span>
+                        </div>
+                        <div class="post-card-views">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="8.98389" y="9.12891" width="5.73913" height="5.73913" rx="2.86957" stroke="#4F6FC1"/>
+                                <path d="M3.39413 9.76465C8.23814 5.32431 15.673 5.3243 20.517 9.76465L22.9556 12L20.517 14.2354C15.673 18.6757 8.23814 18.6757 3.39413 14.2354L0.955566 12L3.39413 9.76465Z" stroke="#4F6FC1" stroke-linejoin="round"/>
+                            </svg>
+                            <span>
+                500
+              </span>
+                        </div>
+                    </div>
+                    <div class="post-card-text-wrapper">
+                        <div class="post-card-title">
+                            Как перегрев влияет на сон
+                        </div>
+                        <div class="post-card-desc">
+                            Жар от раскаленных на солнце подоконников или от работающих на полную мощность батарей центрального отопления – без сложной системы климат-контроля в наших городских квартирах бывает слишком горячо круглый год. Но сохранять прохладу важно, особенно ночью: перегрев во сне может полностью нарушить циркадные ритмы и вызвать проблемы со здоровьем.            </div>
+                    </div>
+                </div>
+                <div class="post-card-button">
+                    <a class="button" href="">
+                        <span>подробнее</span>
+                    </a>
+                </div>
+            </div>
+            <!--post-card-->
+
+            <!--post-card-->
+            <div class="post-card">
+                <div class="post-card-img">
+                    <img src="../files/images/CREATING_THE_PERFECT_CLIMATE_FOR_SLEEP_550x415_873.jpg.webp" alt="">
+                </div>
+                <div class="post-card-info">
+                    <div class="post-card-date-views">
+                        <div class="post-card-date">
+                            <span>21.08.2023</span>
+                        </div>
+                        <div class="post-card-views">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="8.98389" y="9.12891" width="5.73913" height="5.73913" rx="2.86957" stroke="#4F6FC1"/>
+                                <path d="M3.39413 9.76465C8.23814 5.32431 15.673 5.3243 20.517 9.76465L22.9556 12L20.517 14.2354C15.673 18.6757 8.23814 18.6757 3.39413 14.2354L0.955566 12L3.39413 9.76465Z" stroke="#4F6FC1" stroke-linejoin="round"/>
+                            </svg>
+                            <span>
+                500
+              </span>
+                        </div>
+                    </div>
+                    <div class="post-card-text-wrapper">
+                        <div class="post-card-title">
+                            Сонное царство: как организовать идеальный микроклимат в спальне
+                        </div>
+                        <div class="post-card-desc">
+                            Открывать ли форточку, включать или не включать увлажнитель, в какую сторону закрутить термостат на батарее центрального отопления и как управлять всем этим одновременно и без микшер-пульта – вот в чем вопрос. Гарантируем, настроить микроклимат в помещении будет легче, если знать три важнейших условия комфортного сна.
+                        </div>
+                    </div>
+                </div>
+                <div class="post-card-button">
+                    <a class="button" href="">
+                        <span>подробнее</span>
+                    </a>
+                </div>
+            </div>
+            <!--post-card-->
+
+            <!--post-card-->
+            <div class="post-card">
+                <div class="post-card-img">
+                    <img src="../files/images/SUMMER_OF_SILK_550x415_873.jpg.webp" alt="">
+                </div>
+                <div class="post-card-info">
+                    <div class="post-card-date-views">
+                        <div class="post-card-date">
+                            <span>21.08.2023</span>
+                        </div>
+                        <div class="post-card-views">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="8.98389" y="9.12891" width="5.73913" height="5.73913" rx="2.86957" stroke="#4F6FC1"/>
+                                <path d="M3.39413 9.76465C8.23814 5.32431 15.673 5.3243 20.517 9.76465L22.9556 12L20.517 14.2354C15.673 18.6757 8.23814 18.6757 3.39413 14.2354L0.955566 12L3.39413 9.76465Z" stroke="#4F6FC1" stroke-linejoin="round"/>
+                            </svg>
+                            <span>
+                500
+              </span>
+                        </div>
+                    </div>
+                    <div class="post-card-text-wrapper">
+                        <div class="post-card-title">
+                            Шелковый путь
+                        </div>
+                        <div class="post-card-desc">
+                            По какой бы причине вам не было зябко или жарко по ночам, к решению проблемы всегда можно привлечь отряд незаменимых помощников – одежды и аксессуаров из натурального шелка.            </div>
+                    </div>
+                </div>
+                <div class="post-card-button">
+                    <a class="button" href="">
+                        <span>подробнее</span>
+                    </a>
+                </div>
+            </div>
+            <!--post-card-->
+
+
+        </div>
+    </section>
+    <!--post-interesting-->
+
+    <!--post-additional-info-->
+    <section class="post-additional-info">
+
+        <div class="post-additional-info-item">
+            <div class="post-additional-info-img">
+                <picture>
+                    <source srcset="../files/images/additional-info-1-mob.avif" media="(max-width: 768px)" type="image/avif">
+                    <source srcset="../files/images/additional-info-1.avif" type="image/avif">
+
+                    <source srcset="../files/images/additional-info-1-mob.webp" media="(max-width: 768px)" type="image/webp">
+                    <source srcset="../files/images/additional-info-1.webp" type="image/webp">
+
+                    <source srcset="../files/images/additional-info-1-mob.jpg" media="(max-width: 768px)" type="image/jpg">
+                    <source srcset="../files/images/additional-info-1.jpg" type="image/jpg">
+
+                    <img src="../files/images/additional-info-1.jpg" alt="">
+                </picture>
+            </div>
+            <div class="post-additional-info-content">
+                <svg viewBox="0 0 138 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_1560_48705" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="138" height="43">
+                        <path d="M137.848 0.5625H0.133789V42.5214H137.848V0.5625Z" fill="url(#paint0_linear_1560_48705)"/>
+                    </mask>
+                    <g mask="url(#mask0_1560_48705)">
+                        <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M21.2364 36.855C30.2612 36.855 37.5773 29.9688 37.5773 21.4744C37.5773 12.9799 30.2612 6.09375 21.2364 6.09375C12.2116 6.09375 4.89551 12.9799 4.89551 21.4744C4.89551 29.9688 12.2116 36.855 21.2364 36.855ZM125.678 21.4783C125.678 14.337 130.849 8.33252 137.858 6.60062C136.525 6.26991 135.126 6.09375 133.682 6.09375C124.657 6.09375 117.341 12.9799 117.341 21.4744C117.341 29.9688 124.657 36.855 133.682 36.855C135.12 36.855 136.514 36.6802 137.843 36.352C130.841 34.615 125.678 28.6141 125.678 21.4783ZM67.9002 36.0722C67.3222 36.58 66.2395 36.855 64.4362 36.855C55.4114 36.855 48.0953 29.9688 48.0953 21.4744C48.0953 12.9799 55.4114 6.09375 64.4362 6.09375C66.2708 6.09375 67.3596 6.37834 67.9298 6.90318C73.0198 8.95362 76.6852 14.706 76.6852 21.4817C76.6852 28.2706 73.0056 34.0322 67.9002 36.0722ZM88.4424 21.4712C88.4424 13.111 95.5289 6.30874 104.356 6.09571V36.8467C95.5289 36.6336 88.4424 29.8313 88.4424 21.4712Z" fill="url(#paint1_linear_1560_48705)"/>
+                    </g>
+                    <defs>
+                        <linearGradient id="paint0_linear_1560_48705" x1="31.2704" y1="93.565" x2="155.988" y2="107.363" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#F0C9D1"/>
+                            <stop offset="0.75864" stop-color="#4E79C0"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_1560_48705" x1="4.89551" y1="36.855" x2="47.4714" y2="-47.5241" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#F0C9D1"/>
+                            <stop offset="1" stop-color="#6E89C3"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+                <div class="post-additional-info-title">
+                    <h4>
+                        о компании
+                    </h4>
+                    <div class="post-desktop-display">
+                        <a href="" class="button">
+                            <span>подробнее</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="post-additional-info-desc">
+                    <span>Первый прототип подушки был создан коллективом Beauty Sleep в Великобритании</span>
+
+                    <a href="" class="post-mobile-display">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="0.671875" width="24" height="24" rx="12" fill="white"/>
+                            <path d="M10.1052 17.433L13.7608 12.9995L10.1052 8.56628" stroke="#221D1E" stroke-width="1.5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="post-additional-info-item">
+            <div class="post-additional-info-img">
+                <picture>
+                    <source srcset="../files/images/additional-info-2-mob.avif" media="(max-width: 768px)" type="image/avif">
+                    <source srcset="../files/images/additional-info-2.avif" type="image/avif">
+
+                    <source srcset="../files/images/additional-info-2-mob.webp" media="(max-width: 768px)" type="image/webp">
+                    <source srcset="../files/images/additional-info-2.webp" type="image/webp">
+
+                    <source srcset="../files/images/additional-info-2-mob.jpg" media="(max-width: 768px)" type="image/jpg">
+                    <source srcset="../files/images/additional-info-2.jpg" type="image/jpg">
+
+                    <img src="../files/images/additional-info-2.jpg" alt="">
+                </picture>
+            </div>
+            <div class="post-additional-info-content">
+                <svg viewBox="0 0 138 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_1560_48705" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="138" height="43">
+                        <path d="M137.848 0.5625H0.133789V42.5214H137.848V0.5625Z" fill="url(#paint0_linear_1560_48705)"/>
+                    </mask>
+                    <g mask="url(#mask0_1560_48705)">
+                        <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M21.2364 36.855C30.2612 36.855 37.5773 29.9688 37.5773 21.4744C37.5773 12.9799 30.2612 6.09375 21.2364 6.09375C12.2116 6.09375 4.89551 12.9799 4.89551 21.4744C4.89551 29.9688 12.2116 36.855 21.2364 36.855ZM125.678 21.4783C125.678 14.337 130.849 8.33252 137.858 6.60062C136.525 6.26991 135.126 6.09375 133.682 6.09375C124.657 6.09375 117.341 12.9799 117.341 21.4744C117.341 29.9688 124.657 36.855 133.682 36.855C135.12 36.855 136.514 36.6802 137.843 36.352C130.841 34.615 125.678 28.6141 125.678 21.4783ZM67.9002 36.0722C67.3222 36.58 66.2395 36.855 64.4362 36.855C55.4114 36.855 48.0953 29.9688 48.0953 21.4744C48.0953 12.9799 55.4114 6.09375 64.4362 6.09375C66.2708 6.09375 67.3596 6.37834 67.9298 6.90318C73.0198 8.95362 76.6852 14.706 76.6852 21.4817C76.6852 28.2706 73.0056 34.0322 67.9002 36.0722ZM88.4424 21.4712C88.4424 13.111 95.5289 6.30874 104.356 6.09571V36.8467C95.5289 36.6336 88.4424 29.8313 88.4424 21.4712Z" fill="url(#paint1_linear_1560_48705)"/>
+                    </g>
+                    <defs>
+                        <linearGradient id="paint0_linear_1560_48705" x1="31.2704" y1="93.565" x2="155.988" y2="107.363" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#F0C9D1"/>
+                            <stop offset="0.75864" stop-color="#4E79C0"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_1560_48705" x1="4.89551" y1="36.855" x2="47.4714" y2="-47.5241" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#F0C9D1"/>
+                            <stop offset="1" stop-color="#6E89C3"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+                <div class="post-additional-info-title">
+                    <h4>
+                        магазин beauty sleep
+                    </h4>
+                    <div class="post-desktop-display">
+                        <a href="" class="button">
+                            <span>подробнее</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="post-additional-info-desc">
+                    <span>Уникальные инновационные anti-age продукты для заботы о коже во время сна</span>
+
+                    <a href="" class="post-mobile-display">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="0.671875" width="24" height="24" rx="12" fill="white"/>
+                            <path d="M10.1052 17.433L13.7608 12.9995L10.1052 8.56628" stroke="#221D1E" stroke-width="1.5"/>
+                        </svg>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--post-additional-info-->
+
+</main>
+
+<a href="https://beautysleep.ru/pillows-beauty-sleep/beauty-sleep-omnia-1001" class="label__buy">Купить</a>
+<div class="pp pp__fullreview" data-pp="fullreview">
+    <div class="pp__bg"></div>
+    <div class="pp__content pp__content_fullreview">
+
+        <div class="pp__close">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+
+        <div class="popup-content">
+
+            <div class="reviews-text-item__content">
+
+                <div class="reviews-text-item__content_head">
+                    <div class="reviews-text-item__photo">
+                        <div></div>
+                    </div>
+                    <div class="reviews-info">
+                        <div>
+                            <span class="reviewer-name"></span>
+                            <span class="review-date"></span>
+                        </div>
+                        <span class="review-product"></span>
+
+
+                    </div>
+                </div>
+                <div class="reviews-stars">
+                    <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.2933 0L13.3184 5.92523L20.0827 6.87539L15.188 11.4875L16.3435 18L10.2933 14.9252L4.24303 18L5.39853 11.4875L0.503788 6.87539L7.26815 5.92523L10.2933 0Z">
+                        </path>
+                    </svg>
+                    <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.2933 0L13.3184 5.92523L20.0827 6.87539L15.188 11.4875L16.3435 18L10.2933 14.9252L4.24303 18L5.39853 11.4875L0.503788 6.87539L7.26815 5.92523L10.2933 0Z">
+                        </path>
+                    </svg>
+                    <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.2933 0L13.3184 5.92523L20.0827 6.87539L15.188 11.4875L16.3435 18L10.2933 14.9252L4.24303 18L5.39853 11.4875L0.503788 6.87539L7.26815 5.92523L10.2933 0Z">
+                        </path>
+                    </svg>
+                    <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.2933 0L13.3184 5.92523L20.0827 6.87539L15.188 11.4875L16.3435 18L10.2933 14.9252L4.24303 18L5.39853 11.4875L0.503788 6.87539  &lt;div class="
+                              pp="" pp__video-review
+                        "="" data-title="popup_video" data-pp="video-review">
+                        </path></svg>
+                    <div class="pp__bg"></div>
+                    <div class="pp__content pp__content_video-review">
+
+                        <div class="pp__close">
+                            <div class="close__lane"></div>
+                            <div class="close__lane"></div>
+                        </div>
+
+                        <div class="popup-content">
+                            <iframe id="yotubeplayer" allowfullscreen=""
+                                    src="../../files/saved_resource.html">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                <!--                L7.26815 5.92523L10.2933 0Z"&gt;-->
+
+
+                <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.2933 0L13.3184 5.92523L20.0827 6.87539L15.188 11.4875L16.3435 18L10.2933 14.9252L4.24303 18L5.39853 11.4875L0.503788 6.87539L7.26815 5.92523L10.2933 0Z">
+                    </path>
+                </svg>
+            </div>
+            <div class="reviews-text-item__content_text"></div>
+
+            <a href="https://beautysleep.ru/reviews" class="button transparent">
+                <span>читать все отзывы</span>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<div class="pp pp__video-review" data-title="popup_video" data-pp="video-review">
+    <div class="pp__bg"></div>
+    <div class="pp__content pp__content_video-review">
+        <div class="pp__close">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+
+        <div class="popup-content">
+            <iframe id="yotubeplayer" allowfullscreen="" src="https://www.youtube.com/embed/ykrxSO4XVHw?autoplay=1&amp;modestbranding=1&amp;iv_load_policy=3">
+            </iframe>
+        </div>
+    </div>
+</div>
+
+<footer class="posthog_view_block" posthog-name="Футер">
+    <div class="grid">
+
+        <div class="footer-part">
+            <div class="menu-container">
+                <div>
+                    <span>Подушки Beauty sleep</span>
+                    <ul>
+
+                        <li>
+                            <a href="https://beautysleep.ru/omnia-and-classic">Подушка Omnia &amp; Classic</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/copper">Подушка Omnia Copper Blend</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/aula">Подушка Aula</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/products/?category=437">Подушки для
+                                мужчин&nbsp;и&nbsp;детей</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/pillow-for-decollete">Подушка для декольте</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/products/?category=25">Наволочки</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/sleep-wrinkles">Beauty - сон</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <span>Одеяла Beauty Sleep</span>
+                    <ul>
+
+                        <li>
+                            <a href="https://beautysleep.ru/weighted-blanket">Утяжеленное одеяло </a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/airmesh-blanket">Одеяло с вентиляционными вставками</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div>
+                    <span>Silk Collection</span>
+                    <ul>
+
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Халаты</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Комбинации</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Топы и шорты</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Маски для сна</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Аксессуары для волос</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Полотенца</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div>
+                    <span>О Beauty Sleep</span>
+                    <ul>
+
+                        <li>
+                            <a href="https://beautysleep.ru/sleep-wrinkles">Beauty - сон</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/o-kompanii">О компании</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/reviews">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/question">Вопросы</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/about-beauty-sleep/materials-beauty-sleep">Материалы</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/about-beauty-sleep/vacancy/">Вакансии</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/copyright">Авторские права</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <span>Покупателям</span>
+                    <ul>
+
+                        <li>
+                            <a href="https://beautysleep.ru/dostavka-i-oplata">Доставка и оплата</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/garantia-i-vozvrat">Гарантия и возврат</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/for-customers/contacts">Контакты</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/o-kompanii">О компании</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/reviews">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/question">Вопросы</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/about-beauty-sleep/materials-beauty-sleep">Материалы</a>
+                        </li>
+
+                        <li>
+                            <a href="https://beautysleep.ru/stocks" class="stock">Акции</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/rules-certificates">Подарочные сертификаты</a>
+                        </li>
+                        <li>
+                            &nbsp;
+                        </li>
+                        <li>
+                            <a href="https://wa.me/message/IYHHAZPLYCA6I1" class="whats-app">
+                                <img src="../../files/footer-whats-app.svg" alt="whats-app">
+                                whats app
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="email-mailing">
+                <h4>ПОДПИШИТЕСЬ НА РАССЫЛКУ</h4>
+                <p>Подпишитесь, чтобы узнать больше о здоровом сне, новостях и спецпредложениях Beauty Sleep!</p>
+
+                <form method="post" class="js-form-mailing">
+                    <input type="hidden" name="lists[pl2312]" value="set">
+                    <div class="input-box">
+                        <input name="email" type="email" data-si-form="" data-si-preset="msdcaddemail" data-si-nosave=""
+                               data-si-event="change" placeholder="Введите ваш email" required="">
+                    </div>
+                    <input type="text" class="n-message" name="n-message" value="">
+                    <button type="submit"><img src="../../files/mailing-submit.svg" alt="submit">
+                    </button>
+
+                    <input type="hidden" name="af_action" value="deb11a841c7ef742abd036ca26bea0c6">
+                </form>
+                <div class="politics">
+                    Нажимая кнопку "Подписаться", вы соглашаетесь с <a href="https://beautysleep.ru/privacy-policy"
+                                                                       target="_blank">политикой конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-part posthog_view_block" posthog-name="Соц сети">
+            <div class="sn-box">
+                <div>
+                    <a href="https://t.me/beauty_sleep_russia" target="_blank" class="social-box__item posthog_click"
+                       posthog-name="Соц сети - telegram">
+                        <img src="../../files/telegram.svg" alt="telegram">
+                    </a>
+                    <a href="https://vk.com/beautysleep_russia" target="_blank" class="social-box__item posthog_click"
+                       posthog-name="Соц сети - vkontakte">
+                        <img src="../../files/vkon.svg" alt="vkontakte">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCem2kbdspTUse0141WFNSDQ" target="_blank"
+                       class="social-box__item posthog_click" posthog-name="Соц сети - youtube">
+                        <img src="../../files/you.svg" alt="youtube">
+                    </a>
+
+                    <a href="https://clck.ru/Pv27v" target="_blank" class="social-box__item posthog_click"
+                       posthog-name="Соц сети - dzen">
+                        <img src="../../files/dzen.svg" alt="dzen">
+                    </a>
+
+                </div>
+                <span>следите за нами в соцсетях!</span>
+            </div>
+            <a href="https://beautysleep.ru/#up" class="up">
+                <span>наверх</span>
+                <img src="../../files/up.svg" alt="up">
+            </a>
+        </div>
+        <div class="footer-part posthog_view_block" posthog-name="Футер - ссылки">
+            <div class="footer-part__info">
+                <span>© 2016 — 2024, Beauty Sleep ®</span>
+                <div>
+                    <a href="https://beautysleep.ru/privacy-policy" target="_blank" class="posthog_click"
+                       posthog-name="Футер - Политика конфиденциальности">Политика конфиденциальности</a>
+                    <a href="https://beautysleep.ru/terms-of-use" target="_blank" class="posthog_click"
+                       posthog-name="Футер - Пользовательское соглашение">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="shopping-cart js-minicart">
+    <div class="shopping-cart-card">
+
+        <div class="shopping-cart__title posthog_view_block" posthog-name="Мини-корзина">
+            <h4>Корзина</h4>
+            <span class="goods-count">0 продуктов</span>
+
+            <div class="cart-close posthog_click" posthog-name="Закрыть мини-корзину">
+                <div class="close__lane"></div>
+                <div class="close__lane"></div>
+            </div>
+        </div>
+        <div class="shopping-cart__empty" style="display:block">
+            <div class="shopping-cart__empty_top">
+                <img src="../../files/empty-cart.svg" alt="cart empty">
+                <div>
+                    <span>В Вашей корзине нет товаров</span>
+                    <span>Корзина ждет, что ее наполнят. Желаем приятных покупок!</span>
+                </div>
+            </div>
+            <a href="https://beautysleep.ru/products/" class="button gradient"><span>перейти в магазин</span></a>
+        </div>
+
+
+    </div>
+    <div class="shopping-cart__footer">
+        <div class="shopping-cart__footer_title">
+            <span>сумма заказа:</span>
+            <span><span class="js-minicart-cost">0</span> р.</span>
+        </div>
+
+
+        <a href="https://beautysleep.ru/products/" class="shopping-cart__footer_next button transparent posthog_click"
+           posthog-name="Мини-корзина - продолжить покупки"><span>продолжить покупки</span></a>
+
+        <a href="https://beautysleep.ru/basket" class="shopping-cart__footer_buy button gradient posthog_click"
+           posthog-name="Мини-корзина - оформить заказ"><span>оформить заказ</span></a>
+    </div>
+    <div class="shopping-cart-bg"></div>
+    <script>
+        $(document).ready(function () {
+            otherProductsSwiperSidebar();
+        });
+    </script>
+</div>
+
+<div class="coockies-container">
+    <div class="grid">
+        <div class="coockies-text">Мы используем файлы cookie, чтобы обеспечить Вам лучший сервис. Продолжая
+            пользоваться этим сайтом, Вы соглашаетесь на использование cookie
+            и обработку данных в соответствии с Пользовательским соглашением в области обработки и защиты персональных
+            данных.
+        </div>
+        <button class="coockies-ok button transparent">
+            <span>хорошо</span>
+        </button>
+    </div>
+</div>
+
+
+
+<div class="pp pp__mailing" data-title="popup_thanks" data-pp="email-mailing">
+    <div class="pp__bg"></div>
+    <div class="pp__content pp__content_mailing">
+
+        <div class="pp__close">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+
+        <div class="popup-content">
+            <div class="mailing-header">
+                <span class="mailing-header__title">СПАСИБО ЗА ПОДПИСКУ!</span>
+            </div>
+            <div class="mailing-body">
+                <span>Благодарим Вас за подписку! Ваш промокод на первую покупку: <strong>HELLO5</strong></span>
+                <button class="button gradient close_btn">
+                    <span>продолжить покупки</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Scripts-->
+<script src="files/script.js"></script>
+<!--Scripts-->
+<script type="module" src="../../files/mailing.js.download"></script>
+
+<div class="pp pp__patent-preview" data-pp="patent-preview">
+    <div class="pp__bg"></div>
+    <div class="pp__content no_bg">
+        <div class="pp__close pp__close_bg">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+
+        <div class="popup-content">
+
+            <div class="img" data-patent="hong_kong">
+                <img src="../../files/1.jpg" alt="">
+                <img src="../../files/2.jpg" alt="">
+                <img src="../../files/3.jpg" alt="">
+            </div>
+
+            <div class="img" data-patent="canada">
+                <img src="../../files/1(1).jpg" alt="">
+                <img src="../../files/2(1).jpg" alt="">
+                <img src="../../files/3(1).jpg" alt="">
+            </div>
+
+            <div class="img" data-patent="japan">
+                <img src="../../files/1(2).jpg" alt="">
+                <img src="../../files/2(2).jpg" alt="">
+            </div>
+
+            <div class="img" data-patent="skorea">
+                <img src="../../files/1(3).jpg" alt="">
+                <img src="../../files/2(3).jpg" alt="">
+            </div>
+
+            <div class="img" data-patent="usa">
+                <img src="../../files/1(4).jpg" alt="">
+                <img src="../../files/2(4).jpg" alt="">
+                <img src="../../files/1(5).jpg" alt="">
+                <img src="../../files/2(5).jpg" alt="">
+                <img src="../../files/3(2).jpg" alt="">
+                <img src="../../files/4.jpg" alt="">
+                <img src="../../files/5.jpg" alt="">
+                <img src="../../files/6.jpg" alt="">
+                <img src="../../files/7.jpg" alt="">
+                <img src="../../files/8.jpg" alt="">
+                <img src="../../files/9.jpg" alt="">
+                <img src="../../files/10.jpg" alt="">
+                <img src="../../files/11.jpg" alt="">
+                <img src="../../files/12.jpg" alt="">
+                <img src="../../files/13.jpg" alt="">
+            </div>
+
+            <div class="img" data-patent="wipo">
+                <img src="../../files/1(6).jpg" alt="">
+                <img src="../../files/2(6).jpg" alt="">
+                <img src="../../files/1(7).jpg" alt="">
+                <img src="../../files/2(7).jpg" alt="">
+                <img src="../../files/3(3).jpg" alt="">
+                <img src="../../files/4(1).jpg" alt="">
+            </div>
+
+            <div class="img" data-patent="new_zealand">
+                <img src="../../files/1(8).jpg" alt="">
+                <img src="../../files/2(8).jpg" alt="">
+                <img src="../../files/3(4).jpg" alt="">
+                <img src="../../files/4(2).jpg" alt="">
+                <img src="../../files/5(1).jpg" alt="">
+            </div>
+
+            <div class="img" data-patent="australia">
+                <img src="../../files/1(9).jpg" alt="">
+                <img src="../../files/2(9).jpg" alt="">
+                <img src="../../files/3(5).jpg" alt="">
+                <img src="../../files/4(3).jpg" alt="">
+                <img src="../../files/5(2).jpg" alt="">
+                <img src="../../files/6(1).jpg" alt="">
+                <img src="../../files/1(10).jpg" alt="">
+                <img src="../../files/2(10).jpg" alt="">
+                <img src="../../files/3(6).jpg" alt="">
+                <img src="../../files/4(4).jpg" alt="">
+                <img src="../../files/5(3).jpg" alt="">
+                <img src="../../files/6(2).jpg" alt="">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="somia_form">
+    <div class="somia_form-bg"></div>
+    <div class="somia_form-block">
+        <div class="somia_form-close">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+
+    </div>
+</div>
+<script src="files/script.js"></script>
+<script src="../../files/swiper.min.js"></script>
+<script src="../../files/video.min.js"></script>
+<script src="../../files/jquery.validate.min.js"></script>
+
+
+
+
+
+
+
+<!--<script src="../../files/messages_ru.min.js"></script>-->
+<!--<script src="../../files/additional-methods.min.js"></script>-->
+<!--<script src="../../files/PNotify.js"></script>-->
+<!--<script src="../../files/suggs.js"></script>-->
+
+
+
+<script src="../../files/js_main.js"></script>
+<!--<script src="../../files/_js_checkoutt.js.download"></script>-->
+
+
+<!--script src="/static/js/customAjaxForm.js"></script-->
+<script src="../../files/skrollr.min.js"></script>
+<script src="../../files/aos.js"></script>
+<script src="../../files/somia-form.js"></script>
+<script src="../../files/phone-mask.js"></script>
+
+
+<script src="../../files/parts.js"></script>
+
+
+<script>
+    $(document).on('click', '[href="shuber"]', function () {
+        return false;
+    })
+</script>
+
+
+<script>
+    if ($('.pillow-slider').length && $('.slide-product__img_colors').length && $('.slide-product__img_colors [name="options[color]"]').length >= 1) {
+        $('.pillow-slider [data-desc]').parent().hide()
+        $('.slide-product__img_colors [data-value]').each(function () {
+            var val = $(this).data('value');
+            $('.pillow-slider [data-desc="' + val + '"]').parent().show();
+        })
+    }
+
+    $(document).on('click', '[href="purpur"]', function () {
+        return false
+    })
+
+
+</script>
+
+
+<script>
+    window.product = {
+        "item_name": "",
+        "item_id": "",
+        "price": "",
+        "item_brand": "Beautysleep",
+        "item_list_name": "",
+        "variant": "",
+        "index": 1,
+        "quantity": 1,
+        "item_category": "",
+        "item_category2": ""
+    }
+
+    function getValues(form) {
+        let product = Object.assign({}, window.product)
+
+        var color = form.find('.slide-product__img_colors input:checked').next().data('color'),
+            id = parseInt(form.find('[name="id"]').val()),
+            price = parseFloat(form.find('.js-new-price').first().text().replace(/\D/g, "")),
+            name = form.find('[name="pagetitle"]').val(),
+            category1 = form.find('[name="category1"]').val(),
+            category2 = form.find('[name="category2"]').val()
+
+        if (color !== undefined) product.variant = color
+        product.item_category = category1
+        product.item_category2 = category2
+        product.item_name = name
+        product.item_id = id
+        product.price = price
+        return product
+    }
+
+    /* Добавление в корзину из карточки + */
+    $(document).on('click', '#product-inner [name="ms2_action"], #other-products-in-cart [name="ms2_action"]', function () {
+        try {
+            var form = $(this).closest('form'),
+                product = getValues(form),
+                count = parseInt(form.find('[name="count"]').val())
+
+            addProductToCart(product, count)
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    /* Добавление на странице add-products-page +*/
+    $(document).on('click', '.add-products-page .swiper-slide [value="cart/add"]', function () {
+        try {
+            var form = $(this).closest('.swiper-slide'),
+                product = getValues(form),
+                count = parseInt(form.find('[name="count"]').val()),
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.slide-product__img_colors').length)
+                product.variant = form.find('.slide-product__img_colors input:checked + label').data('color')
+
+            product.price = price
+            addProductToCart(product, count)
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    /* Добавление в корзину через кнопку плюс + */
+    $(document).on('click', '#product-in-side-cart .hand_button.increment', function () {
+        try {
+            var form = $(this).closest('#product-in-side-cart'),
+                product = getValues(form),
+                name = form.find('.cart-item__info_title').text(),
+                count = 1,
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.item_name = name
+            product.price = price
+            addProductToCart(product, count)
+        } catch (e) {
+            console.log(e)
+        }
+    })
+    /* Добавление в корзину через кнопку плюс в корзине +*/
+    $(document).on('click', '#page-cart .hand_button.increment', function () {
+        try {
+            var form = $(this).closest('.cart-item'),
+                product = getValues(form),
+                count = 1,
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.price = price
+            addProductToCart(product, count)
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    /* Удаление товара из корзины через кнопку  +*/
+    $(document).on('click', '#product-in-side-cart + .cart-close', function () {
+        try {
+            var form = $(this).prev(),
+                product = getValues(form),
+                name = form.find('[name="pagetitle"]').val(),
+                count = parseInt(form.find('[name="count"]').val()),
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.item_name = name
+            product.price = price
+            removeFromCart(product, count)
+        } catch (e) {
+            console.log(e)
+        }
+    })
+    /* Удаление товара из корзины через кнопку в корзине +*/
+    $(document).on('click', '#page-cart .cart-item .cart-close', function () {
+        try {
+            var form = $(this).closest('.cart-item'),
+                product = getValues(form),
+                count = parseInt(form.find('[name="count"]').val()),
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.price = price
+            removeFromCart(product, count)
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    /* Удаление товара из корзины через минус +*/
+    $(document).on('click', '#product-in-side-cart .hand_button.decrement', function () {
+        try {
+            var form = $(this).closest('#product-in-side-cart'),
+                product = getValues(form),
+                name = form.find('.cart-item__info_title').text(),
+                count = 1,
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.item_name = name
+            product.price = price
+            removeFromCart(product, count)
+        } catch (e) {
+            console.log(e)
+        }
+    })
+    /* Удаление товара из корзины через минус в корзине +*/
+    $(document).on('click', '#page-cart .hand_button.decrement', function () {
+        try {
+            var form = $(this).closest('.cart-item'),
+                product = getValues(form),
+                count = 1,
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.price = price
+            removeFromCart(product, count)
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    /* Клик по товару */
+    $(document).on('click', '.goods-grid .slide-product', function () {
+        try {
+            var form = $(this).closest('.slide-product'),
+                product = getValues(form)
+
+            selectItem(product)
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    /* Клик по цвету */
+    $(document).on('click', '#product-inner .slide-product__img_colors label', function () {
+        try {
+            var form = $(this).closest('#product-inner'),
+                product = getValues(form)
+
+            product.variant = $(this).data('color')
+
+            selectItem(product, 'e03')
+            viewItem(product)
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    /* Просмотр корзины */
+    if ($('#page-cart').length) {
+        try {
+            var items = []
+            $('#page-cart .cart-item').each(function (i, p) {
+                var product = getValues($(this))
+                product.variant = $(this).find('.specifications-color span').last().text()
+                product.quantity = parseInt($(this).find('[name="count"]').val())
+                items.push(product)
+            })
+
+            if (items.length) viewCart(items)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
+    /* Просмотр товара */
+    if ($('#product-inner input[name="id"]').length) {
+        try {
+            var form = $('#product-inner'),
+                product = getValues(form)
+
+            viewItem(product)
+
+            var items = []
+            $('#product-inner .slide-product__img_colors label').each(function (i, e) {
+
+                product = getValues(form)
+                product.variant = $(this).data('color')
+                items.push(product)
+            })
+            viewItemList(items)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
+    /* Просмотр товаров в каталоге */
+    if ($('#shop-catalog .slide-product').length) {
+        viewItemsInCatalog('#shop-catalog .slide-product')
+    }
+
+    /* Переход к оформлению заказа */
+    if ($('#page-order').length) {
+        try {
+            var items = []
+            $('.js-order-cart .cart-item').each(function (i, e) {
+                var form = $(this),
+                    item = getValues(form)
+
+                if (form.find('.specifications-color span').last() != undefined)
+                    item.variant = form.find('.specifications-color span').last().text()
+
+                if (form.find('.js-ordercart-count') != undefined)
+                    item.quantity = parseInt(form.find('.js-ordercart-count').text().replace(/\D/g, ""))
+
+                items.push(item)
+            })
+            onCheckout(items)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
+    /* Может понравитmся */
+    if ($('#product-inner').length) {
+        mayLike()
+    }
+
+    /* Просмотр формы подписки */
+    if ($('.email-mailing').length) {
+        footerSubscribeVisit()
+    }
+
+    if ($('[name="status_id"]') !== undefined && $('[name="payment_id"]') !== undefined) {
+        var status_id = parseInt($('[name="status_id"]').val()),
+            payment_id = parseInt($('[name="payment_id"]').val()),
+            order_id = $('#orderCart [name="id"]').val(),
+            sended = parseInt($('[name="sended"]').val()),
+            queryString = window.location.search,
+            urlParams = new URLSearchParams(queryString),
+            msorder = parseInt(urlParams.get('msorder'))
+
+        if (!sended) {
+            switch (true) {
+                case status_id == 1 && payment_id == 3:
+                case status_id == 2 && [5, 17, 2, 18, 20, 23, 22].indexOf(payment_id) > -1:
+                    purchase()
+                    $.get('/update-order?msorder=' + msorder)
+                    break
+                case status_id == 1 && [5, 17, 2, 18, 20, 23, 22].indexOf(payment_id) > -1:
+                    let itCount = 0;
+                    const interval = setInterval(() => {
+                        itCount++;
+                        $.get('/check-order?msorder=' + order_id, function (resp) {
+                            if (resp.order_status == 2) {
+                                purchase()
+                                $.get('/update-order?msorder=' + msorder)
+                                clearInterval(interval);
+                            }
+                        })
+                        if (itCount >= 10)
+                            clearInterval(interval);
+                    }, 1000);
+                    break
+            }
+        }
+    }
+
+
+    /**********************/
+    /**********************/
+    /**********************/
+
+
+
+    /* Клик по товару */
+    function selectItem(item, event_id = 'e02', list = 'catalog_main_block') {
+        let send = {
+            event: 'select_item',
+            event_id: event_id,
+            ecommerce: {
+                items: []
+            }
+        }
+
+        item.index = 1
+        localStorage.setItem('item_list_name', list)
+
+        item.item_list_name = list
+        send.ecommerce.items.push(item)
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+
+    /* Может понравиться */
+    function mayLike() {
+        var item, id, items = [], sended = false, form
+        $('#other-products-in-cart .js-product-box').each(function () {
+            form = $(this)
+            item = getValues(form)
+            item.item_list_name = 'you_might_like'
+            items.push(item)
+        })
+
+
+        $('.shopping-cart-card').scroll(function () {
+            if (!sended && $('.shopping-cart-card').scrollTop() >= 236) {
+                viewItemList(items)
+                sended = true
+            }
+        })
+    }
+
+    /* Скрол в каталоге */
+    function viewItemsInCatalog(element, list = 'catalog_main_block') {
+        let item, items = new Set(), id, itemsviewednow = new Set(), scrolledEl;
+
+        window.lastviewedmaylike = new Set();
+
+        scrolledEl = list === 'with_these_goods_bought' ? '#msCart.active .wrapper' : window
+
+
+        $(scrolledEl).on('resize scroll', function () {
+            items = new Set();
+            itemsviewednow = new Set();
+
+            $(element).each(function () {
+                if ($(this).offset().top < ($(window).scrollTop() + $(window).height()) && ($(this).offset().top + $(this).height() > $(window).scrollTop())) {
+                    id = $(this).find('[name="id"]').val()
+                    itemsviewednow.add(id);
+                }
+            });
+
+            for (const id of itemsviewednow) {
+                if (!window.lastviewedmaylike.has(id)) {
+                    item = getValues($('[name="id"][value="' + id + '"]').closest('.slide-product'))
+                    item.item_list_name = list
+                    items.add(item)
+                }
+            }
+
+            if (items.size > 0) {
+                items = setIndexes([...items])
+                viewItemList(items)
+            }
+
+            for (const id of itemsviewednow) {
+                window.lastviewedmaylike.add(id)
+            }
+        });
+    }
+
+    /* Удаление товара из корзины */
+    function removeFromCart(item, quantity = 1) {
+        let send = {
+            event: "remove_from_cart",
+            event_id: 'e05',
+            ecommerce: {
+                items: []
+            }
+        }
+        item = setIndexes(item)
+        item.quantity = parseInt(quantity)
+        item.item_list_name = 'catalog_main_block'
+        send.ecommerce.items.push(item)
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    /* Добавление товара в корзину */
+    function addProductToCart(item, count = 1) {
+        let send = {
+            event: 'add_to_cart',
+            event_id: 'e04',
+            ecommerce: {
+                items: []
+            }
+        }
+        item.quantity = parseInt(count)
+        item = setIndexes(item)
+        item.item_list_name = 'catalog_main_block'
+        send.ecommerce.items.push(item)
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    /* Просмотр товара */
+    function viewItem(item, item_list_name = 'landing_productpage') {
+        let send = {
+            event: 'view_item',
+            event_id: 'e03',
+            ecommerce: {
+                items: []
+            }
+        }
+        item = setIndexes(item)
+        item.item_list_name = item_list_name
+
+        if (localStorage.getItem('item_list_name') !== null) {
+            item.item_list_name = localStorage.getItem('item_list_name')
+            localStorage.removeItem('item_list_name')
+        }
+
+        send.ecommerce.items.push(item)
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    /* Просмотр списка товаров */
+    function viewItemList(items) {
+        let send = {
+            event: 'view_item_list',
+            event_id: 'e01',
+            ecommerce: {
+                items: []
+            }
+        }
+        items = setIndexes(items)
+        send.ecommerce.items.push(items)
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    /* Просмотр корзины */
+    function viewCart(items) {
+        let send = {
+            event: 'view_cart',
+            event_id: 'e06',
+            ecommerce: {
+                items: []
+            }
+        }
+
+        items = setIndexes(items)
+        send.ecommerce.items = items
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    /* Переход на оформление заказа */
+    function onCheckout(items = []) {
+        dataLayer.push({ecommerce: null})
+        let send = {
+            event: "begin_checkout",
+            event_id: 'e07',
+            ecommerce: {
+                items: []
+            }
+        }
+
+        items = setIndexes(items)
+        send.ecommerce.items = items
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    /* Добавление способа доставки */
+    function addShippingInfo(items = [], shipping) {
+
+        let send = {
+            event: 'add_shipping_info',
+            event_id: 'e08',
+            ecommerce: {
+                shipping_tier: shipping,
+                items: []
+            }
+        }
+        items = setIndexes(items)
+        send.ecommerce.items.push(items)
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    /* Добавление способа оплаты */
+    function addPaymentInfo(items = [], payment) {
+
+        let send = {
+            event: 'add_payment_info',
+            event_id: 'e09',
+            ecommerce: {
+                payment_type: payment,
+                items: []
+            }
+        }
+        items = setIndexes(items)
+        send.ecommerce.items.push(items)
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    /* Оформление заказа */
+    function orderCreated() {
+        try {
+            var items = []
+            $('.js-order-cart .cart-item').each(function (i, e) {
+                var form = $(this),
+                    item = getValues(form)
+
+                items.push(item)
+            })
+
+            items = setIndexes(items)
+
+            var total = parseFloat($('.result__item.sum span').last().text().replace(' ', ''))
+            var delivery = $('[name="delivery"]:checked').parent().find('.checkbox__descr_title span').first().text()
+            var payment = $('[name="payment"]:checked').parent().find('.checkbox__descr_title span').first().text()
+
+
+            var try_order = 1
+            if (localStorage.getItem('try_order') != null)
+                try_order = localStorage.getItem('try_order')
+
+            var send = {
+                event: 'order_created',
+                event_id: 'e10',
+                shipping_tier: delivery,
+                payment_type: payment,
+                order_id: 'unknown',
+                value: total,
+                try_number_to_order: try_order + '_try'
+            }
+            dataLayer.push({ecommerce: null})
+            dataLayer.push(send)
+            console.log(send)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
+    /* Страница спасибо */
+    function purchase() {
+        if (typeof dataLayer === 'undefined') return
+
+        var items = []
+        $('#orderCart .products .product').each(function (i, p) {
+            var id = $(p).find('[name="id"]').val(),
+                product = getValues($(p)),
+                price = parseInt($(p).find('[name="price"]').val().replace(' ', '')),
+                count = parseInt($(p).find('[name="count"]').val()),
+                color = $(p).find('[name="color"]').val(),
+                name = $(p).find('[name="name"]').val()
+
+            if (isNaN(count)) count = 1
+            product.quantity = count
+            product.item_name = name
+            product.variant = color
+            product.price = price
+            items.push(product)
+        })
+
+        const shipping_price = parseFloat($('#orderCart [name="delivery_cost"]').val())
+        const total = parseFloat($('#orderCart [name="cost"]').val())
+        const transaction_id = $('#orderCart [name="num"]').val()
+        const coupon = $('#orderCart [name="coupon"]').val()
+        const discount = $('#orderCart [name="discount"]').val() != '' ? parseFloat($('#orderCart [name="discount"]').val()) : ''
+        const delivery = $('#orderCart [name="delivery"]').val()
+        const payment = $('#orderCart [name="payment"]').val()
+
+        //addShippingInfo(items, delivery)
+        //addPaymentInfo(items, payment)
+        localStorage.removeItem('try_order')
+
+        let send = {
+            event: 'purchase',
+            event_id: 'e11',
+            shipping_tier: delivery,
+            payment_type: payment,
+            ecommerce: {
+                transaction_id: transaction_id,
+                affiliation: 'beautysleep.ru',
+                value: total,
+                tax: '20%',
+                shipping: shipping_price,
+                currency: 'RUB',
+                coupon: coupon,
+                discount: discount,
+                items: []
+            }
+        }
+
+        items = setIndexes(items)
+        send.ecommerce.items = items
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    /* Ошибки в форме заказа */
+    function checkoutErrors(errors) {
+        let try_order = 1
+        if (localStorage.getItem('try_order') === null) {
+            localStorage.setItem('try_order', try_order)
+        } else {
+            try_order = parseInt(localStorage.getItem('try_order'))
+            try_order++
+            localStorage.setItem('try_order', try_order)
+        }
+
+        let send = {
+            event: 'errors_in_chekout_form',
+            event_id: 'e30',
+            error_field_order: errors,
+            try_number_to_order: try_order + '_try'
+        }
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    function showSubscribeModal() {
+        let title = $('#subscribe h2').text(), send = {}
+
+        send = {
+            event: 'generate_lead_view',
+            event_id: 'e33',
+            lead_type: 'form_for_subscribe',
+            location: 'pop_up_first_visit_after20sec',
+        }
+
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+
+        setTimeout(() => {
+            send = {
+                event: 'view_promotion',
+                event_id: 'e31',
+                ecommerce: {
+                    promotion_name: 'discount_for_subscribe',
+                    creative_slot: 'pop_up_first_visit',
+                    creative_name: title,
+                }
+            }
+            dataLayer.push({ecommerce: null})
+            dataLayer.push(send)
+            console.log(send)
+        }, 1000)
+    }
+
+    function subscribeSubmit() {
+        let title = $('#subscribe h2').text()
+
+        let send = {
+            event: 'select_promotion',
+            event_id: 'e32',
+            ecommerce: {
+                promotion_name: 'discount_for_subscribe',
+                creative_slot: 'popup_subscribe_first_visit',
+                creative_name: title
+            }
+        }
+
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    function footerSubscribeSubmit() {
+        let send = {
+            event: 'generate_lead',
+            event_id: 'e34',
+            lead_type: 'form_for_subscribe',
+            location: 'pop_up_first_visit_after20sec',
+        }
+
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    function footerSubscribeVisit() {
+        let send = {
+            event: 'generate_lead',
+            event_id: 'e34',
+            lead_type: 'form_for_subscribe',
+            location: 'pop_up_first_visit_after20sec',
+        }
+
+        window.pop_up_first_visit_after20sec = false
+
+        $(window).on('resize scroll', function () {
+            $('.email-mailing').each(function () {
+                if ($('.email-mailing').isInViewport() && window.pop_up_first_visit_after20sec === false) {
+                    dataLayer.push({ecommerce: null})
+                    dataLayer.push(send)
+                    console.log(send)
+
+                    window.pop_up_first_visit_after20sec = true
+                }
+            })
+        });
+    }
+
+    function generateLeadView() {
+        let send = {
+            event: 'generate_lead_view',
+            event_id: 'e33',
+            lead_type: 'form_for_subscribe',
+            location: 'pop_up_first_visit_after20sec',
+        }
+
+    }
+
+    function setIndexes(items) {
+        let new_idx = 1
+        if (Array.isArray(items)) {
+            items.forEach((item, idx) => {
+                items[idx].index = new_idx
+                new_idx += 1
+            })
+        } else {
+            items.index = 1
+        }
+        return items
+    }
+
+    $(document).on('af_complete', function (e, r) {
+        const form = r.form.attr('id')
+        if (form === 'subscribe') {
+            subscribeSubmit()
+        }
+        if (form === 'subscribe-foot') {
+            footerSubscribeSubmit()
+        }
+    })
+
+    $(document).ready(function () {
+        miniShop2.Callbacks.add('Order.submit.response.error', 'orders_submit_error', function (response) {
+            checkoutErrors(response.data.join(';'))
+        });
+
+        miniShop2.Callbacks.add('Order.submit.response.success', 'orders_submit_success', function (response) {
+            orderCreated();
+            posthog.capture('sent_order', {
+                block_name: "Оформление заказа",
+                page_name: "Copper"
+            })
+        });
+
+
+    })
+
+
+    $.fn.isInViewport = function () {
+        var elementTop = $(this).offset().top;
+        var elementBottom = elementTop + $(this).outerHeight();
+        var viewportTop = $(window).scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
+
+
+    /* POSTHOG */
+
+
+    /* Добавление в корзину из карточки */
+    $(document).on('click', '#product-inner [name="ms2_action"]', function () {
+        console.log("click");
+        try {
+            var form = $(this).closest('form'),
+                product = getValues(form),
+                count = parseInt(form.find('[name="count"]').val());
+            console.log(product);
+            posthog.capture('cart_add', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_variant: product.variant,
+                product_price: product.price,
+                product_count: count,
+                block_name: "Страница товара"
+            });
+            console.log("posthog страница товара cart_add");
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    $(document).on('click', '#product-inner .hand_button.increment', function () {
+        try {
+            var form = $(this).closest('#product-inner'),
+                product = getValues(form),
+                name = form.find('.cart-item__info_title').text(),
+                count = parseInt(form.find('[name="count"]').val());
+
+            console.log('product_change_plus');
+            console.log(product);
+            posthog.capture('product_change_plus', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: name,
+                product_variant: product.variant,
+                product_price: product.price,
+                product_count: count,
+                block_name: "Страница товара"
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    $(document).on('click', '#product-inner .hand_button.decrement', function () {
+        try {
+            var form = $(this).closest('#product-inner'),
+                product = getValues(form),
+                name = form.find('.cart-item__info_title').text(),
+                count = parseInt(form.find('[name="count"]').val());
+
+            console.log('product_change_minus');
+            console.log(product);
+            posthog.capture('product_change_minus', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: name,
+                product_variant: product.variant,
+                product_price: product.price,
+                product_count: count,
+                block_name: "Страница товара"
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    /* Клик по цвету */
+    $(document).on('click', '#product-inner .slide-product__img_colors label', function () {
+        try {
+            var form = $(this).closest('#product-inner'),
+                product = getValues(form)
+
+            product.variant = $(this).data('color');
+
+            console.log('product_change_color');
+            console.log(product);
+            posthog.capture('product_change_color', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_price: product.price,
+                roduct_variant: product.variant,
+                block_name: "Страница товара"
+            });
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    /* Клик по размеру  */
+    $(document).on('click', '#product-inner .single-product-hints__size label', function () {
+        try {
+            var form = $(this).closest('#product-inner'),
+                product = getValues(form)
+
+            product.variant = $(this).data('size');
+
+            console.log('product_change_size');
+            console.log(product);
+            posthog.capture('product_change_size', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_price: product.price,
+                roduct_variant: product.variant,
+                block_name: "Страница товара"
+            });
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    /* Добавление в корзину из Миникорзины */
+    $(document).on('click', '#other-products-in-cart [name="ms2_action"]', function () {
+        try {
+            var form = $(this).closest('form'),
+                product = getValues(form),
+                count = parseInt(form.find('[name="count"]').val());
+
+            posthog.capture('minicart_additional_products_add', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_variant: product.variant,
+                product_price: product.price,
+                product_count: count,
+                block_name: "Миникорзина. Дополнительные товары"
+            })
+            console.log("posthog Миникорзина. Дополнительные товары minicart_additional_products_add");
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    $(document).on('click', '#other-products-in-cart .slide-product__img_colors label', function () {
+        try {
+            var form = $(this).closest('#other-products-in-cart'),
+                product = getValues(form)
+
+            product.variant = $(this).data('color');
+
+            console.log('minicart_additional_products_color');
+            console.log(product);
+            posthog.capture('minicart_additional_products_color', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_price: product.price,
+                roduct_variant: product.variant,
+                block_name: "Миникорзина. Дополнительные товары"
+            });
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    $(document).on('click', '#other-products-in-cart .single-product-hints__size label', function () {
+        try {
+            var form = $(this).closest('#other-products-in-cart'),
+                product = getValues(form)
+
+            product.variant = $(this).data('size');
+
+            console.log('minicart_additional_products_size');
+            console.log(product);
+            posthog.capture('minicart_additional_products_size', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_price: product.price,
+                roduct_variant: product.variant,
+                block_name: "Миникорзина. Дополнительные товары"
+            });
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    $(document).on('click', '#other-products-in-cart .hand_button.increment', function () {
+        try {
+            var form = $(this).closest('form'),
+                product = getValues(form),
+                count = 1;
+
+            console.log("minicart_additional_products_plus");
+            console.log(product);
+            posthog.capture('minicart_additional_products_plus', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_variant: product.variant,
+                product_price: product.price,
+                product_count: count,
+                block_name: "Миникорзина. Дополнительные товары"
+            })
+
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    $(document).on('click', '#other-products-in-cart .hand_button.decrement', function () {
+        try {
+            var form = $(this).closest('form'),
+                product = getValues(form),
+                count = 1;
+
+            console.log("minicart_additional_products_minus");
+            console.log(product);
+            posthog.capture('minicart_additional_products_minus', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_variant: product.variant,
+                product_price: product.price,
+                product_count: count,
+                block_name: "Миникорзина. Дополнительные товары"
+            })
+
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    /* дополнительные товары  single-product-section__other-products posthog_view_block  */
+
+    $(document).on('click', '.single-product-section__other-products .slide-product__information .hand_button.decrement', function () {
+        try {
+            var form = $(this).closest('form'),
+                product = getValues(form),
+                count = 1;
+
+            console.log("additional_products_minus");
+            console.log(product);
+            posthog.capture('additional_products_minus', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_variant: product.variant,
+                product_price: product.price,
+                product_count: count,
+                block_name: "Дополнительные товары"
+            })
+
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    $(document).on('click', '.single-product-section__other-products .slide-product__information .hand_button.increment', function () {
+        try {
+            var form = $(this).closest('form'),
+                product = getValues(form),
+                count = 1;
+
+            console.log("additional_products_plus");
+            console.log(product);
+            posthog.capture('additional_products_plus', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_variant: product.variant,
+                product_price: product.price,
+                product_count: count,
+                block_name: "Дополнительные товары"
+            })
+
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    /* Добавление на странице add-products-page */
+    $(document).on('click', '.add-products-page .swiper-slide [value="cart/add"]', function () {
+        try {
+            var form = $(this).closest('.swiper-slide'),
+                product = getValues(form),
+                count = parseInt(form.find('[name="count"]').val()),
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.slide-product__img_colors').length)
+                product.variant = form.find('.slide-product__img_colors input:checked + label').data('color')
+
+            product.price = price;
+            console.log('additional_products_add');
+            console.log(product);
+            posthog.capture('additional_products_add', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_variant: product.variant,
+                product_price: price,
+                product_count: count,
+                block_name: "Дополнительные товары"
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    $(document).on('click', '.add-products-page .swiper-slide .slide-product__img_colors label', function () {
+        try {
+            var form = $(this).closest('.slide-product__information'),
+                product = getValues(form)
+
+            product.variant = $(this).data('color');
+
+            console.log('additional_products_color');
+            console.log(product);
+            posthog.capture('additional_products_color', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_price: product.price,
+                roduct_variant: product.variant,
+                block_name: "Дополнительные товары"
+            });
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    $(document).on('click', '.add-products-page .swiper-slide .single-product-hints__size label', function () {
+        try {
+            var form = $(this).closest('.slide-product__information'),
+                product = getValues(form)
+
+            product.variant = $(this).data('size');
+
+            console.log('additional_products_size');
+            console.log(product);
+            posthog.capture('additional_products_size', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_price: product.price,
+                roduct_variant: product.variant,
+                block_name: "Дополнительные товары"
+            });
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    /* Добавление в миникорзину через кнопку плюс */
+    $(document).on('click', '#product-in-side-cart .hand_button.increment', function () {
+        try {
+            var form = $(this).closest('#product-in-side-cart'),
+                product = getValues(form),
+                name = form.find('.cart-item__info_title').text(),
+                count = 1,
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.price = price;
+            console.log('minicart_cart_product_plus');
+            console.log(product);
+            posthog.capture('minicart_cart_product_plus', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: name,
+                product_variant: product.variant,
+                product_price: price,
+                product_count: count,
+                block_name: "Товары в миникорзине"
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    /* Удаление товара из миникорзины через минус */
+    $(document).on('click', '#product-in-side-cart .hand_button.decrement', function () {
+        try {
+            var form = $(this).closest('#product-in-side-cart'),
+                product = getValues(form),
+                name = form.find('.cart-item__info_title').text(),
+                count = 1,
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.price = price;
+            console.log('minicart_cart_product_minus');
+            console.log(product);
+            posthog.capture('minicart_cart_product_minus', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: name,
+                product_variant: product.variant,
+                product_price: price,
+                product_count: count,
+                block_name: "Товары в миникорзине"
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    /* Удаление товара из корзины через кнопку */
+    $(document).on('click', '#product-in-side-cart + .cart-close', function () {
+        try {
+            var form = $(this).prev(),
+                product = getValues(form),
+                name = form.find('[name="pagetitle"]').val(),
+                count = parseInt(form.find('[name="count"]').val()),
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.price = price;
+            console.log('minicart_cart_product_delete');
+            console.log(product);
+            posthog.capture('minicart_cart_product_delete', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: name,
+                product_variant: product.variant,
+                product_price: price,
+                product_count: count,
+                block_name: "Товары в миникорзине"
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    /* Добавление в корзину через кнопку плюс в корзине */
+    $(document).on('click', '#page-cart .hand_button.increment', function () {
+        try {
+            var form = $(this).closest('.cart-item'),
+                product = getValues(form),
+                count = 1,
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.price = price;
+            console.log('cart_product_plus');
+            console.log(product);
+            posthog.capture('cart_product_plus', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: name,
+                product_variant: product.variant,
+                product_price: price,
+                product_count: count,
+                block_name: "Корзина"
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    /* Удаление товара из корзины через минус в корзине */
+    $(document).on('click', '#page-cart .hand_button.decrement', function () {
+        try {
+            var form = $(this).closest('.cart-item'),
+                product = getValues(form),
+                count = 1,
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.price = price;
+            console.log('cart_product_minus');
+            console.log(product);
+            posthog.capture('cart_product_minus', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: name,
+                product_variant: product.variant,
+                product_price: price,
+                product_count: count,
+                block_name: "Корзина"
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    /* Удаление товара из корзины через кнопку в корзине */
+    $(document).on('click', '#page-cart .cart-item .cart-close', function () {
+        try {
+            var form = $(this).closest('.cart-item'),
+                product = getValues(form),
+                count = parseInt(form.find('[name="count"]').val()),
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.price = price;
+            console.log('cart_product_delete');
+            console.log(product);
+            posthog.capture('cart_product_delete', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: name,
+                product_variant: product.variant,
+                product_price: price,
+                product_count: count,
+                block_name: "Корзина"
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    $(document).on("focusout", "form input[name='coupon_value']", function () {
+        console.log("Промокод конец" + $(this).val());
+        posthog.capture('cart_promo_end', {
+            block_name: "Промокод",
+            promo: $(this).val(),
+            page_name: "Copper",
+        })
+    }).on("focus", "form input[name='coupon_value']", function () {
+        console.log("Промокод старт");
+        posthog.capture('cart_promo_start', {
+            block_name: "Промокод",
+            page_name: "Copper",
+        })
+    })
+
+
+    $(document).on('click', '.js-check-coupon button[type="submit"]', function () {
+        try {
+            if ($("input[name='coupon_value']").val() !== "") {
+                console.log('cart_promo_send');
+                posthog.capture('cart_promo_send', {
+                    block_name: "Промокод",
+                    promo: $("input[name='coupon_value']").val(),
+                    error: $(".js-promocode-error.error_promocode").text(),
+                    page_name: "Copper",
+                })
+            }
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    $(".btn-play-video").click(function () {
+        posthog.capture('click_video_index', {
+            video_name: "Как работает BeautySleep"
+        })
+
+    })
+
+    $(".header-common a.interaction__phone").click(function () {
+        posthog.capture('click_phone_header', {
+            event_name: "Клик по номеру телефона"
+        })
+    })
+
+    $("a.whats-app").click(function () {
+        posthog.capture('whatsapp_click', {
+            event_name: "Клик по whatsapp"
+        })
+    })
+
+    $(".pp__mailing").each(function () {
+        observer.observe(this, {
+            attributes: true
+        });
+    });
+    /*var target = $( ".pp__mailing" )[0];
+    observer.observe(target, config);
+    var target = $( ".pp__mailing" )[2];
+    observer.observe(target, config);
+     var target = $( ".pp__video-review" )[0];
+    observer.observe(target, config);*/
+
+
+</script>
+
+<style>
+    .header-info .swiper-slide {
+        background: none !important;
+    }
+</style>
+
+<script>
+    $(window).resize(function () {
+        addMarginToSwiper();
+    })
+    addMarginToSwiper();
+
+    function addMarginToSwiper() {
+        var h = $('.general-section img').outerHeight();
+        $('.curtain-container.index').css({'margin-top': h})
+    }
+</script>
+
+<script src="../../files/beautysleep.js"></script>
+<script src="../../files/bs_default.js"></script>
+<script src="../../files/jquery.jgrowl.min.js"></script>
+<!--<script src="../../files/message_settings.js"></script>-->
+<!--<script type="module" src="../../files/sendit.js"></script>-->
+
+<!--<script type="module" src="../../files/sendsay.js"></script>-->
+<!--<script src="../../files/customAjaxForm.js"></script>-->
+
+
+<div class="SmartCaptcha-Overlay SmartCaptcha-Overlay_show_spinner" data-testid="advanced-container" tabindex="-1"
+     style="--smart-captcha-doc-height: 918px; --smart-captcha-doc-width: 1598px;">
+    <div class="SmartCaptcha-Spin"></div>
+</div>
+<div class="SmartCaptcha-Overlay SmartCaptcha-Overlay_show_spinner" data-testid="advanced-container" tabindex="-1"
+     style="--smart-captcha-doc-height: 918px; --smart-captcha-doc-width: 1598px;">
+    <div class="SmartCaptcha-Spin"></div>
+</div>
+<script type="text/javascript" async="" src="../../files/dyn-goal-config.js"></script>
+<script src="../../files/iziToast.min.js"></script>
+</body>
+
+</html>
