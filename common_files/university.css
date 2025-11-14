@@ -3527,7 +3527,7 @@
     top: 0;
     height: 60px;
     width: 259px;
-    background: url("../files/common_left.svg") no-repeat;
+    background: url("/common_left.svg") no-repeat;
 }
 
 .unisupport_common .block:after {
@@ -3537,7 +3537,7 @@
     top: 0;
     height: 60px;
     width: 259px;
-    background: url("../files/common_left.svg") no-repeat;
+    background: url("/common_left.svg") no-repeat;
 }
 
 .unisupport_stages {
