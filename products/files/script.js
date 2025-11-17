@@ -1,7 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const productModalInfo = document.querySelector('.product-modal-info');
-    const productModalSwiperCont = document.querySelector('.product-modal-images .swiper-container');
-    productModalSwiperCont.style.height = productModalInfo.clientHeight  + 'px';
+    document.querySelectorAll('.pp_product-modal').forEach(modal => {
+        const infoSection = modal.querySelector('.product-modal-info');
+        const swiperContainer = modal.querySelector('.product-modal-images .swiper-container');
+
+        if (infoSection && swiperContainer) {
+            // Добавляем обработчик на случай изменения размера
+            const updateHeight = () => {
+                swiperContainer.style.height = infoSection.clientHeight + 'px';
+            };
+
+            // Устанавливаем начальную высоту
+            updateHeight();
+
+            // Опционально: обновлять при изменении размера окна
+            window.addEventListener('resize', updateHeight);
+        }
+    });
 
     const productModalImagesSwiper = new Swiper(".product-modal-images .swiper-container", {
         spaceBetween: 0,
