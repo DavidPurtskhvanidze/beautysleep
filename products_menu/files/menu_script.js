@@ -57,11 +57,14 @@ function adjustMenuItemsPadding() {
         // Применяем padding ко всем элементам
         items.forEach((item, index) => {
             const goodsItem = item.querySelector('.shop-section__goods_item');
-            if (goodsItem && index <= visibleItemsCount) {
-                const currentPadding = parseFloat(getComputedStyle(goodsItem).paddingLeft) || 0;
-                goodsItem.style.paddingLeft = `${currentPadding + paddingToAdd}px`;
-                goodsItem.style.paddingRight = `${currentPadding + paddingToAdd}px`;
-            }
+            const currentPadding = parseFloat(getComputedStyle(goodsItem).paddingLeft) || 0;
+            goodsItem.style.paddingLeft = `${currentPadding + paddingToAdd}px`;
+            goodsItem.style.paddingRight = `${currentPadding + paddingToAdd}px`;
+            // if (goodsItem && index <= visibleItemsCount) {
+            //     const currentPadding = parseFloat(getComputedStyle(goodsItem).paddingLeft) || 0;
+            //     goodsItem.style.paddingLeft = `${currentPadding + paddingToAdd}px`;
+            //     goodsItem.style.paddingRight = `${currentPadding + paddingToAdd}px`;
+            // }
         });
     }
 }
@@ -105,9 +108,9 @@ function demonstrateHorizontalScroll() {
     // Настройки анимации
     const config = {
         scrollAmount: 100, // На сколько пикселей прокручивать
-        duration: 600,     // Длительность одной анимации (вперед+назад) в ms
+        duration: 400,     // Длительность одной анимации (вперед+назад) в ms
         repetitions: 2,    // Количество повторений (туда-обратно = 1 повторение)
-        delayBetween: 800  // Задержка между повторениями в ms
+        delayBetween: 600  // Задержка между повторениями в ms
     };
 
     let currentRepetition = 0;
@@ -220,7 +223,7 @@ window.addEventListener('load', function() {
 });
 
 // Дополнительно: можно запустить при первом взаимодействии пользователя
-document.addEventListener('click', function initOnInteraction() {
-    demonstrateHorizontalScroll();
-    document.removeEventListener('click', initOnInteraction);
-}, { once: true });
+// document.addEventListener('click', function initOnInteraction() {
+//     demonstrateHorizontalScroll();
+//     document.removeEventListener('click', initOnInteraction);
+// }, { once: true });
