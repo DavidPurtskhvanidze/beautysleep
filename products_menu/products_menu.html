@@ -1,0 +1,2288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>Каталог</title>
+    <style>
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('../common_files/fonts/CeraPro-Regular.woff2') format('woff2'),
+            url('../common_files/fonts/CeraPro-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('../common_files/fonts/CeraPro-Bold.woff2') format('woff2'),
+            url('../common_files/fonts/CeraPro-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('../common_files/fonts/CeraPro-Medium.woff2') format('woff2'),
+            url('../common_files/fonts/CeraPro-Medium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('../common_files/fonts/CeraPro-Light.woff2') format('woff2'),
+            url('../common_files/fonts/CeraPro-Light.woff') format('woff');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <link rel="stylesheet" href="../common_files/normalize.css">
+    <link rel="stylesheet" href="../common_files/swiper.min.css">
+    <link href="../common_files/fancybox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../common_files/css_styles.css">
+    <link rel="stylesheet" href="../common_files/css_common.css">
+    <link rel="stylesheet" href="../common_files/header.css">
+    <link rel="stylesheet" href="files/catalog.css" type="text/css">
+
+    <script src="../common_files/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header__content">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <span class="header__slide">Для обеспечения быстрой работы сайта, пожалуйста, отключите VPN</span>
+                </div>
+                <div class="swiper-slide">
+                    <a href="products/" class="header__slide">-10% НА ВСЕ ИЗДЕЛИЯ. ПРОМОКОД: HAPPY10</a>
+                </div>
+                <div class="swiper-slide">
+                    <span class="header__slide">Покупайте сейчас и оплачивайте частями в течение нескольких месяцев</span>
+                </div>
+                <div class="swiper-slide">
+                    <span class="header__slide">Для обеспечения быстрой работы сайта, пожалуйста, отключите VPN</span>
+                </div>
+                <div class="swiper-slide">
+                    <a href="products/" class="header__slide">-10% НА ВСЕ ИЗДЕЛИЯ. ПРОМОКОД: HAPPY10</a>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="header__middle-col">
+                <a href="tel:88002224624" class="header__phone">
+                    <img loading="lazy" width="18" height="18" src="../common_files/phone.svg" alt="Телефон горячей линии">
+                    <span class="header__phone-text">8 (800) 222 46 24</span>
+                </a>
+                <button class="header__nav-switch" data-site-switch="#main-nav" data-site-noscroll="1" data-site-backdrop="1">
+                    <span class="header__line"></span>
+                    <span class="header__line"></span>
+                    <span class="header__line"></span>
+                </button>
+            </div>
+            <div class="header__middle-col">
+                <a class="header__logo-link">
+                    <img loading="lazy" width="356" height="45" class="header__logo" src="../common_files/logo.svg" alt="Beauty Sleep">
+                </a>
+            </div>
+            <div class="header__middle-col">
+                <div class="header__link-group">
+                    <a href="products/" class="header__shop-link">
+                        <img loading="lazy" src="../common_files/dot-grid.svg" alt="Онлайн магазин">
+                        <span class="header__link-text">Купить</span>
+                    </a>
+                    <a href="basket" class="header__cart-link ">
+                        <span class="header__cart-icon-wrap">
+                            <img loading="lazy" class="header__cart-icon" src="../common_files/cart_new_icon.svg" width="18" height="18" alt="Shopping cart">
+                            <span class="header__cart-counter">0</span>
+                        </span>
+                        <span class="header__link-text">Корзина</span>
+                    </a>                
+                </div>
+            </div>
+        </div>
+        <nav class="header__nav-wrap" id="main-nav">
+            <div class="header__mobile" style="padding: 1.5rem 0.5rem;">
+                <div class="header__mobile-col" style="align-items: flex-start; justify-content: flex-start;">
+                    <a href="products/" class="header__shop-link">
+                        <img loading="lazy" data-site-lazy="../files/dot-grid.svg" data-site-svg="" alt="Онлайн магазин">
+                        <span class="header__link-text">Купить</span>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav">
+                <ul class="header__nav">
+                    <li class="header__nav-item" data-site-switch="#submenu-0" data-site-hover="(min-width: 1280px)">
+                        <button class="header__nav-link ">
+                            <span class="header__nav-link-text">Подушки</span>
+                            <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g opacity="0.500000">
+                                    <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+                                </g>
+                            </svg>
+                        </button>
+                        <div id="submenu-0" class="header__submenu-wrap">
+                            <ul class="header__submenu header__submenu_special">
+                                <li class="header__submenu-item">
+                                    <a href="omnia" class="header__submenu-link">
+                                        <div class="header__submenu-img-wrap">
+                                            <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/pillow_omnia02.svg" alt="Omnia">
+                                        </div>
+                                        <span class="header__submenu-link-text">Omnia</span>
+                                    </a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="copper" class="header__submenu-link">
+                                        <div class="header__submenu-img-wrap">
+                                            <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/pillow_copper02.svg" alt="Omnia Copper Blend">
+                                        </div>
+                                        <span class="header__submenu-link-text">Omnia Copper Blend</span>
+                                    </a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="hyaluron" class="header__submenu-link">
+                                        <div class="header__submenu-img-wrap">
+                                            <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/pillow_Hyaluronic.svg" alt="Omnia Hyaluron">
+                                        </div>
+                                        <span class="header__submenu-link-text">Omnia Hyaluron</span>
+                                    </a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="cooling" class="header__submenu-link">
+                                        <div class="header__submenu-img-wrap">
+                                            <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/pillow_cooling02.svg" alt="Omnia Cooling">
+                                        </div>
+                                        <span class="header__submenu-link-text">Omnia Cooling</span>
+                                    </a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="aula" class="header__submenu-link">
+                                        <div class="header__submenu-img-wrap">
+                                            <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/pillow_aula02.svg" alt="Aula">
+                                        </div>
+                                        <span class="header__submenu-link-text">Aula</span>
+                                    </a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="products/?category=437" class="header__submenu-link">
+                                        <div class="header__submenu-img-wrap">
+                                            <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/somia_ico02.svg" alt="Подушки для мужчин&nbsp;и&nbsp;детей">
+                                        </div>
+                                        <span class="header__submenu-link-text">Подушки для мужчин&nbsp;и&nbsp;детей</span>
+                                    </a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="pillow-for-decollete" class="header__submenu-link">
+                                        <div class="header__submenu-img-wrap">
+                                            <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/pillow_decollete02.svg" alt="Подушка для декольте">
+                                        </div>
+                                        <span class="header__submenu-link-text">Подушка для декольте</span>
+                                    </a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="products/?category=25" class="header__submenu-link">
+                                        <div class="header__submenu-img-wrap">
+                                            <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/pillow_case02.svg" alt="Наволочки">
+                                        </div>
+                                        <span class="header__submenu-link-text">Наволочки</span>
+                                    </a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="sleep-wrinkles" class="header__submenu-link">
+                                        <div class="header__submenu-img-wrap">
+                                            <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/sleep02.svg" alt="Beauty - сон">
+                                        </div>
+                                        <span class="header__submenu-link-text">Beauty - сон</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li><li class="header__nav-item" data-site-switch="#submenu-1" data-site-hover="(min-width: 1280px)">
+                    <button class="header__nav-link ">
+                        <span class="header__nav-link-text">Одеяла</span>
+                        <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g opacity="0.500000">
+                                <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <div id="submenu-1" class="header__submenu-wrap">
+                        <ul class="header__submenu ">
+                            <li class="header__submenu-item">
+                                <a href="weighted-blanket" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/blanket02.svg" alt="Утяжеленное одеяло ">
+                                    </div>
+                                    <span class="header__submenu-link-text">Утяжеленное одеяло </span>
+                                </a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="airmesh-blanket" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/blanket002.svg" alt="Одеяло с вентиляционными вставками">
+                                    </div>
+                                    <span class="header__submenu-link-text">Одеяло с вентиляционными вставками</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li><li class="header__nav-item" data-site-switch="#submenu-2" data-site-hover="(min-width: 1280px)">
+                    <button class="header__nav-link ">
+                        <span class="header__nav-link-text">Постельное белье</span>
+                        <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g opacity="0.500000">
+                                <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <div id="submenu-2" class="header__submenu-wrap">
+                        <ul class="header__submenu ">
+                            <li class="header__submenu-item">
+                                <a href="products/?category=481" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/linen02.svg" alt="Постельное белье">
+                                        <img loading="lazy" width="55" height="55" src="../common_files/new.svg" alt="" class="header__submenu-img-new">
+                                    </div>
+                                    <span class="header__submenu-link-text">Постельное белье</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li><li class="header__nav-item" data-site-switch="#submenu-3" data-site-hover="(min-width: 1280px)">
+                    <button class="header__nav-link ">
+                        <span class="header__nav-link-text">Одежда и аксессуары из шелка</span>
+                        <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g opacity="0.500000">
+                                <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <div id="submenu-3" class="header__submenu-wrap">
+                        <ul class="header__submenu ">
+                            <li class="header__submenu-item">
+                                <a href="silk-clothes/?category=all" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/all_products02.svg" alt="Все товары из шелка">
+                                    </div>
+                                    <span class="header__submenu-link-text">Все товары из шелка</span>
+                                </a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="silk-clothes/?category=263-452-261-512-259-508-536-505-504" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/clothes02.svg" alt="Одежда">
+                                    </div>
+                                    <span class="header__submenu-link-text">Одежда</span>
+                                </a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="silk-clothes/?category=267-266-268-269-270-280" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/accessories02.svg" alt="Аксессуары">
+                                    </div>
+                                    <span class="header__submenu-link-text">Аксессуары</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li><li class="header__nav-item" data-site-switch="#submenu-4" data-site-hover="(min-width: 1280px)">
+                    <button class="header__nav-link ">
+                        <span class="header__nav-link-text">Ароматы для сна</span>
+                        <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g opacity="0.500000">
+                                <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <div id="submenu-4" class="header__submenu-wrap">
+                        <ul class="header__submenu ">
+                            <li class="header__submenu-item">
+                                <a href="scents-for-sleep" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/aroma02.svg" alt="Ароматы для сна">
+                                    </div>
+                                    <span class="header__submenu-link-text">Ароматы для сна</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li><li class="header__nav-item" data-site-switch="#submenu-5" data-site-hover="(min-width: 1280px)">
+                    <button class="header__nav-link ">
+                        <span class="header__nav-link-text">Идеи подарков</span>
+                        <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g opacity="0.500000">
+                                <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <div id="submenu-5" class="header__submenu-wrap">
+                        <ul class="header__submenu ">
+                            <li class="header__submenu-item">
+                                <a href="products/?category=287" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/gift_card02.svg" alt="Подарочные сертификаты">
+                                    </div>
+                                    <span class="header__submenu-link-text">Подарочные сертификаты</span>
+                                </a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="products/?category=325" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/gift02.svg" alt="Подарочные наборы">
+                                    </div>
+                                    <span class="header__submenu-link-text">Подарочные наборы</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li><li class="header__nav-item" data-site-switch="#submenu-6" data-site-hover="(min-width: 1280px)">
+                    <button class="header__nav-link ">
+                        <span class="header__nav-link-text">Наша наука</span>
+                        <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g opacity="0.500000">
+                                <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <div id="submenu-6" class="header__submenu-wrap">
+                        <ul class="header__submenu ">
+                            <li class="header__submenu-item">
+                                <a href="our-science" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/expert02.svg" alt="Клинические исследования">
+                                    </div>
+                                    <span class="header__submenu-link-text">Клинические исследования</span>
+                                </a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="beauty-sleep-university/" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/univer.svg" alt="Beauty - университет">
+                                    </div>
+                                    <span class="header__submenu-link-text">Beauty - университет</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li><li class="header__nav-item" data-site-switch="#submenu-7" data-site-hover="(min-width: 1280px)">
+                    <button class="header__nav-link ">
+                        <span class="header__nav-link-text">Покупателям</span>
+                        <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g opacity="0.500000">
+                                <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <div id="submenu-7" class="header__submenu-wrap">
+                        <ul class="header__submenu ">
+                            <li class="header__submenu-item">
+                                <a href="dostavka-i-oplata" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/delivery02.svg" alt="Доставка и оплата">
+                                    </div>
+                                    <span class="header__submenu-link-text">Доставка и оплата</span>
+                                </a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="garantia-i-vozvrat" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/return02.svg" alt="Гарантия и возврат">
+                                    </div>
+                                    <span class="header__submenu-link-text">Гарантия и возврат</span>
+                                </a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="for-customers/contacts" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/contacts02.svg" alt="Контакты">
+                                    </div>
+                                    <span class="header__submenu-link-text">Контакты</span>
+                                </a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="o-kompanii" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/about02.svg" alt="О компании">
+                                    </div>
+                                    <span class="header__submenu-link-text">О компании</span>
+                                </a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="reviews" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/review02.svg" alt="Отзывы">
+                                    </div>
+                                    <span class="header__submenu-link-text">Отзывы</span>
+                                </a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="question" class="header__submenu-link">
+                                    <div class="header__submenu-img-wrap">
+                                        <img loading="lazy" class="header__submenu-img" width="100" height="100" src="../common_files/faq02.svg" alt="Вопросы">
+                                    </div>
+                                    <span class="header__submenu-link-text">Вопросы</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>                </ul>
+                <div class="header__mobile" style="align-items: flex-start;justify-content: flex-start; row-gap: 1rem;">
+
+                    <div class="header__mobile-col" style="align-items: flex-start;justify-content: flex-start;">
+                        <a href="tel:88002224624" class="header__mobile-link">
+                            <img loading="lazy" width="20" height="20" src="../common_files/phone.svg" alt="Hotline phone">
+                            <span class="header__mobile-link-text">8 (800) 222 46 24</span>
+                        </a>
+                    </div>
+                    <div class="header__mobile-col" style="align-items: flex-start;justify-content: flex-start;">
+                        <a href="https://api.whatsapp.com/send?phone=+79303844624" class="header__mobile-link">
+                            <img loading="lazy" width="20" height="20" src="../common_files/socials/wa.svg" alt="Whatsapp phone">
+                            <span class="header__mobile-link-text">+7 (930) 384-46-24</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main role="main" class="beauty-landing store shop-store">
+
+    <section class="general-section">
+        <div class="general-photo center posthog_view_block ">
+            <picture>
+                <source srcset="../common_files/po_main_mob_570х420.jpg" media="(max-width: 767px)">
+                <source srcset="../common_files/po_catalog_tab_768х300.jpg" media="(max-width: 1279px)">
+                <img loading="lazy" class="single-photo" src="../common_files/po_catalog_pc_1920х380.jpg" alt="">
+            </picture>
+        </div>
+    </section>
+    <style>
+        @media screen and (max-width: 1023px){
+            .general-photo,
+            .general-photo > picture {
+                height: 360px;
+            }
+        }
+    </style>
+    <section class="delivery-section posthog_view_block">
+        <div class="grid">
+            <div class="delivery-section__item posthog_try_to_click ">
+                <img loading="lazy" src="../common_files/delivery-section__item-2.svg" alt="">
+                <span>Заказ на сайте или по телефону 8 (800) 222 46 24</span>
+            </div>
+        </div>
+    </section>
+    <section class="shop-section">
+        <div class="grid">
+            <div class="shop-section__goods">
+                <div class="shop-section__goods_sidebar">
+                    <p class="show">Все продукты</p>
+                    <div>
+                        <div class="shop-section__goods_item_action active" data-id="anti-age/" data-category-id="552">
+                            <div class="shop-section__goods_item">
+                                Anti-age бестселлеры
+                            </div>
+                        </div>
+                        <div class="shop-section__goods_item_action" data-id="anti-age2/" data-category-id="553">
+                            <div class="shop-section__goods_item">
+                                Золотой стандарт anti-age
+                            </div>
+                        </div>
+                        <div class="shop-section__goods_item_action" data-id="anti-stress/" data-category-id="554">
+                            <div class="shop-section__goods_item">
+                                Антистресс-одеяло
+                            </div>
+                        </div>
+                        <div class="shop-section__goods_item_action" data-id="ventilated/" data-category-id="555">
+                            <div class="shop-section__goods_item">
+                                Вентилируемое одеяло
+                            </div>
+                        </div>
+                        <div class="shop-section__goods_item_action" data-id="anti-age-and-defence/" data-category-id="556">
+                            <div class="shop-section__goods_item">
+                                Anti-Age + Защита кожи
+                            </div>
+                        </div>
+                        <div class="shop-section__goods_item_action" data-id="anti-age-hyaluron/" data-category-id="557">
+                            <div class="shop-section__goods_item">
+                                Anti-Age + Увлажнение
+                            </div>
+                        </div>
+                        <div class="shop-section__goods_item_action" data-id="anti-age-cooling/" data-category-id="558">
+                            <div class="shop-section__goods_item">
+                                Anti-Age + Охлаждение
+                            </div>
+                        </div>
+                        <div class="shop-section__goods_item_action" data-id="anti-age-premium/" data-category-id="559">
+                            <div class="shop-section__goods_item">
+                                Anti-Age + Премиальный шелк
+                            </div>
+                        </div>
+                        <div class="shop-section__goods_item_action" data-id="beauty-towel/" data-category-id="581">
+                            <div class="shop-section__goods_item">
+                                Бьюти-полотенца
+                            </div>
+                        </div>
+                        <div class="shop-section__goods_item_action" data-id="pillowcases-hand/" data-category-id="560">
+                            <div class="shop-section__goods_item">
+                                Наволочки Omnia
+                            </div>
+                        </div>
+                        <div class="shop-section__goods_item_action" data-id="pillowcases-aula/" data-category-id="569">
+                            <div class="shop-section__goods_item">
+                                Наволочки Aula
+                            </div>
+                        </div>
+                        <div class="shop-section__goods_item_action" data-id="premium/" data-category-id="561">
+                            <div class="shop-section__goods_item">
+                                Постельное белье
+                            </div>
+                        </div>
+                        <div class="shop-section__goods_item_action" data-id="aroma/" data-category-id="562">
+                            <div class="shop-section__goods_item">
+                                Ароматы для спальни
+                            </div>
+                        </div>
+                        <div class="shop-section__goods_item_action" data-id="somia-pillows/" data-category-id="563">
+                            <div class="shop-section__goods_item">
+                                Подушка-трансформер для мужчин и детей
+                            </div>
+                        </div>
+                        <div class="shop-section__goods_item_action" data-id="luxury/" data-category-id="564">
+                            <div class="shop-section__goods_item">
+                                Шелковые аксессуары для волос и кожи
+                            </div>
+                        </div>
+                        <div class="shop-section__goods_item_action" data-id="luxury-longwear/" data-category-id="565">
+                            <div class="shop-section__goods_item">
+                                Шелковая одежда Ayris Silk
+                            </div>
+                        </div>
+                        <div class="shop-section__goods_item_action" data-id="idea-gifts/" data-category-id="566">
+                            <div class="shop-section__goods_item">
+                                Подарочные сертификаты
+                            </div>
+                        </div>
+                        <div class="shop-section__goods_item_action" data-id="gifs/" data-category-id="567">
+                            <div class="shop-section__goods_item">
+                                Подарочные наборы
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-section__goods_content posthog_view_block" id="shop-catalog">
+                    <div class="goods-grid goods-grid--complects22" id="anti-age/">
+                        <div class="goods-grid__title">
+                            <h3>Anti-age бестселлеры</h3>
+                            <div class="goods-grid__sub-title">
+                                Борются с морщинами от сна на боку и животе и утренней отёчностью
+                            </div>
+                        </div>
+                        <div class="goods-grid-img-video-box">
+                            <video style="background-color: #cccccc" class="" preload="none" playsinline="" autoplay="" muted="" loop="" src="">
+                                <source data-src="" type="video/mp4" src="">
+                            </video>
+                        </div>
+
+                        <!--product card-->
+                        <form data-viewproduct="1" class="slide-product js-product-box dd posthog_view_block ms2_form msoptionsprice-product">
+                            <!--slide-product__img-->
+                            <div class="slide-product__img">
+                                <div class="slide-product__badge custom">
+                                    <img loading="lazy" src="../common_files/20percent.svg" alt="">
+                                </div>
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <img loading="lazy" src="../common_files/mssk-hyaluron-1_500x500_1e1.jpg.webp" alt="photo-0" data-color="Молочный">
+                                </a>
+                                <div class="js-product-color" data-id="98">
+                                    <div class="real-options d-flex"></div>
+                                </div>
+                                <!--slide-product-color-->
+                                <div class="slide-product-color-size">
+                                    <div class="color" style="background-color: #db8c97;"></div>
+                                    <div class="color" style="background-color: #eae6dd;"></div>
+                                    <div class="color" style="background-color: #bbb7b0;"></div>
+                                    <div class="color" style="background-color: #D2B58B;"></div>
+                                    <div class="color" style="background-color: #3A3939;"></div>
+                                    <div class="color" style="background-color: #D2B58B;"></div>
+                                </div>
+                                <!--slide-product-color-->
+                                <div class="pillow-preview-labels"></div>
+
+                                <!--mobile add button-->
+                                <button data-pp="open-product-modal-data1" type="submit" name="" value="cart/add" onclick="" class="pp_ button border single-product__to-card single-product__to-card-mobile">
+                                    <span>
+                                        опции
+                                    </span>
+                                </button>
+                                <!--mobile add button-->
+                            </div>
+                            <!--slide-product__img-->
+
+                            <!--slide-product__title-->
+                            <div class="slide-product__title">
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <h4>
+                                        Есть цвета (6шт). Показываем кнопку "Опции".
+                                        Скрываем цвета (n+) если их больше 5.
+                                    </h4>
+                                </a>
+                            </div>
+                            <!--slide-product__title-->
+
+                            <!--slide-product__info-->
+                            <div class="slide-product__info">
+                                <div class="slide-product__item">
+                                    <div class="single-product-price">
+                                        <span class="js-old-price">3 200 ₽</span>
+                                        <span class="js-new-price">4 200 ₽</span>
+                                    </div>
+                                    <div class="separate-payments">
+                                        4 платежа по 3 500 ₽
+                                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="9" cy="9.66675" r="8" stroke="#4F6FC1"/>
+                                            <path d="M9.05805 14.8848C8.87986 14.8848 8.73448 14.8332 8.62194 14.73C8.50939 14.6175 8.45312 14.4674 8.45312 14.2799V7.7944C8.45312 7.60682 8.50939 7.46145 8.62194 7.35829C8.73448 7.24574 8.87986 7.18947 9.05805 7.18947C9.23625 7.18947 9.37693 7.24574 9.4801 7.35829C9.59265 7.46145 9.64892 7.60682 9.64892 7.7944V14.2799C9.64892 14.4674 9.59265 14.6175 9.4801 14.73C9.37693 14.8332 9.23625 14.8848 9.05805 14.8848ZM9.04399 5.79671C8.81889 5.79671 8.62663 5.71699 8.46719 5.55755C8.30775 5.38873 8.22803 5.19178 8.22803 4.96668C8.22803 4.73221 8.30775 4.53995 8.46719 4.38989C8.63601 4.23983 8.82827 4.16479 9.04399 4.16479C9.2597 4.16479 9.44727 4.23983 9.60671 4.38989C9.77553 4.53995 9.85994 4.73221 9.85994 4.96668C9.85994 5.19178 9.78022 5.38873 9.62078 5.55755C9.46134 5.71699 9.26908 5.79671 9.04399 5.79671Z" fill="#4F6FC1"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <button data-pp="open-product-modal-data1" type="button" class="pp_ button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show">
+                                    <span>опции</span>
+                                </button>
+                            </div>
+                            <!--slide-product__info-->
+                        </form>
+                        <!--product card-->
+
+                        <!--product card-->
+                        <form data-viewproduct="2" class="slide-product js-product-box dd posthog_view_block ms2_form msoptionsprice-product">
+                            <!--slide-product__img-->
+                            <div class="slide-product__img">
+                                <div class="slide-product__badge custom">
+                                    <img loading="lazy" src="../common_files/20percent.svg" alt="">
+                                </div>
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <img loading="lazy" src="../common_files/mssk-hyaluron-1_500x500_1e1.jpg.webp" alt="photo-0" data-color="Молочный">
+                                </a>
+                                <div class="js-product-color" data-id="98">
+                                    <div class="real-options d-flex"></div>
+                                </div>
+                                <!--slide-product-color-->
+                                <div class="slide-product-color-size">
+                                    <div class="color" style="background-color: #db8c97;"></div>
+                                    <div class="color" style="background-color: #eae6dd;"></div>
+                                    <div class="color" style="background-color: #986711;"></div>
+                                    <div class="color" style="background-color: #20a53e;"></div>
+                                    <div class="color" style="background-color: #9b5eb3;"></div>
+                                </div>
+                                <!--slide-product-color-->
+                                <div class="pillow-preview-labels"></div>
+
+                                <!--mobile add button-->
+                                <button data-pp="open-product-modal-data2" type="submit" name="" value="cart/add" onclick="" class="pp_ button border single-product__to-card single-product__to-card-mobile">
+                                    <span>
+                                        опции
+                                    </span>
+                                </button>
+                                <!--mobile add button-->
+                            </div>
+                            <!--slide-product__img-->
+
+                            <!--slide-product__title-->
+                            <div class="slide-product__title">
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <h4>
+                                        Есть цвета (5шт). Показываем кнопку "Опции". Цветов всего 5.
+                                        Показываем все цвета.
+                                    </h4>
+                                </a>
+                            </div>
+                            <!--slide-product__title-->
+
+                            <!--slide-product__info-->
+                            <div class="slide-product__info">
+                                <div class="slide-product__item">
+                                    <div class="single-product-price">
+                                        <span class="js-old-price">3 200 ₽</span>
+                                        <span class="js-new-price">4 200 ₽</span>
+                                    </div>
+                                    <div class="separate-payments">
+                                        4 платежа по 3 500 ₽
+                                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="9" cy="9.66675" r="8" stroke="#4F6FC1"/>
+                                            <path d="M9.05805 14.8848C8.87986 14.8848 8.73448 14.8332 8.62194 14.73C8.50939 14.6175 8.45312 14.4674 8.45312 14.2799V7.7944C8.45312 7.60682 8.50939 7.46145 8.62194 7.35829C8.73448 7.24574 8.87986 7.18947 9.05805 7.18947C9.23625 7.18947 9.37693 7.24574 9.4801 7.35829C9.59265 7.46145 9.64892 7.60682 9.64892 7.7944V14.2799C9.64892 14.4674 9.59265 14.6175 9.4801 14.73C9.37693 14.8332 9.23625 14.8848 9.05805 14.8848ZM9.04399 5.79671C8.81889 5.79671 8.62663 5.71699 8.46719 5.55755C8.30775 5.38873 8.22803 5.19178 8.22803 4.96668C8.22803 4.73221 8.30775 4.53995 8.46719 4.38989C8.63601 4.23983 8.82827 4.16479 9.04399 4.16479C9.2597 4.16479 9.44727 4.23983 9.60671 4.38989C9.77553 4.53995 9.85994 4.73221 9.85994 4.96668C9.85994 5.19178 9.78022 5.38873 9.62078 5.55755C9.46134 5.71699 9.26908 5.79671 9.04399 5.79671Z" fill="#4F6FC1"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <button data-pp="open-product-modal-data2" type="button" class="pp_ button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show">
+                                    <span>опции</span>
+                                </button>
+                            </div>
+                            <!--slide-product__info-->
+                        </form>
+                        <!--product card-->
+
+                        <!--product card-->
+                        <form data-viewproduct="3" class="slide-product js-product-box dd posthog_view_block ms2_form msoptionsprice-product">
+                            <!--slide-product__img-->
+                            <div class="slide-product__img">
+                                <div class="slide-product__badge custom">
+                                    <img loading="lazy" src="../common_files/20percent.svg" alt="">
+                                </div>
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <img loading="lazy" src="../common_files/mssk-hyaluron-1_500x500_1e1.jpg.webp" alt="photo-0" data-color="Молочный">
+                                </a>
+                                <div class="js-product-color" data-id="98">
+                                    <div class="real-options d-flex"></div>
+                                </div>
+                                <!--slide-product-color-->
+                                <div class="slide-product-color-size">
+                                    <div class="color" style="background-color: #db8c97;"></div>
+                                    <div class="color" style="background-color: #eae6dd;"></div>
+                                </div>
+                                <!--slide-product-color-->
+                                <div class="pillow-preview-labels"></div>
+
+                                <!--mobile add button-->
+                                <button data-pp="open-product-modal-data3" type="submit" name="" value="cart/add" onclick="" class="pp_ button border single-product__to-card single-product__to-card-mobile">
+                                    <span>
+                                        опции
+                                    </span>
+                                </button>
+                                <!--mobile add button-->
+                            </div>
+                            <!--slide-product__img-->
+
+                            <!--slide-product__title-->
+                            <div class="slide-product__title">
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <h4>
+                                        Есть цвета (2шт). Показываем кнопку "Опции". Цветов всего 2.
+                                        Показываем все цвета.
+                                    </h4>
+                                </a>
+                            </div>
+                            <!--slide-product__title-->
+
+                            <!--slide-product__info-->
+                            <div class="slide-product__info">
+                                <div class="slide-product__item">
+                                    <div class="single-product-price">
+                                        <span class="js-old-price">3 200 ₽</span>
+                                        <span class="js-new-price">4 200 ₽</span>
+                                    </div>
+                                    <div class="separate-payments">
+                                        4 платежа по 3 500 ₽
+                                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="9" cy="9.66675" r="8" stroke="#4F6FC1"/>
+                                            <path d="M9.05805 14.8848C8.87986 14.8848 8.73448 14.8332 8.62194 14.73C8.50939 14.6175 8.45312 14.4674 8.45312 14.2799V7.7944C8.45312 7.60682 8.50939 7.46145 8.62194 7.35829C8.73448 7.24574 8.87986 7.18947 9.05805 7.18947C9.23625 7.18947 9.37693 7.24574 9.4801 7.35829C9.59265 7.46145 9.64892 7.60682 9.64892 7.7944V14.2799C9.64892 14.4674 9.59265 14.6175 9.4801 14.73C9.37693 14.8332 9.23625 14.8848 9.05805 14.8848ZM9.04399 5.79671C8.81889 5.79671 8.62663 5.71699 8.46719 5.55755C8.30775 5.38873 8.22803 5.19178 8.22803 4.96668C8.22803 4.73221 8.30775 4.53995 8.46719 4.38989C8.63601 4.23983 8.82827 4.16479 9.04399 4.16479C9.2597 4.16479 9.44727 4.23983 9.60671 4.38989C9.77553 4.53995 9.85994 4.73221 9.85994 4.96668C9.85994 5.19178 9.78022 5.38873 9.62078 5.55755C9.46134 5.71699 9.26908 5.79671 9.04399 5.79671Z" fill="#4F6FC1"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <button data-pp="open-product-modal-data3" type="button" class="pp_ button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show">
+                                    <span>опции</span>
+                                </button>
+                            </div>
+                            <!--slide-product__info-->
+                        </form>
+                        <!--product card-->
+
+                        <!--product card-->
+                        <form data-viewproduct="31" class="slide-product js-product-box dd posthog_view_block ms2_form msoptionsprice-product">
+                            <!--slide-product__img-->
+                            <div class="slide-product__img">
+                                <div class="slide-product__badge custom">
+                                    <img loading="lazy" src="../common_files/20percent.svg" alt="">
+                                </div>
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <img loading="lazy" src="../common_files/mssk-hyaluron-1_500x500_1e1.jpg.webp" alt="photo-0" data-color="Молочный">
+                                </a>
+                                <div class="js-product-color" data-id="98">
+                                    <div class="real-options d-flex"></div>
+                                </div>
+                                <!--slide-product-color-->
+                                <div class="slide-product-color-size">
+                                    <div class="color" style="background-color: #db8c97;"></div>
+                                </div>
+                                <!--slide-product-color-->
+                                <div class="pillow-preview-labels"></div>
+
+                                <!--mobile add button-->
+                                <button type="submit" name="" value="cart/add" onclick="moveToCardAnimation(31);" class="button border single-product__to-card single-product__to-card-mobile">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.33333 16.3519L2 7.01855H16L13.6667 16.3519H4.33333Z" stroke="#221D1E"/>
+                                        <path d="M12.4566 5.32099C12.4566 2.49608 10.9089 1 8.99973 1C7.09062 1 5.54297 2.50068 5.54297 5.32099" stroke="#221D1E"/>
+                                        <path d="M11.1543 11.6851H6.84333" stroke="#221D1E" stroke-linecap="square"/>
+                                        <path d="M9 13.8406L9 9.52961" stroke="#221D1E" stroke-linecap="square"/>
+                                    </svg>
+                                </button>
+                                <!--mobile add button-->
+                            </div>
+                            <!--slide-product__img-->
+
+                            <!--slide-product__title-->
+                            <div class="slide-product__title">
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <h4>
+                                        Есть цвет (1шт). Показываем цвет.
+                                        Показываем кнопку "Добавить", добавляет сразу в корзину.
+                                    </h4>
+                                </a>
+                            </div>
+                            <!--slide-product__title-->
+
+                            <!--slide-product__info-->
+                            <div class="slide-product__info">
+                                <div class="slide-product__item">
+                                    <div class="single-product-price">
+                                        <span class="js-old-price">3 200 ₽</span>
+                                        <span class="js-new-price">4 200 ₽</span>
+                                    </div>
+                                    <div class="separate-payments">
+                                        4 платежа по 3 500 ₽
+                                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="9" cy="9.66675" r="8" stroke="#4F6FC1"/>
+                                            <path d="M9.05805 14.8848C8.87986 14.8848 8.73448 14.8332 8.62194 14.73C8.50939 14.6175 8.45312 14.4674 8.45312 14.2799V7.7944C8.45312 7.60682 8.50939 7.46145 8.62194 7.35829C8.73448 7.24574 8.87986 7.18947 9.05805 7.18947C9.23625 7.18947 9.37693 7.24574 9.4801 7.35829C9.59265 7.46145 9.64892 7.60682 9.64892 7.7944V14.2799C9.64892 14.4674 9.59265 14.6175 9.4801 14.73C9.37693 14.8332 9.23625 14.8848 9.05805 14.8848ZM9.04399 5.79671C8.81889 5.79671 8.62663 5.71699 8.46719 5.55755C8.30775 5.38873 8.22803 5.19178 8.22803 4.96668C8.22803 4.73221 8.30775 4.53995 8.46719 4.38989C8.63601 4.23983 8.82827 4.16479 9.04399 4.16479C9.2597 4.16479 9.44727 4.23983 9.60671 4.38989C9.77553 4.53995 9.85994 4.73221 9.85994 4.96668C9.85994 5.19178 9.78022 5.38873 9.62078 5.55755C9.46134 5.71699 9.26908 5.79671 9.04399 5.79671Z" fill="#4F6FC1"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <button data-reachgoal="click-add-to-cart-button " type="submit" name="ms2_action" value="cart/add" onclick="moveToCardAnimation(31);" class="button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show" data-pagetitle="Подушка арт.1003 | Beauty Sleep Classic" data-parent="Подушки" data-id="365" data-price="14600">
+                                    <span>добавить</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 21.7383L3 9.73828H21L18 21.7383H6Z" stroke="#221D1E"></path>
+                                        <path d="M16.4446 7.55556C16.4446 3.92353 14.4547 2 12.0001 2C9.5455 2 7.55566 3.92944 7.55566 7.55556" stroke="#221D1E"></path>
+                                        <path d="M14.7695 15.7383H9.22686" stroke="black" stroke-linecap="round"></path>
+                                        <path d="M12 18.5095L12 12.9668" stroke="black" stroke-linecap="round"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <!--slide-product__info-->
+                        </form>
+                        <!--product card-->
+
+                        <!--product card-->
+                        <form data-viewproduct="4" class="slide-product js-product-box dd posthog_view_block ms2_form msoptionsprice-product">
+                            <!--slide-product__img-->
+                            <div class="slide-product__img">
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <img loading="lazy" src="../common_files/omnia-tencel-1_500x500.jpg.webp" alt="photo-0" data-color="Молочный">
+                                </a>
+                                <div class="js-product-color" data-id="98">
+                                    <div class="real-options d-flex"></div>
+                                </div>
+                                <!--                                &lt;!&ndash;slide-product-color&ndash;&gt;-->
+                                <!--                                <div class="slide-product-color-size">-->
+                                <!--                                    <div class="color" style="background-color: #db8c97;"></div>-->
+                                <!--                                    <div class="color" style="background-color: #eae6dd;"></div>-->
+                                <!--                                    <div class="color" style="background-color: #bbb7b0;"></div>-->
+                                <!--                                    <div class="color" style="background-color: #D2B58B;"></div>-->
+                                <!--                                    <div class="color" style="background-color: #3A3939;"></div>-->
+                                <!--                                </div>-->
+                                <!--slide-product-color-->
+                                <div class="pillow-preview-labels"></div>
+
+                                <!--mobile add button-->
+                                <button type="submit" name="" value="cart/add" onclick="moveToCardAnimation(4);" class="button border single-product__to-card single-product__to-card-mobile">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.33333 16.3519L2 7.01855H16L13.6667 16.3519H4.33333Z" stroke="#221D1E"/>
+                                        <path d="M12.4566 5.32099C12.4566 2.49608 10.9089 1 8.99973 1C7.09062 1 5.54297 2.50068 5.54297 5.32099" stroke="#221D1E"/>
+                                        <path d="M11.1543 11.6851H6.84333" stroke="#221D1E" stroke-linecap="square"/>
+                                        <path d="M9 13.8406L9 9.52961" stroke="#221D1E" stroke-linecap="square"/>
+                                    </svg>
+                                </button>
+                                <!--mobile add button-->
+                            </div>
+                            <!--slide-product__img-->
+
+                            <!--slide-product__title-->
+                            <div class="slide-product__title">
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <h4>
+                                        Нет цвета или размера. Показываем кнопку "Добавить", добавляет сразу в корзину.
+                                    </h4>
+                                </a>
+                            </div>
+                            <!--slide-product__title-->
+
+                            <!--slide-product__info-->
+                            <div class="slide-product__info">
+                                <div class="slide-product__item">
+                                    <div class="single-product-price">
+                                        <span class="js-old-price">31 000 ₽</span>
+                                        <span class="js-new-price">27 000 ₽</span>
+                                    </div>
+                                    <div class="separate-payments">
+                                        4 платежа по 3 500 ₽
+                                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="9" cy="9.66675" r="8" stroke="#4F6FC1"/>
+                                            <path d="M9.05805 14.8848C8.87986 14.8848 8.73448 14.8332 8.62194 14.73C8.50939 14.6175 8.45312 14.4674 8.45312 14.2799V7.7944C8.45312 7.60682 8.50939 7.46145 8.62194 7.35829C8.73448 7.24574 8.87986 7.18947 9.05805 7.18947C9.23625 7.18947 9.37693 7.24574 9.4801 7.35829C9.59265 7.46145 9.64892 7.60682 9.64892 7.7944V14.2799C9.64892 14.4674 9.59265 14.6175 9.4801 14.73C9.37693 14.8332 9.23625 14.8848 9.05805 14.8848ZM9.04399 5.79671C8.81889 5.79671 8.62663 5.71699 8.46719 5.55755C8.30775 5.38873 8.22803 5.19178 8.22803 4.96668C8.22803 4.73221 8.30775 4.53995 8.46719 4.38989C8.63601 4.23983 8.82827 4.16479 9.04399 4.16479C9.2597 4.16479 9.44727 4.23983 9.60671 4.38989C9.77553 4.53995 9.85994 4.73221 9.85994 4.96668C9.85994 5.19178 9.78022 5.38873 9.62078 5.55755C9.46134 5.71699 9.26908 5.79671 9.04399 5.79671Z" fill="#4F6FC1"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <button data-reachgoal="click-add-to-cart-button " type="submit" name="ms2_action" value="cart/add" onclick="moveToCardAnimation(4);" class="button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show" data-pagetitle="Подушка арт.1003 | Beauty Sleep Classic" data-parent="Подушки" data-id="365" data-price="14600">
+                                    <span>добавить</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 21.7383L3 9.73828H21L18 21.7383H6Z" stroke="#221D1E"></path>
+                                        <path d="M16.4446 7.55556C16.4446 3.92353 14.4547 2 12.0001 2C9.5455 2 7.55566 3.92944 7.55566 7.55556" stroke="#221D1E"></path>
+                                        <path d="M14.7695 15.7383H9.22686" stroke="black" stroke-linecap="round"></path>
+                                        <path d="M12 18.5095L12 12.9668" stroke="black" stroke-linecap="round"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <!--slide-product__info-->
+                        </form>
+                        <!--product card-->
+
+                        <!--product card-->
+                        <form data-viewproduct="5" class="slide-product js-product-box dd posthog_view_block ms2_form msoptionsprice-product">
+                            <!--slide-product__img-->
+                            <div class="slide-product__img">
+<!--                                <div class="slide-product__badge custom">-->
+<!--                                    <img loading="lazy" src="../common_files/cup+tencel-badge.svg" alt="">-->
+<!--                                </div>-->
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <img loading="lazy" src="../common_files/omnia-tencel-1_500x500.jpg.webp" alt="photo-0" data-color="Молочный">
+                                </a>
+                                <div class="js-product-color" data-id="98">
+                                    <div class="real-options d-flex"></div>
+                                </div>
+                                <!--slide-product-size-->
+                                <div class="slide-product-color-size">
+                                    <div class="size">
+                                        200x220
+                                    </div>
+                                    <div class="size">
+                                        145x205
+                                    </div>
+                                </div>
+                                <!--slide-product-size-->
+                                <div class="pillow-preview-labels"></div>
+
+                                <!--mobile add button-->
+                                <button data-pp="open-product-modal-data5" type="submit" name="" value="cart/add" onclick="" class="pp_ button border single-product__to-card single-product__to-card-mobile">
+                                    <span>
+                                        опции
+                                    </span>
+                                </button>
+                                <!--mobile add button-->
+                            </div>
+                            <!--slide-product__img-->
+
+                            <!--slide-product__title-->
+                            <div class="slide-product__title">
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <h4>
+                                        Есть размеры (2шт). Показываем кнопку "Опции".
+                                        Показываем не больше 2х.
+                                    </h4>
+                                </a>
+                            </div>
+                            <!--slide-product__title-->
+
+                            <!--slide-product__info-->
+                            <div class="slide-product__info">
+                                <div class="slide-product__item">
+                                    <div class="single-product-price">
+                                        <span class="js-old-price hidden"></span>
+                                        <span class="js-new-price">17 600 ₽</span>
+                                    </div>
+                                    <div class="separate-payments">
+                                        4 платежа по 3 500 ₽
+                                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="9" cy="9.66675" r="8" stroke="#4F6FC1"/>
+                                            <path d="M9.05805 14.8848C8.87986 14.8848 8.73448 14.8332 8.62194 14.73C8.50939 14.6175 8.45312 14.4674 8.45312 14.2799V7.7944C8.45312 7.60682 8.50939 7.46145 8.62194 7.35829C8.73448 7.24574 8.87986 7.18947 9.05805 7.18947C9.23625 7.18947 9.37693 7.24574 9.4801 7.35829C9.59265 7.46145 9.64892 7.60682 9.64892 7.7944V14.2799C9.64892 14.4674 9.59265 14.6175 9.4801 14.73C9.37693 14.8332 9.23625 14.8848 9.05805 14.8848ZM9.04399 5.79671C8.81889 5.79671 8.62663 5.71699 8.46719 5.55755C8.30775 5.38873 8.22803 5.19178 8.22803 4.96668C8.22803 4.73221 8.30775 4.53995 8.46719 4.38989C8.63601 4.23983 8.82827 4.16479 9.04399 4.16479C9.2597 4.16479 9.44727 4.23983 9.60671 4.38989C9.77553 4.53995 9.85994 4.73221 9.85994 4.96668C9.85994 5.19178 9.78022 5.38873 9.62078 5.55755C9.46134 5.71699 9.26908 5.79671 9.04399 5.79671Z" fill="#4F6FC1"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <button data-pp="open-product-modal-data5" type="submit" name="ms2_action" value="cart/add" class="pp_ button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show" data-pagetitle="Подушка арт.1003 | Beauty Sleep Classic" data-parent="Подушки" data-id="365" data-price="14600">
+                                    <span>опции</span>
+                                </button>
+                            </div>
+                            <!--slide-product__info-->
+                        </form>
+                        <!--product card-->
+
+                        <!--product card-->
+                        <form data-viewproduct="51" class="slide-product js-product-box dd posthog_view_block ms2_form msoptionsprice-product">
+                            <!--slide-product__img-->
+                            <div class="slide-product__img">
+                                <!--                                <div class="slide-product__badge custom">-->
+                                <!--                                    <img loading="lazy" src="../common_files/cup+tencel-badge.svg" alt="">-->
+                                <!--                                </div>-->
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <img loading="lazy" src="../common_files/omnia-tencel-1_500x500.jpg.webp" alt="photo-0" data-color="Молочный">
+                                </a>
+                                <div class="js-product-color" data-id="98">
+                                    <div class="real-options d-flex"></div>
+                                </div>
+                                <!--slide-product-size-->
+                                <div class="slide-product-color-size">
+                                    <div class="size">
+                                        200x220
+                                    </div>
+                                </div>
+                                <!--slide-product-size-->
+                                <div class="pillow-preview-labels"></div>
+
+                                <!--mobile add button-->
+                                <button type="submit" name="" value="cart/add" onclick="moveToCardAnimation(51);" class="button border single-product__to-card single-product__to-card-mobile">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.33333 16.3519L2 7.01855H16L13.6667 16.3519H4.33333Z" stroke="#221D1E"/>
+                                        <path d="M12.4566 5.32099C12.4566 2.49608 10.9089 1 8.99973 1C7.09062 1 5.54297 2.50068 5.54297 5.32099" stroke="#221D1E"/>
+                                        <path d="M11.1543 11.6851H6.84333" stroke="#221D1E" stroke-linecap="square"/>
+                                        <path d="M9 13.8406L9 9.52961" stroke="#221D1E" stroke-linecap="square"/>
+                                    </svg>
+                                </button>
+                                <!--mobile add button-->
+                            </div>
+                            <!--slide-product__img-->
+
+                            <!--slide-product__title-->
+                            <div class="slide-product__title">
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <h4>
+                                        Есть размеры (1шт). Показываем размер.
+                                        Показываем кнопку "Добавить", добавляет сразу в корзину.
+                                    </h4>
+                                </a>
+                            </div>
+                            <!--slide-product__title-->
+
+                            <!--slide-product__info-->
+                            <div class="slide-product__info">
+                                <div class="slide-product__item">
+                                    <div class="single-product-price">
+                                        <span class="js-old-price hidden"></span>
+                                        <span class="js-new-price">17 600 ₽</span>
+                                    </div>
+                                    <div class="separate-payments">
+                                        4 платежа по 3 500 ₽
+                                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="9" cy="9.66675" r="8" stroke="#4F6FC1"/>
+                                            <path d="M9.05805 14.8848C8.87986 14.8848 8.73448 14.8332 8.62194 14.73C8.50939 14.6175 8.45312 14.4674 8.45312 14.2799V7.7944C8.45312 7.60682 8.50939 7.46145 8.62194 7.35829C8.73448 7.24574 8.87986 7.18947 9.05805 7.18947C9.23625 7.18947 9.37693 7.24574 9.4801 7.35829C9.59265 7.46145 9.64892 7.60682 9.64892 7.7944V14.2799C9.64892 14.4674 9.59265 14.6175 9.4801 14.73C9.37693 14.8332 9.23625 14.8848 9.05805 14.8848ZM9.04399 5.79671C8.81889 5.79671 8.62663 5.71699 8.46719 5.55755C8.30775 5.38873 8.22803 5.19178 8.22803 4.96668C8.22803 4.73221 8.30775 4.53995 8.46719 4.38989C8.63601 4.23983 8.82827 4.16479 9.04399 4.16479C9.2597 4.16479 9.44727 4.23983 9.60671 4.38989C9.77553 4.53995 9.85994 4.73221 9.85994 4.96668C9.85994 5.19178 9.78022 5.38873 9.62078 5.55755C9.46134 5.71699 9.26908 5.79671 9.04399 5.79671Z" fill="#4F6FC1"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <button data-reachgoal="click-add-to-cart-button " type="submit" name="ms2_action" value="cart/add" onclick="moveToCardAnimation(51);" class="button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show" data-pagetitle="Подушка арт.1003 | Beauty Sleep Classic" data-parent="Подушки" data-id="365" data-price="14600">
+                                    <span>добавить</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 21.7383L3 9.73828H21L18 21.7383H6Z" stroke="#221D1E"></path>
+                                        <path d="M16.4446 7.55556C16.4446 3.92353 14.4547 2 12.0001 2C9.5455 2 7.55566 3.92944 7.55566 7.55556" stroke="#221D1E"></path>
+                                        <path d="M14.7695 15.7383H9.22686" stroke="black" stroke-linecap="round"></path>
+                                        <path d="M12 18.5095L12 12.9668" stroke="black" stroke-linecap="round"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <!--slide-product__info-->
+                        </form>
+                        <!--product card-->
+
+                        <!--product card-->
+                        <form data-viewproduct="6" class="slide-product js-product-box dd posthog_view_block ms2_form msoptionsprice-product">
+                            <!--slide-product__img-->
+                            <div class="slide-product__img">
+                                <div class="slide-product__badge custom">
+                                    <img loading="lazy" src="../common_files/2025-08-15-efusiaefusia.svg" alt="">
+                                </div>
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <img loading="lazy" src="../common_files/omnia-tencel-1_500x500.jpg.webp" alt="photo-0" data-color="Молочный">
+                                </a>
+                                <div class="js-product-color" data-id="98">
+                                    <div class="real-options d-flex"></div>
+                                </div>
+                                <div class="pillow-preview-labels"></div>
+
+                                <!--mobile add button-->
+                                <button data-pp="open-product-modal-data6" type="submit" name="" value="cart/add" onclick="" class="pp_ button border single-product__to-card single-product__to-card-mobile">
+                                    <span>
+                                        опции
+                                    </span>
+                                </button>
+                                <!--mobile add button-->
+                            </div>
+                            <!--slide-product__img-->
+
+                            <!--slide-product__title-->
+                            <div class="slide-product__title">
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <h4>
+                                        Есть размеры (3шт). Размеры не показываем. Показываем кнопку "Опции".
+                                    </h4>
+                                </a>
+                            </div>
+                            <!--slide-product__title-->
+
+                            <!--slide-product__info-->
+                            <div class="slide-product__info">
+                                <div class="slide-product__item">
+                                    <div class="single-product-price">
+                                        <span class="js-old-price hidden"></span>
+                                        <span class="js-new-price">17 600 ₽</span>
+                                    </div>
+                                    <div class="separate-payments">
+                                        4 платежа по 3 500 ₽
+                                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="9" cy="9.66675" r="8" stroke="#4F6FC1"/>
+                                            <path d="M9.05805 14.8848C8.87986 14.8848 8.73448 14.8332 8.62194 14.73C8.50939 14.6175 8.45312 14.4674 8.45312 14.2799V7.7944C8.45312 7.60682 8.50939 7.46145 8.62194 7.35829C8.73448 7.24574 8.87986 7.18947 9.05805 7.18947C9.23625 7.18947 9.37693 7.24574 9.4801 7.35829C9.59265 7.46145 9.64892 7.60682 9.64892 7.7944V14.2799C9.64892 14.4674 9.59265 14.6175 9.4801 14.73C9.37693 14.8332 9.23625 14.8848 9.05805 14.8848ZM9.04399 5.79671C8.81889 5.79671 8.62663 5.71699 8.46719 5.55755C8.30775 5.38873 8.22803 5.19178 8.22803 4.96668C8.22803 4.73221 8.30775 4.53995 8.46719 4.38989C8.63601 4.23983 8.82827 4.16479 9.04399 4.16479C9.2597 4.16479 9.44727 4.23983 9.60671 4.38989C9.77553 4.53995 9.85994 4.73221 9.85994 4.96668C9.85994 5.19178 9.78022 5.38873 9.62078 5.55755C9.46134 5.71699 9.26908 5.79671 9.04399 5.79671Z" fill="#4F6FC1"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <button data-pp="open-product-modal-data6" type="submit" name="ms2_action" value="cart/add" class="pp_ button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show" data-pagetitle="Подушка арт.1003 | Beauty Sleep Classic" data-parent="Подушки" data-id="365" data-price="14600">
+                                    <span>опции</span>
+                                </button>
+                            </div>
+                            <!--slide-product__info-->
+                        </form>
+                        <!--product card-->
+
+                        <!--product card-->
+                        <form data-viewproduct="7" class="slide-product js-product-box dd posthog_view_block ms2_form msoptionsprice-product">
+                            <!--slide-product__img-->
+                            <div class="slide-product__img">
+                                <div class="slide-product__badge custom">
+                                    <img loading="lazy" src="../common_files/2025-08-15-efusiaefusia.svg" alt="">
+                                </div>
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <img loading="lazy" src="../common_files/omnia-tencel-1_500x500.jpg.webp" alt="photo-0" data-color="Молочный">
+                                </a>
+                                <div class="js-product-color" data-id="98">
+                                    <div class="real-options d-flex"></div>
+                                </div>
+                                <div class="pillow-preview-labels"></div>
+
+                                <!--mobile add button-->
+                                <button data-pp="open-product-modal-data7" type="submit" name="" value="cart/add" onclick="" class="pp_ button border single-product__to-card single-product__to-card-mobile">
+                                    <span>
+                                        опции
+                                    </span>
+                                </button>
+                                <!--mobile add button-->
+                            </div>
+                            <!--slide-product__img-->
+
+                            <!--slide-product__title-->
+                            <div class="slide-product__title">
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <h4>
+                                        Есть размеры и цвета. Показываем кнопку "Опции". Не показываем размеры и цвета. Только в модальном.
+                                    </h4>
+                                </a>
+                            </div>
+                            <!--slide-product__title-->
+
+                            <!--slide-product__info-->
+                            <div class="slide-product__info">
+                                <div class="slide-product__item">
+                                    <div class="single-product-price">
+                                        <span class="js-old-price hidden"></span>
+                                        <span class="js-new-price">17 600 ₽</span>
+                                    </div>
+                                    <div class="separate-payments">
+                                        4 платежа по 3 500 ₽
+                                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="9" cy="9.66675" r="8" stroke="#4F6FC1"/>
+                                            <path d="M9.05805 14.8848C8.87986 14.8848 8.73448 14.8332 8.62194 14.73C8.50939 14.6175 8.45312 14.4674 8.45312 14.2799V7.7944C8.45312 7.60682 8.50939 7.46145 8.62194 7.35829C8.73448 7.24574 8.87986 7.18947 9.05805 7.18947C9.23625 7.18947 9.37693 7.24574 9.4801 7.35829C9.59265 7.46145 9.64892 7.60682 9.64892 7.7944V14.2799C9.64892 14.4674 9.59265 14.6175 9.4801 14.73C9.37693 14.8332 9.23625 14.8848 9.05805 14.8848ZM9.04399 5.79671C8.81889 5.79671 8.62663 5.71699 8.46719 5.55755C8.30775 5.38873 8.22803 5.19178 8.22803 4.96668C8.22803 4.73221 8.30775 4.53995 8.46719 4.38989C8.63601 4.23983 8.82827 4.16479 9.04399 4.16479C9.2597 4.16479 9.44727 4.23983 9.60671 4.38989C9.77553 4.53995 9.85994 4.73221 9.85994 4.96668C9.85994 5.19178 9.78022 5.38873 9.62078 5.55755C9.46134 5.71699 9.26908 5.79671 9.04399 5.79671Z" fill="#4F6FC1"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <button data-pp="open-product-modal-data7" type="submit" name="ms2_action" value="cart/add" class="pp_ button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show" data-pagetitle="Подушка арт.1003 | Beauty Sleep Classic" data-parent="Подушки" data-id="365" data-price="14600">
+                                    <span>опции</span>
+                                </button>
+                            </div>
+                            <!--slide-product__info-->
+                        </form>
+                        <!--product card-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</main>
+
+
+<!--pp_product-modal 1-->
+<div class="pp pp_product-modal" data-pp="open-product-modal-data1">
+    <div class="pp__bg"></div>
+    <div class="pp__content pp__content_content_product-modal">
+        <div class="pp__close">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+        <div class="popup-content popup-content_product-modal">
+            <form action="">
+                <div class="product-modal-wrapper">
+                    <div class="product-modal-images">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="../common_files/mssk-hyaluron-1.jpg.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../common_files/mssk-hyaluron-3.jpg.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../common_files/mssk-hyaluron-2.jpg.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="product-prev"></div>
+                            <div class="product-next"></div>
+                        </div>
+                    </div>
+                    <div class="product-modal-info">
+                        <div class="product-modal-info-wrapper">
+                            <div class="product-modal-promocode">
+                                промокод 8MARCH | -10%
+                            </div>
+                            <div class="product-modal-title">
+                                <b>Маска для сна Hyaluron</b> из шелка <b>с гиалуроновой кислотой</b>
+                            </div>
+                            <div class="product-modal-desc">
+                                Невесомая маска из 3 слоёв натурального шёлка с гиалуроновой кислотой
+                                дарит коже приятную прохладу, снимает напряжение с глаз и благодаря высокой
+                                плотности ткани обеспечивает надёжную защиту от света и комфортный сон
+                                в любое время суток. <a href="">Подробнее</a>
+                            </div>
+                            <div class="product-modal-price">
+                                <div class="price">
+                                    <span class="old-price">
+                                        3 200 ₽
+                                    </span>
+                                    <span class="new-price">
+                                        4 200 ₽
+                                    </span>
+                                </div>
+                                <div class="separate-payments">
+                                    4 платежа по 1 175 ₽
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="9" cy="9" r="8" stroke="#4F6FC1"/>
+                                        <path d="M9.05805 14.218C8.87986 14.218 8.73448 14.1664 8.62194 14.0632C8.50939 13.9507 8.45312 13.8006 8.45312 13.6131V7.12759C8.45312 6.94002 8.50939 6.79464 8.62194 6.69148C8.73448 6.57893 8.87986 6.52266 9.05805 6.52266C9.23625 6.52266 9.37693 6.57893 9.4801 6.69148C9.59265 6.79464 9.64892 6.94002 9.64892 7.12759V13.6131C9.64892 13.8006 9.59265 13.9507 9.4801 14.0632C9.37693 14.1664 9.23625 14.218 9.05805 14.218ZM9.04399 5.1299C8.81889 5.1299 8.62663 5.05018 8.46719 4.89074C8.30775 4.72192 8.22803 4.52497 8.22803 4.29988C8.22803 4.0654 8.30775 3.87314 8.46719 3.72308C8.63601 3.57302 8.82827 3.49799 9.04399 3.49799C9.2597 3.49799 9.44727 3.57302 9.60671 3.72308C9.77553 3.87314 9.85994 4.0654 9.85994 4.29988C9.85994 4.52497 9.78022 4.72192 9.62078 4.89074C9.46134 5.05018 9.26908 5.1299 9.04399 5.1299Z" fill="#4F6FC1"/>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="product-modal-colors-sizes">
+                                <!-- Colors -->
+                                <div class="product-modal-colors">
+                                    <input id="c11" type="radio" name="options[color]" value="" checked>
+                                    <!--  Add "active" class to "product-modal-color" if needed -->
+                                    <label for="c11" class="product-modal-color" style="background-color: #db8c97;"></label>
+
+                                    <input id="c22" type="radio" name="options[color]" value="">
+                                    <label for="c22" class="product-modal-color" style="background-color: #eae6dd;"></label>
+
+                                    <input id="c33" type="radio" name="options[color]" value="">
+                                    <label for="c33" class="product-modal-color" style="background-color: #bbb7b0;"></label>
+
+                                    <input id="c44" type="radio" name="options[color]" value="">
+                                    <label for="c44" class="product-modal-color" style="background-color: #D2B58B;"></label>
+
+                                    <input id="c44" type="radio" name="options[color]" value="">
+                                    <label for="c44" class="product-modal-color" style="background-color: #3A3939;"></label>
+
+                                    <input id="c44" type="radio" name="options[color]" value="">
+                                    <label for="c44" class="product-modal-color" style="background-color: #D2B58B;"></label>
+                                </div>
+                                <!-- Colors -->
+                            </div>
+
+                            <div class="product-modal-buttons">
+                                <button class="button gradient" type="button">
+                                    <span>
+                                        добавить
+                                    </span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 21.7383L3 9.73828H21L18 21.7383H6Z" stroke="#221D1E"/>
+                                        <path d="M16.4446 7.55556C16.4446 3.92353 14.4547 2 12.0001 2C9.5455 2 7.55566 3.92944 7.55566 7.55556" stroke="#221D1E"/>
+                                        <path d="M14.769 15.7382H9.22637" stroke="#221D1E" stroke-linecap="square"/>
+                                        <path d="M11.9995 18.5095L11.9995 12.9668" stroke="#221D1E" stroke-linecap="square"/>
+                                    </svg>
+                                </button>
+                                <div class="product-modal-counter">
+                                    <div class="decrement"></div>
+                                    <input type="number" name="count" min="1" max="999" value="1" placeholder="1">
+                                    <div class="increment"></div>
+                                </div>
+
+                                <!--Демонстрационный JS код, чтобы показать/скрыть элементы-->
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', function() {
+                                        const button = document.querySelector('[data-pp="open-product-modal-data1"].pp_product-modal .product-modal-buttons .button');
+                                        const counter = document.querySelector('[data-pp="open-product-modal-data1"].pp_product-modal .product-modal-counter');
+                                        const decrement = document.querySelector('[data-pp="open-product-modal-data1"].pp_product-modal .decrement');
+                                        counter.style.display = 'none';
+                                        button.addEventListener('click', function() {
+                                            button.style.display = 'none';
+                                            counter.style.display = 'inline-flex';
+                                        });
+                                        decrement.addEventListener('click', function() {
+                                            counter.style.display = 'none';
+                                            button.style.display = 'inline-flex';
+                                        });
+                                    });
+                                </script>
+                                <!--Демонстрационный JS код, чтобы показать/скрыть элементы-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--pp_product-modal 1-->
+
+<!--pp_product-modal 2-->
+<div class="pp pp_product-modal" data-pp="open-product-modal-data2">
+    <div class="pp__bg"></div>
+    <div class="pp__content pp__content_content_product-modal">
+        <div class="pp__close">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+        <div class="popup-content popup-content_product-modal">
+            <form action="">
+                <div class="product-modal-wrapper">
+                    <div class="product-modal-images">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="../common_files/mssk-hyaluron-1.jpg.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../common_files/mssk-hyaluron-3.jpg.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../common_files/mssk-hyaluron-2.jpg.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="product-prev"></div>
+                            <div class="product-next"></div>
+                        </div>
+                    </div>
+                    <div class="product-modal-info">
+                        <div class="product-modal-info-wrapper">
+                            <div class="product-modal-promocode">
+                                промокод 8MARCH | -10%
+                            </div>
+                            <div class="product-modal-title">
+                                <b>Маска для сна Hyaluron</b> из шелка <b>с гиалуроновой кислотой</b>
+                            </div>
+                            <div class="product-modal-desc">
+                                Невесомая маска из 3 слоёв натурального шёлка с гиалуроновой кислотой
+                                дарит коже приятную прохладу, снимает напряжение с глаз и благодаря высокой
+                                плотности ткани обеспечивает надёжную защиту от света и комфортный сон
+                                в любое время суток. <a href="">Подробнее</a>
+                            </div>
+                            <div class="product-modal-price">
+                                <div class="price">
+                                    <span class="old-price">
+                                        4 200 ₽
+                                    </span>
+                                    <span class="new-price">
+                                        3 200 ₽
+                                    </span>
+                                </div>
+                                <div class="separate-payments">
+                                    4 платежа по 1 175 ₽
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="9" cy="9" r="8" stroke="#4F6FC1"/>
+                                        <path d="M9.05805 14.218C8.87986 14.218 8.73448 14.1664 8.62194 14.0632C8.50939 13.9507 8.45312 13.8006 8.45312 13.6131V7.12759C8.45312 6.94002 8.50939 6.79464 8.62194 6.69148C8.73448 6.57893 8.87986 6.52266 9.05805 6.52266C9.23625 6.52266 9.37693 6.57893 9.4801 6.69148C9.59265 6.79464 9.64892 6.94002 9.64892 7.12759V13.6131C9.64892 13.8006 9.59265 13.9507 9.4801 14.0632C9.37693 14.1664 9.23625 14.218 9.05805 14.218ZM9.04399 5.1299C8.81889 5.1299 8.62663 5.05018 8.46719 4.89074C8.30775 4.72192 8.22803 4.52497 8.22803 4.29988C8.22803 4.0654 8.30775 3.87314 8.46719 3.72308C8.63601 3.57302 8.82827 3.49799 9.04399 3.49799C9.2597 3.49799 9.44727 3.57302 9.60671 3.72308C9.77553 3.87314 9.85994 4.0654 9.85994 4.29988C9.85994 4.52497 9.78022 4.72192 9.62078 4.89074C9.46134 5.05018 9.26908 5.1299 9.04399 5.1299Z" fill="#4F6FC1"/>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="product-modal-colors-sizes">
+                                <!-- Colors -->
+                                <div class="product-modal-colors">
+                                    <input id="c111" type="radio" name="options[color]" value="" checked>
+                                    <!--  Add "active" class to "product-modal-color" if needed -->
+                                    <label for="c111" class="product-modal-color" style="background-color: #db8c97;"></label>
+
+                                    <input id="c221" type="radio" name="options[color]" value="">
+                                    <label for="c221" class="product-modal-color" style="background-color: #eae6dd;"></label>
+
+                                    <input id="c331" type="radio" name="options[color]" value="">
+                                    <label for="c331" class="product-modal-color" style="background-color: #986711;"></label>
+
+                                    <input id="c441" type="radio" name="options[color]" value="">
+                                    <label for="c441" class="product-modal-color" style="background-color: #20a53e;"></label>
+
+                                    <input id="c4411" type="radio" name="options[color]" value="">
+                                    <label for="c4411" class="product-modal-color" style="background-color: #9b5eb3;"></label>
+                                </div>
+                                <!-- Colors -->
+
+                                <!-- Sizes -->
+<!--                                <div class="product-modal-sizes">-->
+<!--                                    <input id="s11" type="radio" name="options[size]" value="" checked>-->
+<!--                                    &lt;!&ndash;  Add "active" class to "product-modal-size" if needed &ndash;&gt;-->
+<!--                                    <label for="s11" class="product-modal-size">-->
+<!--                                        220 х 205 см-->
+<!--                                    </label>-->
+
+<!--                                    <input id="s22" type="radio" name="options[size]" value="">-->
+<!--                                    <label for="s22" class="product-modal-size">-->
+<!--                                        145 х 205 см-->
+<!--                                    </label>-->
+
+<!--                                    <input id="s33" type="radio" name="options[size]" value="">-->
+<!--                                    <label for="s33" class="product-modal-size">-->
+<!--                                        145 х 405 см-->
+<!--                                    </label>-->
+<!--                                </div>-->
+                                <!-- Sizes -->
+                            </div>
+
+                            <div class="product-modal-buttons">
+                                <button class="button gradient" type="button">
+                                    <span>
+                                        добавить
+                                    </span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 21.7383L3 9.73828H21L18 21.7383H6Z" stroke="#221D1E"/>
+                                        <path d="M16.4446 7.55556C16.4446 3.92353 14.4547 2 12.0001 2C9.5455 2 7.55566 3.92944 7.55566 7.55556" stroke="#221D1E"/>
+                                        <path d="M14.769 15.7382H9.22637" stroke="#221D1E" stroke-linecap="square"/>
+                                        <path d="M11.9995 18.5095L11.9995 12.9668" stroke="#221D1E" stroke-linecap="square"/>
+                                    </svg>
+                                </button>
+                                <div class="product-modal-counter">
+                                    <div class="decrement"></div>
+                                    <input type="number" name="count" min="1" max="999" value="1" placeholder="1">
+                                    <div class="increment"></div>
+                                </div>
+
+                                <!--Демонстрационный JS код, чтобы показать/скрыть элементы-->
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', function() {
+                                        const button = document.querySelector('[data-pp="open-product-modal-data2"].pp_product-modal .product-modal-buttons .button');
+                                        const counter = document.querySelector('[data-pp="open-product-modal-data2"].pp_product-modal .product-modal-counter');
+                                        const decrement = document.querySelector('[data-pp="open-product-modal-data2"].pp_product-modal .decrement');
+                                        counter.style.display = 'none';
+                                        button.addEventListener('click', function() {
+                                            button.style.display = 'none';
+                                            counter.style.display = 'inline-flex';
+                                        });
+                                        decrement.addEventListener('click', function() {
+                                            counter.style.display = 'none';
+                                            button.style.display = 'inline-flex';
+                                        });
+                                    });
+                                </script>
+                                <!--Демонстрационный JS код, чтобы показать/скрыть элементы-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--pp_product-modal 2-->
+
+<!--pp_product-modal 3-->
+<div class="pp pp_product-modal" data-pp="open-product-modal-data3">
+    <div class="pp__bg"></div>
+    <div class="pp__content pp__content_content_product-modal">
+        <div class="pp__close">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+        <div class="popup-content popup-content_product-modal">
+            <form action="">
+                <div class="product-modal-wrapper">
+                    <div class="product-modal-images">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="../common_files/mssk-hyaluron-1.jpg.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../common_files/mssk-hyaluron-3.jpg.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../common_files/mssk-hyaluron-2.jpg.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="product-prev"></div>
+                            <div class="product-next"></div>
+                        </div>
+                    </div>
+                    <div class="product-modal-info">
+                        <div class="product-modal-info-wrapper">
+                            <div class="product-modal-promocode">
+                                промокод 8MARCH | -10%
+                            </div>
+                            <div class="product-modal-title">
+                                <b>Маска для сна Hyaluron</b> из шелка <b>с гиалуроновой кислотой</b>
+                            </div>
+                            <div class="product-modal-desc">
+                                Невесомая маска из 3 слоёв натурального шёлка с гиалуроновой кислотой
+                                дарит коже приятную прохладу, снимает напряжение с глаз и благодаря высокой
+                                плотности ткани обеспечивает надёжную защиту от света и комфортный сон
+                                в любое время суток. <a href="">Подробнее</a>
+                            </div>
+                            <div class="product-modal-price">
+                                <div class="price">
+                                    <span class="old-price">
+                                        4 200 ₽
+                                    </span>
+                                    <span class="new-price">
+                                        3 200 ₽
+                                    </span>
+                                </div>
+                                <div class="separate-payments">
+                                    4 платежа по 1 175 ₽
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="9" cy="9" r="8" stroke="#4F6FC1"/>
+                                        <path d="M9.05805 14.218C8.87986 14.218 8.73448 14.1664 8.62194 14.0632C8.50939 13.9507 8.45312 13.8006 8.45312 13.6131V7.12759C8.45312 6.94002 8.50939 6.79464 8.62194 6.69148C8.73448 6.57893 8.87986 6.52266 9.05805 6.52266C9.23625 6.52266 9.37693 6.57893 9.4801 6.69148C9.59265 6.79464 9.64892 6.94002 9.64892 7.12759V13.6131C9.64892 13.8006 9.59265 13.9507 9.4801 14.0632C9.37693 14.1664 9.23625 14.218 9.05805 14.218ZM9.04399 5.1299C8.81889 5.1299 8.62663 5.05018 8.46719 4.89074C8.30775 4.72192 8.22803 4.52497 8.22803 4.29988C8.22803 4.0654 8.30775 3.87314 8.46719 3.72308C8.63601 3.57302 8.82827 3.49799 9.04399 3.49799C9.2597 3.49799 9.44727 3.57302 9.60671 3.72308C9.77553 3.87314 9.85994 4.0654 9.85994 4.29988C9.85994 4.52497 9.78022 4.72192 9.62078 4.89074C9.46134 5.05018 9.26908 5.1299 9.04399 5.1299Z" fill="#4F6FC1"/>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="product-modal-colors-sizes">
+                                <!-- Colors -->
+                                <div class="product-modal-colors">
+                                    <input id="c112" type="radio" name="options[color]" value="" checked>
+                                    <!--  Add "active" class to "product-modal-color" if needed -->
+                                    <label for="c112" class="product-modal-color" style="background-color: #db8c97;"></label>
+
+                                    <input id="c222" type="radio" name="options[color]" value="">
+                                    <label for="c222" class="product-modal-color" style="background-color: #eae6dd;"></label>
+                                </div>
+                                <!-- Colors -->
+
+                                <!-- Sizes -->
+                                <!--                                <div class="product-modal-sizes">-->
+                                <!--                                    <input id="s11" type="radio" name="options[size]" value="" checked>-->
+                                <!--                                    &lt;!&ndash;  Add "active" class to "product-modal-size" if needed &ndash;&gt;-->
+                                <!--                                    <label for="s11" class="product-modal-size">-->
+                                <!--                                        220 х 205 см-->
+                                <!--                                    </label>-->
+
+                                <!--                                    <input id="s22" type="radio" name="options[size]" value="">-->
+                                <!--                                    <label for="s22" class="product-modal-size">-->
+                                <!--                                        145 х 205 см-->
+                                <!--                                    </label>-->
+
+                                <!--                                    <input id="s33" type="radio" name="options[size]" value="">-->
+                                <!--                                    <label for="s33" class="product-modal-size">-->
+                                <!--                                        145 х 405 см-->
+                                <!--                                    </label>-->
+                                <!--                                </div>-->
+                                <!-- Sizes -->
+                            </div>
+
+                            <div class="product-modal-buttons">
+                                <button class="button gradient" type="button">
+                                    <span>
+                                        добавить
+                                    </span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 21.7383L3 9.73828H21L18 21.7383H6Z" stroke="#221D1E"/>
+                                        <path d="M16.4446 7.55556C16.4446 3.92353 14.4547 2 12.0001 2C9.5455 2 7.55566 3.92944 7.55566 7.55556" stroke="#221D1E"/>
+                                        <path d="M14.769 15.7382H9.22637" stroke="#221D1E" stroke-linecap="square"/>
+                                        <path d="M11.9995 18.5095L11.9995 12.9668" stroke="#221D1E" stroke-linecap="square"/>
+                                    </svg>
+                                </button>
+                                <div class="product-modal-counter">
+                                    <div class="decrement"></div>
+                                    <input type="number" name="count" min="1" max="999" value="1" placeholder="1">
+                                    <div class="increment"></div>
+                                </div>
+
+                                <!--Демонстрационный JS код, чтобы показать/скрыть элементы-->
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', function() {
+                                        const button = document.querySelector('[data-pp="open-product-modal-data3"].pp_product-modal .product-modal-buttons .button');
+                                        const counter = document.querySelector('[data-pp="open-product-modal-data3"].pp_product-modal .product-modal-counter');
+                                        const decrement = document.querySelector('[data-pp="open-product-modal-data3"].pp_product-modal .decrement');
+                                        counter.style.display = 'none';
+                                        button.addEventListener('click', function() {
+                                            button.style.display = 'none';
+                                            counter.style.display = 'inline-flex';
+                                        });
+                                        decrement.addEventListener('click', function() {
+                                            counter.style.display = 'none';
+                                            button.style.display = 'inline-flex';
+                                        });
+                                    });
+                                </script>
+                                <!--Демонстрационный JS код, чтобы показать/скрыть элементы-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--pp_product-modal 3-->
+
+<!--pp_product-modal 5-->
+<div class="pp pp_product-modal" data-pp="open-product-modal-data5">
+    <div class="pp__bg"></div>
+    <div class="pp__content pp__content_content_product-modal">
+        <div class="pp__close">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+        <div class="popup-content popup-content_product-modal">
+            <form action="">
+                <div class="product-modal-wrapper">
+                    <div class="product-modal-images">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="../common_files/mssk-hyaluron-1.jpg.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../common_files/mssk-hyaluron-3.jpg.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../common_files/mssk-hyaluron-2.jpg.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="product-prev"></div>
+                            <div class="product-next"></div>
+                        </div>
+                    </div>
+                    <div class="product-modal-info">
+                        <div class="product-modal-info-wrapper">
+                            <div class="product-modal-promocode">
+                                промокод 8MARCH | -10%
+                            </div>
+                            <div class="product-modal-title">
+                                <b>Маска для сна Hyaluron</b> из шелка <b>с гиалуроновой кислотой</b>
+                            </div>
+                            <div class="product-modal-desc">
+                                Невесомая маска из 3 слоёв натурального шёлка с гиалуроновой кислотой
+                                дарит коже приятную прохладу, снимает напряжение с глаз и благодаря высокой
+                                плотности ткани обеспечивает надёжную защиту от света и комфортный сон
+                                в любое время суток. <a href="">Подробнее</a>
+                            </div>
+                            <div class="product-modal-price">
+                                <div class="price">
+                                    <span class="new-price">
+                                        17 600 ₽
+                                    </span>
+                                </div>
+                                <div class="separate-payments">
+                                    4 платежа по 1 175 ₽
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="9" cy="9" r="8" stroke="#4F6FC1"/>
+                                        <path d="M9.05805 14.218C8.87986 14.218 8.73448 14.1664 8.62194 14.0632C8.50939 13.9507 8.45312 13.8006 8.45312 13.6131V7.12759C8.45312 6.94002 8.50939 6.79464 8.62194 6.69148C8.73448 6.57893 8.87986 6.52266 9.05805 6.52266C9.23625 6.52266 9.37693 6.57893 9.4801 6.69148C9.59265 6.79464 9.64892 6.94002 9.64892 7.12759V13.6131C9.64892 13.8006 9.59265 13.9507 9.4801 14.0632C9.37693 14.1664 9.23625 14.218 9.05805 14.218ZM9.04399 5.1299C8.81889 5.1299 8.62663 5.05018 8.46719 4.89074C8.30775 4.72192 8.22803 4.52497 8.22803 4.29988C8.22803 4.0654 8.30775 3.87314 8.46719 3.72308C8.63601 3.57302 8.82827 3.49799 9.04399 3.49799C9.2597 3.49799 9.44727 3.57302 9.60671 3.72308C9.77553 3.87314 9.85994 4.0654 9.85994 4.29988C9.85994 4.52497 9.78022 4.72192 9.62078 4.89074C9.46134 5.05018 9.26908 5.1299 9.04399 5.1299Z" fill="#4F6FC1"/>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="product-modal-colors-sizes">
+                                <!-- Sizes -->
+                                <div class="product-modal-sizes">
+                                    <input id="s116" type="radio" name="options[size]" value="" checked>
+                                    <label for="s116" class="product-modal-size">
+                                        200 х 220 см
+                                    </label>
+
+                                    <input id="s226" type="radio" name="options[size]" value="">
+                                    <label for="s226" class="product-modal-size">
+                                        145 х 205 см
+                                    </label>
+                                </div>
+                                <!-- Sizes -->
+                            </div>
+
+                            <div class="product-modal-buttons">
+                                <button class="button gradient" type="button">
+                                    <span>
+                                        добавить
+                                    </span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 21.7383L3 9.73828H21L18 21.7383H6Z" stroke="#221D1E"/>
+                                        <path d="M16.4446 7.55556C16.4446 3.92353 14.4547 2 12.0001 2C9.5455 2 7.55566 3.92944 7.55566 7.55556" stroke="#221D1E"/>
+                                        <path d="M14.769 15.7382H9.22637" stroke="#221D1E" stroke-linecap="square"/>
+                                        <path d="M11.9995 18.5095L11.9995 12.9668" stroke="#221D1E" stroke-linecap="square"/>
+                                    </svg>
+                                </button>
+                                <div class="product-modal-counter">
+                                    <div class="decrement"></div>
+                                    <input type="number" name="count" min="1" max="999" value="1" placeholder="1">
+                                    <div class="increment"></div>
+                                </div>
+
+                                <!--Демонстрационный JS код, чтобы показать/скрыть элементы-->
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', function() {
+                                        const button = document.querySelector('[data-pp="open-product-modal-data5"].pp_product-modal .product-modal-buttons .button');
+                                        const counter = document.querySelector('[data-pp="open-product-modal-data5"].pp_product-modal .product-modal-counter');
+                                        const decrement = document.querySelector('[data-pp="open-product-modal-data5"].pp_product-modal .decrement');
+                                        counter.style.display = 'none';
+                                        button.addEventListener('click', function() {
+                                            button.style.display = 'none';
+                                            counter.style.display = 'inline-flex';
+                                        });
+                                        decrement.addEventListener('click', function() {
+                                            counter.style.display = 'none';
+                                            button.style.display = 'inline-flex';
+                                        });
+                                    });
+                                </script>
+                                <!--Демонстрационный JS код, чтобы показать/скрыть элементы-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--pp_product-modal 5-->
+
+<!--pp_product-modal 6-->
+<div class="pp pp_product-modal" data-pp="open-product-modal-data6">
+    <div class="pp__bg"></div>
+    <div class="pp__content pp__content_content_product-modal">
+        <div class="pp__close">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+        <div class="popup-content popup-content_product-modal">
+            <form action="">
+                <div class="product-modal-wrapper">
+                    <div class="product-modal-images">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="../common_files/mssk-hyaluron-1.jpg.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../common_files/mssk-hyaluron-3.jpg.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../common_files/mssk-hyaluron-2.jpg.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="product-prev"></div>
+                            <div class="product-next"></div>
+                        </div>
+                    </div>
+                    <div class="product-modal-info">
+                        <div class="product-modal-info-wrapper">
+                            <div class="product-modal-promocode">
+                                промокод 8MARCH | -10%
+                            </div>
+                            <div class="product-modal-title">
+                                <b>Маска для сна Hyaluron</b> из шелка <b>с гиалуроновой кислотой</b>
+                            </div>
+                            <div class="product-modal-desc">
+                                Невесомая маска из 3 слоёв натурального шёлка с гиалуроновой кислотой
+                                дарит коже приятную прохладу, снимает напряжение с глаз и благодаря высокой
+                                плотности ткани обеспечивает надёжную защиту от света и комфортный сон
+                                в любое время суток. <a href="">Подробнее</a>
+                            </div>
+                            <div class="product-modal-price">
+                                <div class="price">
+                                    <span class="new-price">
+                                        17 600 ₽
+                                    </span>
+                                </div>
+                                <div class="separate-payments">
+                                    4 платежа по 1 175 ₽
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="9" cy="9" r="8" stroke="#4F6FC1"/>
+                                        <path d="M9.05805 14.218C8.87986 14.218 8.73448 14.1664 8.62194 14.0632C8.50939 13.9507 8.45312 13.8006 8.45312 13.6131V7.12759C8.45312 6.94002 8.50939 6.79464 8.62194 6.69148C8.73448 6.57893 8.87986 6.52266 9.05805 6.52266C9.23625 6.52266 9.37693 6.57893 9.4801 6.69148C9.59265 6.79464 9.64892 6.94002 9.64892 7.12759V13.6131C9.64892 13.8006 9.59265 13.9507 9.4801 14.0632C9.37693 14.1664 9.23625 14.218 9.05805 14.218ZM9.04399 5.1299C8.81889 5.1299 8.62663 5.05018 8.46719 4.89074C8.30775 4.72192 8.22803 4.52497 8.22803 4.29988C8.22803 4.0654 8.30775 3.87314 8.46719 3.72308C8.63601 3.57302 8.82827 3.49799 9.04399 3.49799C9.2597 3.49799 9.44727 3.57302 9.60671 3.72308C9.77553 3.87314 9.85994 4.0654 9.85994 4.29988C9.85994 4.52497 9.78022 4.72192 9.62078 4.89074C9.46134 5.05018 9.26908 5.1299 9.04399 5.1299Z" fill="#4F6FC1"/>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="product-modal-colors-sizes">
+                                <!-- Sizes -->
+                                <div class="product-modal-sizes">
+                                    <input id="s118" type="radio" name="options[size]" value="" checked>
+                                    <label for="s118" class="product-modal-size">
+                                        200 х 220 см
+                                    </label>
+
+                                    <input id="s228" type="radio" name="options[size]" value="">
+                                    <label for="s228" class="product-modal-size">
+                                        145 х 205 см
+                                    </label>
+
+                                    <input id="s2287" type="radio" name="options[size]" value="">
+                                    <label for="s2287" class="product-modal-size">
+                                        333 х 205 см
+                                    </label>
+                                </div>
+                                <!-- Sizes -->
+                            </div>
+
+                            <div class="product-modal-buttons">
+                                <button class="button gradient" type="button">
+                                    <span>
+                                        добавить
+                                    </span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 21.7383L3 9.73828H21L18 21.7383H6Z" stroke="#221D1E"/>
+                                        <path d="M16.4446 7.55556C16.4446 3.92353 14.4547 2 12.0001 2C9.5455 2 7.55566 3.92944 7.55566 7.55556" stroke="#221D1E"/>
+                                        <path d="M14.769 15.7382H9.22637" stroke="#221D1E" stroke-linecap="square"/>
+                                        <path d="M11.9995 18.5095L11.9995 12.9668" stroke="#221D1E" stroke-linecap="square"/>
+                                    </svg>
+                                </button>
+                                <div class="product-modal-counter">
+                                    <div class="decrement"></div>
+                                    <input type="number" name="count" min="1" max="999" value="1" placeholder="1">
+                                    <div class="increment"></div>
+                                </div>
+
+                                <!--Демонстрационный JS код, чтобы показать/скрыть элементы-->
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', function() {
+                                        const button = document.querySelector('[data-pp="open-product-modal-data6"].pp_product-modal .product-modal-buttons .button');
+                                        const counter = document.querySelector('[data-pp="open-product-modal-data6"].pp_product-modal .product-modal-counter');
+                                        const decrement = document.querySelector('[data-pp="open-product-modal-data6"].pp_product-modal .decrement');
+                                        counter.style.display = 'none';
+                                        button.addEventListener('click', function() {
+                                            button.style.display = 'none';
+                                            counter.style.display = 'inline-flex';
+                                        });
+                                        decrement.addEventListener('click', function() {
+                                            counter.style.display = 'none';
+                                            button.style.display = 'inline-flex';
+                                        });
+                                    });
+                                </script>
+                                <!--Демонстрационный JS код, чтобы показать/скрыть элементы-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--pp_product-modal 6-->
+
+<!--pp_product-modal 7-->
+<div class="pp pp_product-modal" data-pp="open-product-modal-data7">
+    <div class="pp__bg"></div>
+    <div class="pp__content pp__content_content_product-modal">
+        <div class="pp__close">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+        <div class="popup-content popup-content_product-modal">
+            <form action="">
+                <div class="product-modal-wrapper">
+                    <div class="product-modal-images">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="../common_files/mssk-hyaluron-1.jpg.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../common_files/mssk-hyaluron-3.jpg.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../common_files/mssk-hyaluron-2.jpg.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="product-prev"></div>
+                            <div class="product-next"></div>
+                        </div>
+                    </div>
+                    <div class="product-modal-info">
+                        <div class="product-modal-info-wrapper">
+                            <div class="product-modal-promocode">
+                                промокод 8MARCH | -10%
+                            </div>
+                            <div class="product-modal-title">
+                                <b>Маска для сна Hyaluron</b> из шелка <b>с гиалуроновой кислотой</b>
+                            </div>
+                            <div class="product-modal-desc">
+                                Невесомая маска из 3 слоёв натурального шёлка с гиалуроновой кислотой
+                                дарит коже приятную прохладу, снимает напряжение с глаз и благодаря высокой
+                                плотности ткани обеспечивает надёжную защиту от света и комфортный сон
+                                в любое время суток. <a href="">Подробнее</a>
+                            </div>
+                            <div class="product-modal-price">
+                                <div class="price">
+                                    <span class="new-price">
+                                        17 600 ₽
+                                    </span>
+                                </div>
+                                <div class="separate-payments">
+                                    4 платежа по 1 175 ₽
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="9" cy="9" r="8" stroke="#4F6FC1"/>
+                                        <path d="M9.05805 14.218C8.87986 14.218 8.73448 14.1664 8.62194 14.0632C8.50939 13.9507 8.45312 13.8006 8.45312 13.6131V7.12759C8.45312 6.94002 8.50939 6.79464 8.62194 6.69148C8.73448 6.57893 8.87986 6.52266 9.05805 6.52266C9.23625 6.52266 9.37693 6.57893 9.4801 6.69148C9.59265 6.79464 9.64892 6.94002 9.64892 7.12759V13.6131C9.64892 13.8006 9.59265 13.9507 9.4801 14.0632C9.37693 14.1664 9.23625 14.218 9.05805 14.218ZM9.04399 5.1299C8.81889 5.1299 8.62663 5.05018 8.46719 4.89074C8.30775 4.72192 8.22803 4.52497 8.22803 4.29988C8.22803 4.0654 8.30775 3.87314 8.46719 3.72308C8.63601 3.57302 8.82827 3.49799 9.04399 3.49799C9.2597 3.49799 9.44727 3.57302 9.60671 3.72308C9.77553 3.87314 9.85994 4.0654 9.85994 4.29988C9.85994 4.52497 9.78022 4.72192 9.62078 4.89074C9.46134 5.05018 9.26908 5.1299 9.04399 5.1299Z" fill="#4F6FC1"/>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="product-modal-colors-sizes">
+                                <!-- Colors -->
+                                <div class="product-modal-colors">
+                                    <input id="c11df" type="radio" name="options[color]" value="" checked>
+                                    <!--  Add "active" class to "product-modal-color" if needed -->
+                                    <label for="c11df" class="product-modal-color" style="background-color: #db8c97;"></label>
+
+                                    <input id="c22df" type="radio" name="options[color]" value="">
+                                    <label for="c22df" class="product-modal-color" style="background-color: #eae6dd;"></label>
+
+                                    <input id="c33df" type="radio" name="options[color]" value="">
+                                    <label for="c33df" class="product-modal-color" style="background-color: #986711;"></label>
+
+                                    <input id="c44df" type="radio" name="options[color]" value="">
+                                    <label for="c44df" class="product-modal-color" style="background-color: #20a53e;"></label>
+
+                                    <input id="c44er" type="radio" name="options[color]" value="">
+                                    <label for="c44er" class="product-modal-color" style="background-color: #9b5eb3;"></label>
+                                </div>
+                                <!-- Colors -->
+
+                                <!-- Sizes -->
+                                <div class="product-modal-sizes">
+                                    <input id="s11" type="radio" name="options[size]" value="" checked>
+                                    <label for="s11" class="product-modal-size">
+                                        200 х 220 см
+                                    </label>
+
+                                    <input id="s22ty" type="radio" name="options[size]" value="">
+                                    <label for="s22ty" class="product-modal-size">
+                                        145 х 205 см
+                                    </label>
+
+                                    <input id="s22yt" type="radio" name="options[size]" value="">
+                                    <label for="s22yt" class="product-modal-size">
+                                        333 х 205 см
+                                    </label>
+                                </div>
+                                <!-- Sizes -->
+                            </div>
+
+                            <div class="product-modal-buttons">
+                                <button class="button gradient" type="button">
+                                    <span>
+                                        добавить
+                                    </span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 21.7383L3 9.73828H21L18 21.7383H6Z" stroke="#221D1E"/>
+                                        <path d="M16.4446 7.55556C16.4446 3.92353 14.4547 2 12.0001 2C9.5455 2 7.55566 3.92944 7.55566 7.55556" stroke="#221D1E"/>
+                                        <path d="M14.769 15.7382H9.22637" stroke="#221D1E" stroke-linecap="square"/>
+                                        <path d="M11.9995 18.5095L11.9995 12.9668" stroke="#221D1E" stroke-linecap="square"/>
+                                    </svg>
+                                </button>
+                                <div class="product-modal-counter">
+                                    <div class="decrement"></div>
+                                    <input type="number" name="count" min="1" max="999" value="1" placeholder="1">
+                                    <div class="increment"></div>
+                                </div>
+
+                                <!--Демонстрационный JS код, чтобы показать/скрыть элементы-->
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', function() {
+                                        const button = document.querySelector('[data-pp="open-product-modal-data7"].pp_product-modal .product-modal-buttons .button');
+                                        const counter = document.querySelector('[data-pp="open-product-modal-data7"].pp_product-modal .product-modal-counter');
+                                        const decrement = document.querySelector('[data-pp="open-product-modal-data7"].pp_product-modal .decrement');
+                                        counter.style.display = 'none';
+                                        button.addEventListener('click', function() {
+                                            button.style.display = 'none';
+                                            counter.style.display = 'inline-flex';
+                                        });
+                                        decrement.addEventListener('click', function() {
+                                            counter.style.display = 'none';
+                                            button.style.display = 'inline-flex';
+                                        });
+                                    });
+                                </script>
+                                <!--Демонстрационный JS код, чтобы показать/скрыть элементы-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--pp_product-modal 7-->
+
+<footer class="posthog_view_block" posthog-name="Футер">
+    <div class="grid">
+
+        <div class="footer-part">
+            <div class="menu-container">
+                <div>
+                    <span>Подушки Beauty sleep</span>
+                    <ul>
+
+                        <li>
+                            <a href="https://beautysleep.ru/omnia-and-classic">Подушка Omnia &amp; Classic</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/copper">Подушка Omnia Copper Blend</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/aula">Подушка Aula</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/products/?category=437">Подушки для
+                                мужчин&nbsp;и&nbsp;детей</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/pillow-for-decollete">Подушка для декольте</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/products/?category=25">Наволочки</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/sleep-wrinkles">Beauty - сон</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <span>Одеяла Beauty Sleep</span>
+                    <ul>
+
+                        <li>
+                            <a href="https://beautysleep.ru/weighted-blanket">Утяжеленное одеяло </a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/airmesh-blanket">Одеяло с вентиляционными вставками</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div>
+                    <span>Silk Collection</span>
+                    <ul>
+
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Халаты</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Комбинации</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Топы и шорты</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Маски для сна</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Аксессуары для волос</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Полотенца</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div>
+                    <span>О Beauty Sleep</span>
+                    <ul>
+
+                        <li>
+                            <a href="https://beautysleep.ru/sleep-wrinkles">Beauty - сон</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/o-kompanii">О компании</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/reviews">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/question">Вопросы</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/about-beauty-sleep/materials-beauty-sleep">Материалы</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/about-beauty-sleep/vacancy/">Вакансии</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/copyright">Авторские права</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <span>Покупателям</span>
+                    <ul>
+
+                        <li>
+                            <a href="https://beautysleep.ru/dostavka-i-oplata">Доставка и оплата</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/garantia-i-vozvrat">Гарантия и возврат</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/for-customers/contacts">Контакты</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/o-kompanii">О компании</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/reviews">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/question">Вопросы</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/about-beauty-sleep/materials-beauty-sleep">Материалы</a>
+                        </li>
+
+                        <li>
+                            <a href="https://beautysleep.ru/stocks" class="stock">Акции</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/rules-certificates">Подарочные сертификаты</a>
+                        </li>
+                        <li>
+                            &nbsp;
+                        </li>
+                        <li>
+                            <a href="https://wa.me/message/IYHHAZPLYCA6I1" class="whats-app">
+                                <img src="../common_files/footer-whats-app.svg" alt="whats-app">
+                                whats app
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="email-mailing">
+                <h4>ПОДПИШИТЕСЬ НА РАССЫЛКУ</h4>
+                <p>Подпишитесь, чтобы узнать больше о здоровом сне, новостях и спецпредложениях Beauty Sleep!</p>
+
+                <form method="post" class="js-form-mailing">
+                    <input type="hidden" name="lists[pl2312]" value="set">
+                    <div class="input-box">
+                        <input name="email" type="email" data-si-form="" data-si-preset="msdcaddemail" data-si-nosave=""
+                               data-si-event="change" placeholder="Введите ваш email" required="">
+                    </div>
+                    <input type="text" class="n-message" name="n-message" value="">
+                    <button type="submit"><img src="../common_files/mailing-submit.svg" alt="submit">
+                    </button>
+
+                    <input type="hidden" name="af_action" value="deb11a841c7ef742abd036ca26bea0c6">
+                </form>
+                <div class="politics">
+                    Нажимая кнопку "Подписаться", вы соглашаетесь с <a href="https://beautysleep.ru/privacy-policy"
+                                                                       target="_blank">политикой конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-part posthog_view_block" posthog-name="Соц сети">
+            <div class="sn-box">
+                <div>
+                    <a href="https://t.me/beauty_sleep_russia" target="_blank" class="social-box__item posthog_click"
+                       posthog-name="Соц сети - telegram">
+                        <img src="../common_files/telegram.svg" alt="telegram">
+                    </a>
+                    <a href="https://vk.com/beautysleep_russia" target="_blank" class="social-box__item posthog_click"
+                       posthog-name="Соц сети - vkontakte">
+                        <img src="../common_files/vkon.svg" alt="vkontakte">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCem2kbdspTUse0141WFNSDQ" target="_blank"
+                       class="social-box__item posthog_click" posthog-name="Соц сети - youtube">
+                        <img src="../common_files/you.svg" alt="youtube">
+                    </a>
+
+                    <a href="https://clck.ru/Pv27v" target="_blank" class="social-box__item posthog_click"
+                       posthog-name="Соц сети - dzen">
+                        <img src="../common_files/dzen.svg" alt="dzen">
+                    </a>
+
+                </div>
+                <span>следите за нами в соцсетях!</span>
+            </div>
+            <a href="https://beautysleep.ru/#up" class="up">
+                <span>наверх</span>
+                <img src="../common_files/up.svg" alt="up">
+            </a>
+        </div>
+        <div class="footer-part posthog_view_block" posthog-name="Футер - ссылки">
+            <div class="footer-part__info">
+                <span>© 2016 — 2024, Beauty Sleep ®</span>
+                <div>
+                    <a href="https://beautysleep.ru/privacy-policy" target="_blank" class="posthog_click"
+                       posthog-name="Футер - Политика конфиденциальности">Политика конфиденциальности</a>
+                    <a href="https://beautysleep.ru/terms-of-use" target="_blank" class="posthog_click"
+                       posthog-name="Футер - Пользовательское соглашение">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="../common_files/swiper.min.js"></script>
+<script src="../common_files/jquery.validate.min.js"></script>
+
+
+<!--<script src="../common_files/messages_ru.min.js"></script>-->
+<!--<script src="../common_files/additional-methods.min.js"></script>-->
+<!--<script src="../common_files/PNotify.js"></script>-->
+<!--<script src="../common_files/suggs.js"></script>-->
+
+
+<script src="../common_files/js_main.js"></script>
+<!--<script src="../common_files/_js_checkoutt.js.download"></script>-->
+
+
+<!--script src="/static/js/customAjaxForm.js"></script-->
+<script src="../common_files/skrollr.min.js"></script>
+<!--<script src="../common_files/aos.js"></script>-->
+<!--<script src="../common_files/somia-form.js"></script>-->
+<!--<script src="../common_files/phone-mask.js"></script>-->
+<script src="files/catalog.js"></script>
+
+
+<!--<script src="../common_files/parts.js"></script>-->
+
+
+
+<!--<script src="../common_files/beautysleep.js"></script>-->
+<!--<script src="../common_files/bs_default.js"></script>-->
+<!--<script src="../common_files/jquery.jgrowl.min.js"></script>-->
+<script src="../common_files/fancybox.min.js"></script>
+<!--<script src="../common_files/message_settings.js"></script>-->
+<!--<script type="module" src="../common_files/sendit.js"></script>-->
+
+<!--<script type="module" src="../common_files/sendsay.js"></script>-->
+<!--<script src="../common_files/customAjaxForm.js"></script>-->
+
+
+<!--new scripts-->
+<script src="files/script.js"></script>
+<!--new scripts-->
+
+</body>
+
+</html>
