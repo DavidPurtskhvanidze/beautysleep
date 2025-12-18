@@ -1,0 +1,77 @@
+.mobile-sections-menu {
+    display: flex;
+    flex-direction: row;
+    padding: 24px 0 16px;
+    gap: 10px;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: unset !important;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 101;
+    transition-duration: var(--site-transition);
+}
+
+
+
+.mobile-section-menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px 4px 10px;
+    gap: 4px;
+    scroll-margin-left: 10px;
+    width: 100px;
+    height: 130px;
+    background-color: #fff;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: var(--site-transition);
+}
+.mobile-section-menu-item:first-child {
+    margin-left: 10px;
+}
+.mobile-section-menu-item:last-child {
+    margin-right: 10px;
+}
+.mobile-section-menu-item.active {
+    background-color: #EAEDFF;
+}
+.mobile-section-menu-item picture {
+    width: 92px;
+    min-height: 92px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition-duration: var(--site-transition);
+    flex: 1;
+}
+.mobile-sections-menu.top .mobile-section-menu-item picture {
+    height: 0;
+    min-height: auto;
+}
+.mobile-sections-menu.top .mobile-section-menu-item {
+    height: 34px;
+}
+.section-menu-item-title {
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 13px;
+    text-align: center;
+    color: #221D1E;
+    height: 100%;
+    flex: 1 1 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1023px) {
+    main.beauty-landing.store.shop-store {
+        padding-top: 170px !important;
+    }
+    .shop-store .shop-section .shop-section__goods_sidebar > div {
+        display: none;
+    }
+}
