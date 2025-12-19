@@ -49,6 +49,9 @@
     width: 100%;
     transition-duration: var(--site-transition);
 }
+.mobile-sections-menu.top .mobile-sections-menu-list {
+    padding: 14px 0 24px;
+}
 
 .mobile-section-menu-item {
     display: block;
