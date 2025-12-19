@@ -100,13 +100,22 @@ navLinks.forEach((link, index) => {
 // New js for mobile menu
 mobileSectionMenuItem.forEach((link, index) => {
     link.addEventListener("click", (event) => {
-        console.log(index);
         event.preventDefault();
+
+        // calculations based on moving up and down the list
+        if (index > lastNavLinksIndex) {
+            sidebarOffsetTop = index === 0 ? 270 : 170;
+        } else if (index < lastNavLinksIndex) {
+            //moving up
+            sidebarOffsetTop = 270;
+        }
+        lastNavLinksIndex = index;
+
         const targetId = link.getAttribute("data-section-id");
         const targetSection = document.getElementById(targetId);
         const shopSection = document.getElementsByClassName("shop-section");
         window.scrollTo({
-            top: targetSection.offsetTop + (shopSection[0].offsetTop - (index === 0 ? 270 : 170)),
+            top: targetSection.offsetTop + (shopSection[0].offsetTop - sidebarOffsetTop),
             behavior: "smooth"
         });
     });
@@ -114,14 +123,17 @@ mobileSectionMenuItem.forEach((link, index) => {
 // New js for mobile menu
 
 // New js for mobile menu
+let lastScroll = 0;
+let anchor = 0;
 function mobileSectionMenuAction() {
-    let e = window.scrollY || document.documentElement.scrollTop;
-    if (document.documentElement.scrollTop > 100 && e > lastScrollTop) {
-        mobileSectionsMenu.addClass("top");
-    } else {
-        mobileSectionsMenu.removeClass("top");
+    const cur = window.scrollY || document.documentElement.scrollTop;
+
+    if (Math.abs(cur - anchor) >= 100) {
+        mobileSectionsMenu.toggleClass('top', cur > lastScroll);
+        anchor = cur;
     }
-    lastScrollTop = e <= 0 ? 0 : e;
+
+    lastScroll = cur;
 }
 window.addEventListener("scroll", mobileSectionMenuAction);
 // New js for mobile menu
