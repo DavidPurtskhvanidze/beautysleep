@@ -36,13 +36,6 @@ function highlightMenu() {
                 if (link.getAttribute('data-id') === id) {
                     link.classList.add('active');
                     lastNavLinksIndex = index;
-                    if (window.innerWidth < 1279 && !seenSections.has(id)) {
-                        seenSections.add(id);
-                        link.scrollIntoView({
-                            behavior: 'smooth',
-                            inline: 'start',
-                        });
-                    }
                 }
             });
             // New js for mobile menu
@@ -50,7 +43,8 @@ function highlightMenu() {
                 link.classList.remove('active');
                 if (link.getAttribute('data-section-id') === id) {
                     link.classList.add('active');
-                    if (seenSections.has(id)) {
+                    if (!seenSections.has(id)) {
+                        seenSections.add(id);
                         link.scrollIntoView({
                             behavior: 'smooth',
                             inline: 'start',
