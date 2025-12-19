@@ -1,19 +1,54 @@
-.mobile-sections-menu {
+
+/*scrollbar*/
+.mobile-sections-menu-scrollbar {
+    height: 2px;
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    left: 10px;
     display: flex;
-    flex-direction: row;
-    padding: 24px 0 16px;
-    gap: 10px;
-    overflow-x: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: unset !important;
-    background-color: #fff;
+    align-items: center;
+}
+.mobile-sections-menu-scrollbar:before {
+    content: '';
+    background-color: #EAEDFF;
+    height: 2px;
+    width: calc(100% + 20px);
+    position: absolute;
+    left: -10px;
+    right: -10px;
+}
+.mobile-sections-menu-thumb {
+    height: 4px;
+    background-color: #6E89C3;
+    border-radius: 6px;
+    width: 40px;
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
+}
+/*scrollbar*/
+
+
+.mobile-sections-menu {
+    display: none;
     position: fixed;
     width: 100%;
     z-index: 101;
     transition-duration: var(--site-transition);
 }
 
-
+.mobile-sections-menu-list {
+    display: flex;
+    flex-direction: row;
+    padding: 24px 0;
+    gap: 10px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    background-color: #fff;
+    width: 100%;
+    transition-duration: var(--site-transition);
+}
 
 .mobile-section-menu-item {
     display: flex;
@@ -42,10 +77,11 @@
 .mobile-section-menu-item picture {
     width: 92px;
     min-height: 92px;
+    height: 92px;
     border-radius: 10px;
     overflow: hidden;
+    will-change: height;
     transition-duration: var(--site-transition);
-    flex: 1;
 }
 .mobile-sections-menu.top .mobile-section-menu-item picture {
     height: 0;
@@ -53,6 +89,7 @@
 }
 .mobile-sections-menu.top .mobile-section-menu-item {
     height: 34px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.16);
 }
 .section-menu-item-title {
     font-weight: 300;
@@ -69,9 +106,27 @@
 
 @media screen and (max-width: 1023px) {
     main.beauty-landing.store.shop-store {
-        padding-top: 170px !important;
+        padding-top: 174px !important;
     }
-    .shop-store .shop-section .shop-section__goods_sidebar > div {
+}
+@media (max-width: 1280px) {
+    .header.hide {
+        transform: none;
+    }
+    .header,
+    header.scroll {
+        box-shadow: none;
+    }
+}
+@media screen and (max-width: 1279px) {
+    main.beauty-landing.store.shop-store {
+        padding-top: 174px !important;
+    }
+    .mobile-sections-menu {
+        display: block;
+    }
+
+    .shop-store .shop-section .shop-section__goods_sidebar {
         display: none;
     }
 }

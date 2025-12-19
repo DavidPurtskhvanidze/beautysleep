@@ -6,6 +6,12 @@ const shopSidebarBlock = $('.shop-section .shop-section__goods_sidebar > div');
 let lastNavLinksIndex = 0;
 let sidebarOffsetTop = 190;
 
+// New js for mobile menu
+const mobileSectionsMenu = $('.mobile-sections-menu');
+const mobileSectionMenuItem = document.querySelectorAll(".mobile-section-menu-item");
+mobileSectionsMenu.css({'top': mainHeader.height()});
+// New js for mobile menu
+
 function sidebarTopPosition() {
     let sidebarHeight = $(window).height() - mainHeader.height();
     if (mainHeader.hasClass('hide')) {
@@ -39,6 +45,20 @@ function highlightMenu() {
                     }
                 }
             });
+            // New js for mobile menu
+            mobileSectionMenuItem.forEach((link, index) => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-section-id') === id) {
+                    link.classList.add('active');
+                    if (seenSections.has(id)) {
+                        link.scrollIntoView({
+                            behavior: 'smooth',
+                            inline: 'start',
+                        });
+                    }
+                }
+            });
+            // New js for mobile menu
         } else {
             seenSections.delete(section.getAttribute('id'));
         }
@@ -76,6 +96,35 @@ navLinks.forEach((link, index) => {
         });
     });
 });
+
+// New js for mobile menu
+mobileSectionMenuItem.forEach((link, index) => {
+    link.addEventListener("click", (event) => {
+        console.log(index);
+        event.preventDefault();
+        const targetId = link.getAttribute("data-section-id");
+        const targetSection = document.getElementById(targetId);
+        const shopSection = document.getElementsByClassName("shop-section");
+        window.scrollTo({
+            top: targetSection.offsetTop + (shopSection[0].offsetTop - (index === 0 ? 270 : 170)),
+            behavior: "smooth"
+        });
+    });
+});
+// New js for mobile menu
+
+// New js for mobile menu
+function mobileSectionMenuAction() {
+    let e = window.scrollY || document.documentElement.scrollTop;
+    if (document.documentElement.scrollTop > 100 && e > lastScrollTop) {
+        mobileSectionsMenu.addClass("top");
+    } else {
+        mobileSectionsMenu.removeClass("top");
+    }
+    lastScrollTop = e <= 0 ? 0 : e;
+}
+window.addEventListener("scroll", mobileSectionMenuAction);
+// New js for mobile menu
 
 $(document).ready(function() {
     $('.js-product-color').each(function(index) {
@@ -189,3 +238,117 @@ $(document).ready(function() {
         }
     }
 });
+
+
+// New js for mobile menu
+// Custom scrollbar
+const mobileSectionsMenuList = document.querySelector('.mobile-sections-menu-list');
+const mobileSectionsMenuScrollbar = document.querySelector('.mobile-sections-menu-scrollbar');
+const mobileSectionsMenuThumb = document.querySelector('.mobile-sections-menu-thumb');
+
+let isDragging = false;
+let startX = 0;
+let startLeft = 0;
+let velocity = 0;
+let lastX = 0;
+let lastTime = 0;
+let rafId = null;
+
+const FRICTION = 0.94;
+const MIN_VELOCITY = 0.15;
+
+function updateThumb() {
+    const ratio = mobileSectionsMenuList.clientWidth / mobileSectionsMenuList.scrollWidth;
+    //mobileSectionsMenuThumb.style.width = `${Math.max(ratio * mobileSectionsMenuScrollbar.clientWidth, 30)}px`;
+}
+
+function syncThumb() {
+    if (isDragging) return;
+    const maxLeft = mobileSectionsMenuScrollbar.clientWidth - mobileSectionsMenuThumb.offsetWidth;
+    const scrollRatio = mobileSectionsMenuList.scrollLeft / (mobileSectionsMenuList.scrollWidth - mobileSectionsMenuList.clientWidth);
+    mobileSectionsMenuThumb.style.left = `${scrollRatio * maxLeft}px`;
+}
+
+function setScrollFromThumb(left) {
+    const maxLeft = mobileSectionsMenuScrollbar.clientWidth - mobileSectionsMenuThumb.offsetWidth;
+    const ratio = left / maxLeft;
+    mobileSectionsMenuList.scrollLeft = ratio * (mobileSectionsMenuList.scrollWidth - mobileSectionsMenuList.clientWidth);
+}
+
+function animateInertia() {
+    velocity *= FRICTION;
+
+    if (Math.abs(velocity) < MIN_VELOCITY) {
+        rafId = null;
+        return;
+    }
+
+    const maxLeft = mobileSectionsMenuScrollbar.clientWidth - mobileSectionsMenuThumb.offsetWidth;
+    let newLeft = mobileSectionsMenuThumb.offsetLeft + velocity;
+
+    newLeft = Math.max(0, Math.min(newLeft, maxLeft));
+
+    mobileSectionsMenuThumb.style.left = `${newLeft}px`;
+    setScrollFromThumb(newLeft);
+
+    rafId = requestAnimationFrame(animateInertia);
+}
+
+/* DRAG START */
+mobileSectionsMenuThumb.addEventListener('mousedown', e => {
+    isDragging = true;
+    startX = e.clientX;
+    startLeft = mobileSectionsMenuThumb.offsetLeft;
+    lastX = e.clientX;
+    lastTime = performance.now();
+    velocity = 0;
+
+    if (rafId) cancelAnimationFrame(rafId);
+
+    document.body.style.userSelect = 'none';
+});
+
+/* DRAG */
+document.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+
+    const now = performance.now();
+    const dx = e.clientX - startX;
+    const maxLeft = mobileSectionsMenuScrollbar.clientWidth - mobileSectionsMenuThumb.offsetWidth;
+
+    let newLeft = startLeft + dx;
+    newLeft = Math.max(0, Math.min(newLeft, maxLeft));
+
+    mobileSectionsMenuThumb.style.left = `${newLeft}px`;
+    setScrollFromThumb(newLeft);
+
+    const dt = now - lastTime || 16;
+    velocity = (e.clientX - lastX) / dt * 16;
+
+    lastX = e.clientX;
+    lastTime = now;
+});
+
+/* DRAG END */
+document.addEventListener('mouseup', () => {
+    if (!isDragging) return;
+
+    isDragging = false;
+    document.body.style.userSelect = '';
+
+    rafId = requestAnimationFrame(animateInertia);
+});
+
+/* Scroll → thumb (только когда не drag) */
+mobileSectionsMenuList.addEventListener('scroll', syncThumb);
+
+/* Init */
+window.addEventListener('resize', () => {
+    updateThumb();
+    syncThumb();
+});
+
+updateThumb();
+syncThumb();
+// Custom scrollbar
+// New js for mobile menu
